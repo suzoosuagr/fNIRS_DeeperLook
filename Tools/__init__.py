@@ -29,10 +29,8 @@ def env_init(args, loglevel=logging.INFO):
     # summary writer
     if args.summary:
         if args.mode in args.summary_register:
-            if not os.path.isdir(args.summary_dir):
-                os.mkdir(args.summary_dir)
+            ensure(args.summary_dir)
             summary_dir = os.path.join(args.summary_dir, args.name+'/',datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S'))
-
             writer = SummaryWriter(summary_dir)
             info("tfboard writer created. ")
         else:
