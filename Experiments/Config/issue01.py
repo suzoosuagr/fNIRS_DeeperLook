@@ -56,9 +56,7 @@ class EXP01(Basic_Config):
 
         # train:
         self.resume = False
-        self.norm = nn.BatchNorm2d
-        self.model = "BiGRU_multilabel"
-        self.encoder = 'Naive_Embedding'
+        self.model = "BiGRU_Attn_Multi_Branch_SLA"
         self.lr = 1e-4
         self.weight_decay = 2e-5
         self.eval_freq = 1

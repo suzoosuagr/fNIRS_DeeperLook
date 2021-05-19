@@ -71,12 +71,12 @@ class fNIRS_Basic(data.Dataset):
         with open(file_path, 'w') as f:
             f.write(head_msg)
             for line in instructor:
-                line = [str(i) for i in line]
-                msg = ','.join(line) + '\n'
+                file_list = ','.join(line[0])
+                msg = ','.join([file_list, str(line[1]), str(line[2]), line[3]]) + '\n'
                 f.write(msg)
 
     @staticmethod
-    def read_instructor(self, file_path):
+    def read_instructor(file_path):
         f = open(file_path, 'r')
         lines = f.readlines()
         lines = lines[1:] # skip the head message
@@ -109,9 +109,57 @@ class fNIRS_Basic(data.Dataset):
         data = F.pad(data, (0, 1, 0, 1), 'constant', 0)
         return data 
 
-    def get_cr_task_self_supervised(self, index):
+    def load_data_(self, index):
         assert len(self.instructor) > 0
-        
+        f_idx, start_cr, start_task, label = self.instructor[index]
+        start_cr = int(start_cr)
+        start_task = int(start_task)
+
+        label = self.class_map[label]
+        cr_duration, task_duration, _ = self.steps
+
+        # read filename
+        oxy_file, deoxy_file = self.data_files[f_idx]
+        cr_oxy_file, cr_deoxy_file = self.get_cr_files(oxy_file)
+
+        #load_data
+        oxy_task = np.load(oxy_file)
+        oxy_cr = np.load(cr_oxy_file)
+
+        deoxy_task = np.load(deoxy_file)
+        deoxy_cr = np.load(cr_deoxy_file)
+
+        # slice
+        oxy_cr_sample = oxy_cr[start_cr: start_cr + cr_duration]
+        oxy_task_sample = oxy_task[start_task: start_task + task_duration]
+
+        deoxy_cr_sample = deoxy_cr[start_cr: start_cr + cr_duration]
+        deoxy_task_sample = deoxy_task[start_cr: start_cr + task_duration]
+
+        cr = self.gen_2d(oxy_cr_sample, deoxy_cr_sample)
+        task = self.gen_2d(oxy_task_sample, deoxy_task_sample)
+        return cr, task, label, oxy_file
+
+    def get_cr_task_self_supervised_multi_branch(self, index):
+        cr, task, label, oxy_file = self.load_data_(index)
+
+        # random self supervision 
+        if self.mode in ["train", "eval"]:
+            tr = np.random.uniform(0.0, 1.0)
+            if tr > 0.5:
+                label = [l*2 + 0 for l in label]
+                return np.concatenate((cr, task), axis=0).astype(np.float32), label, 0, oxy_file
+            else:
+                label = [l*2 + 1 for l in label]
+                return np.concatenate((task, cr), axis=0).astype(np.float32), label, 1, oxy_file
+        elif self.mode in ["test"]:
+            return [np.concatenate((cr, task), axis=0).astype(np.float32), self.MBlabeling(label, 0.5+1)], [np.concatenate((task, cr), axis=0).astype(np.float32), self.MBlabeling(label, 0.5-1)]
+
+    def MBlabeling(self, label, tr):
+        if tr>0.5:
+            return [l*2 + 0 for l in label]
+        else:
+            return [l*2 + 1 for l in label]
 
     def label_balance_init_instructor(self):
         """
@@ -167,8 +215,8 @@ class fNIRS_Basic(data.Dataset):
             # generate instructor:
             cr_duration, task_duration, _ = self.steps
             step = tasks_steps[stp_l]
-            if stp_l in [1]:
-                step = round(step/3)
+            if stp_l in [1, 2]:
+                step = round(step/2)
             else:
                 step = round(step)
             
@@ -190,9 +238,6 @@ class fNIRS_Basic(data.Dataset):
         self.instructor = instructor
         # logging the data information. 
         self.valid_label_statistic(self.instructor)
-
-
-
 
 class fNIRS_mb_label_balance_leave_subject_sla(fNIRS_Basic):
     """
@@ -220,6 +265,11 @@ class fNIRS_mb_label_balance_leave_subject_sla(fNIRS_Basic):
             self.save_instructor(ins_path, self.instructor, data_config)
         else:
             self.instructor = self.read_instructor(ins_path)
+
+    def __getitem__(self, index):
+        return self.get_cr_task_self_supervised_multi_branch(index)
+    def __len__(self):
+        return len(self.instructor)
 
     def collect_data_files(self, file_path):
         f = open(os.path.join(file_path), 'r')
