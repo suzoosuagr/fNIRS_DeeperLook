@@ -7,7 +7,11 @@ from Experiments.Config.issue01 import *
 import torch.utils.data as data 
 from Model.models import BiGRU_Attn_Multi_Branch_SLA
 import torch.optim as optim
+from Tools.engine import fNIRS_Engine
+import random
+import numpy as np
 
+from Tools.metric import Performance_Test_ensemble_multi
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -18,16 +22,16 @@ def parse_args():
 
 # initialization
 parser = parse_args()
-args = EXP01(parser.mode, parser.logfile)
+args = EXP02(parser.mode, parser.logfile)
 warning("STARTING >>>>>> {} ".format(args.name))
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
 ngpu, device, writer = env_init(args, logging.INFO)
 args.ngpu = ngpu
 
 if args.mode == 'debug':
-    args.data_config['train_ids'] = args.data_config['ids'].copy()
-    args.data_config['train_ids'].remove('2004')
-    args.data_config['eval_ids'] = ['2004']
+    # args.data_config['train_ids'] = args.data_config['ids'].copy()
+    # args.data_config['train_ids'].remove('2004')
+    # args.data_config['eval_ids'] = ['2004']
     args.summary = False
     args.resume = False
 
@@ -46,15 +50,19 @@ def update_loader(fold_id, args_):
             data_config=args_.data_config,
             runtime=True,
             fold_id=fold_id)
+    test_dataset = fNIRS_mb_label_balance_leave_subject_sla(\
+            list_root = args_.list_path,
+            steps = args_.steps_sizes,
+            mode='test',
+            data_config=args_.data_config,
+            runtime=True,
+            fold_id=fold_id)
 
     train_loader = data.DataLoader(train_dataset, batch_size=args_.batch_size, shuffle=True, drop_last=args_.drop_last)
     eval_loader = data.DataLoader(eval_dataset, batch_size=args_.batch_size, shuffle=False, drop_last=args_.drop_last)
+    test_loader = data.DataLoader(test_dataset, batch_size=args_.batch_size, shuffle=False, drop_last=args_.drop_last)
 
-    # debug:
-    debug_data = train_dataset[0]
-    print("Debug")
-
-    return train_loader, eval_loader
+    return train_loader, eval_loader, test_loader
 
 def update_model(model_name):
     if model_name == 'BiGRU_Attn_Multi_Branch_SLA':
@@ -89,6 +97,40 @@ def generate_instructors(args):
                         runtime=False,
                         fold_id=i)
 
+def generate_kfold_instructors(args, k=5):
+    args_ = args
+    IDS = args.data_config["ids"].copy()
+    random.shuffle(IDS)
+    id_folds = np.array_split(IDS, k)
+    listify = lambda folds: [list(f) for f in folds]  
+    for i in range(len(id_folds)):
+        id_folds_ = listify(id_folds.copy())
+        print("generating instructors ... ")
+        print(f"[{i}/{len(IDS)}]managing {id}")
+        tem_id = id_folds_[i]
+        id_folds_.remove(tem_id)
+        train = []
+        for ids in id_folds_:
+            train += ids
+
+        args_.data_config['train_ids'] = train
+        args_.data_config['eval_ids'] = tem_id
+
+        train_dataset = fNIRS_mb_label_balance_leave_subject_sla(\
+                        list_root=args.list_path,
+                        steps=args.steps_sizes,
+                        mode='train',
+                        data_config=args.data_config,
+                        runtime=False,
+                        fold_id=i)
+        eval_dataset = fNIRS_mb_label_balance_leave_subject_sla(\
+                        list_root=args.list_path,
+                        steps=args.steps_sizes,
+                        mode='eval',
+                        data_config=args.data_config,
+                        runtime=False,
+                        fold_id=i)
+
 def run_leave_subjects_out(args):
     count = 0
     accu = 0
@@ -104,12 +146,40 @@ def run_leave_subjects_out(args):
         train_loader, eval_loader = update_loader(i, args)
         model = update_model(args.model).to(device)
         optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+        criterion = nn.CrossEntropyLoss()
+        exe = fNIRS_Engine(train_loader, eval_loader, None, args, writer, device)
+        exe.train(model, optimizer, criterion, None)
+        exe.test(model, optimizer)
 
+def esemble_test_subjects_out(args):
+    count = 0
+    accu = 0
+    Basic_Name = args.name
+    last = False
+    ensemble_metric = Performance_Test_ensemble_multi(joint=True, self_supervise=True)
+    IDS = args.data_config["ids"].copy()
+    for i, id in enumerate(IDS):
+        args.data_config['train_ids'] = args.data_config['ids'].copy()
+        args.data_config['train_ids'].remove(id)
+        args.data_config['eval_ids'] = [id]
+        args.name = "{}_{:02}".format(Basic_Name, i)
+        info(f"Runing {args.name} | eval ids : {args.data_config['eval_ids']}")
 
-
-
+        train_loader, eval_loader, test_loader = update_loader(i, args)
+        model = update_model(args.model).to(device)
+        optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+        criterion = nn.CrossEntropyLoss()
+        exe = fNIRS_Engine(train_loader, eval_loader, test_loader, args, writer, device)
+        # exe.train(model, optimizer, criterion, None)
+        if i == len(IDS) - 1:
+            last=True
+        else:
+            last=False
+        exe.test(model, optimizer, ensemble_metric, last=last)
 
 if __name__ == "__main__":
-    generate_instructors(args)
+    # generate_instructors(args)
+    generate_kfold_instructors(args, k=5)
     # run_leave_subjects_out(args)
+    # esemble_test_subjects_out(args)
 

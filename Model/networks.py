@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
+import numpy as np
 
 class Basic_Conv(nn.Module):
     def __init__(self, in_ch, growth_rate, kernel_size=3, stride=1, padding=1, norm=nn.BatchNorm2d):

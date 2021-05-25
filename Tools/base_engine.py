@@ -86,7 +86,7 @@ class BaseEngine():
             
             # VALIDATION
             if (epoch+1) % self.args.eval_freq == 0 or epoch+1 == self.args.epochs:
-                eval_loss, metric_ = self.eval_epoch(epoch)
+                eval_loss = self.eval_epoch(epoch)
                 
                 try:
                     self.writer.add_scalar('eval/loss', eval_loss, epoch)
@@ -96,10 +96,13 @@ class BaseEngine():
 
                 if self.min_loss > eval_loss:
                     self.min_loss = eval_loss
-                    info("New min Val loss {:.4f} at [{:03}]: Val_{}:{:.2f}".format(eval_loss, epoch, self.metric.__class__.__name__, metric_))
+                    info("New min Val loss {} at [{:03}]".format(eval_loss, epoch))
                     self.save_ckpt(self.model, self.optimizer, epoch, self.min_loss)
                 self.scheduler.step(eval_loss)
-                info("current lr_rate is {}".format(self.scheduler._last_lr))
+                info("leanring rate = {}".format(self.scheduler._last_lr))
+            if self.scheduler._last_lr[0] <= 1e-5:
+                warning("Out of patience and reached lowest learning rate.")
+                return    
 
     def test(self):
         raise NotImplementedError

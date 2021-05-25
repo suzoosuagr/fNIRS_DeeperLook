@@ -4,7 +4,7 @@ import torch.nn as nn
 
 class Basic_Config():
     def __init__(self):
-        self.seed = 777
+        self.seed = 2333
         self.device = 'cuda'
 
         self.list_path = "./Data/FileList/Oxy"
@@ -19,6 +19,7 @@ class EXP01(Basic_Config):
     using naive embedding method.
     multi - classification
     self - supervised 50 50 25
+    full-size label-balanced data
     """
     def __init__(self, mode, logfile):
         super(EXP01, self).__init__()
@@ -29,7 +30,6 @@ class EXP01(Basic_Config):
         self.name = self.issue + '_' + self.__class__.__name__
         # data
         self.list_path = "./Data/FileList/ZSCORE_Oxy/"
-        self.dataset = "fNIRS_Block"
         self.data_config = {
             # "nb", "anb", "rt", "gng", "ewm", "es"
                     "train_tasks": ["anb" , "rt","ewm", "gng"],
@@ -43,16 +43,12 @@ class EXP01(Basic_Config):
                     "ins_root": "./Data/Ins/label_balance/22Folds/"
         }
         self.steps_sizes = [50, 50, 25]
-        self.sampling = "task"
         self.drop_last = True
         self.batch_size = 64
         self.out_mode = 1  # 1 means 2d images as input. 
-        self.train_ratio = 0.7
 
         # save related
         self.summary = False
-        self.monitor = 'loss'
-        self.save_dir = os.path.join(self.ckpt_root, self.name)
 
         # train:
         self.resume = False
@@ -60,5 +56,26 @@ class EXP01(Basic_Config):
         self.lr = 1e-4
         self.weight_decay = 2e-5
         self.eval_freq = 1
-        self.epochs = 100
+        self.epochs = 50
         self.patience = 5
+
+class EXP02(EXP01):
+    """
+    using naive embedding method.
+    multi - classification
+    self - supervised 50 50 25
+    full-size label-balanced data
+    """
+    def __init__(self, mode, logfile):
+        super(EXP02, self).__init__(mode, logfile)
+        self.data_config = {
+            "train_tasks": ["anb" , "rt","ewm", "gng"],
+            "eval_tasks": ["anb" , "rt","ewm", "gng"],
+            "ids":      ["2001", "2004", "2012", "2013", "2015",
+                        "8204","8206","8209","8210","8211","8213",
+                        "8214","8218", "2006", "2011", "2014", "2017", 
+                        "8201", "8203","8208","8216", "2003"],  # no subject named 8012
+            "sessions": ["s1","s2"],
+            "parts": ["head.npy"],
+            "ins_root": "./Data/Ins/label_balance/5Folds/"
+        }

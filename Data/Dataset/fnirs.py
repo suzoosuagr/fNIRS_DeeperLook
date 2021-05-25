@@ -106,12 +106,13 @@ class fNIRS_Basic(data.Dataset):
 
         data = np.stack([data_0, data_1, data_2, data_3, data_4], axis=2)
         # padding:
+        data = torch.from_numpy(data).float()
         data = F.pad(data, (0, 1, 0, 1), 'constant', 0)
         return data 
 
     def load_data_(self, index):
         assert len(self.instructor) > 0
-        f_idx, start_cr, start_task, label = self.instructor[index]
+        oxy_file, deoxy_file, start_cr, start_task, label = self.instructor[index]
         start_cr = int(start_cr)
         start_task = int(start_task)
 
@@ -119,7 +120,6 @@ class fNIRS_Basic(data.Dataset):
         cr_duration, task_duration, _ = self.steps
 
         # read filename
-        oxy_file, deoxy_file = self.data_files[f_idx]
         cr_oxy_file, cr_deoxy_file = self.get_cr_files(oxy_file)
 
         #load_data
@@ -215,7 +215,7 @@ class fNIRS_Basic(data.Dataset):
             # generate instructor:
             cr_duration, task_duration, _ = self.steps
             step = tasks_steps[stp_l]
-            if stp_l in [1, 2]:
+            if stp_l in [1, 2]:         # need to change: based on M instructor or B instructor
                 step = round(step/2)
             else:
                 step = round(step)
@@ -246,7 +246,7 @@ class fNIRS_mb_label_balance_leave_subject_sla(fNIRS_Basic):
         leave subject
         self supervised labeling 
     """
-    def __init__(self, list_root, steps: list, mode, data_config, runtime=False, fold_id=0) -> None:
+    def __init__(self, list_root, steps: list, mode, data_config, runtime=False, fold_id=0, istest=False) -> None:
         super(fNIRS_mb_label_balance_leave_subject_sla, self).__init__(list_root, steps, mode, data_config)
         self.class_map = {
             "nb":[2,1],
@@ -256,8 +256,11 @@ class fNIRS_mb_label_balance_leave_subject_sla(fNIRS_Basic):
             'ewm':[1,2],
             'es':[0,1],
         }
+        self.istest = istest
         ensure(data_config['ins_root'])
         ins_path = os.path.join(data_config['ins_root'], 'M', f'{mode}_{fold_id}.txt')
+        if mode in ['test']:
+            ins_path = os.path.join(data_config['ins_root'], 'M', f'eval_{fold_id}.txt')
         for sess in self.data_config["sessions"]:
             self.collect_data_files(os.path.join(list_root, sess+'.txt'))
         if not runtime:
@@ -265,6 +268,7 @@ class fNIRS_mb_label_balance_leave_subject_sla(fNIRS_Basic):
             self.save_instructor(ins_path, self.instructor, data_config)
         else:
             self.instructor = self.read_instructor(ins_path)
+            self.valid_label_statistic(self.instructor)
 
     def __getitem__(self, index):
         return self.get_cr_task_self_supervised_multi_branch(index)

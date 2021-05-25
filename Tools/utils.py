@@ -1,6 +1,19 @@
 import os
 import time
 from PIL import Image
+from mlxtend.plotting import plot_confusion_matrix
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def visual_conf_mat(conf_mat, class_names):
+    fig, ax = plot_confusion_matrix(conf_mat=conf_mat, colorbar=True, show_absolute=False, show_normed=True, class_names=class_names)
+    # canvas = FigureCanvas(fig)
+    fig.canvas.draw()
+    image_from_plot = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
+    image_from_plot = image_from_plot.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    plt.close(fig)
+    return image_from_plot
 
 def pil_loader(path):
     with open(path, 'rb') as f:
