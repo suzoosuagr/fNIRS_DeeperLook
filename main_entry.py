@@ -10,6 +10,7 @@ import torch.optim as optim
 from Tools.engine import fNIRS_Engine
 import random
 import numpy as np
+import json
 
 from Tools.metric import Performance_Test_ensemble_multi
 
@@ -102,7 +103,8 @@ def generate_kfold_instructors(args, k=5):
     IDS = args.data_config["ids"].copy()
     random.shuffle(IDS)
     id_folds = np.array_split(IDS, k)
-    listify = lambda folds: [list(f) for f in folds]  
+    listify = lambda folds: [list(f) for f in folds]
+    fold_json = {}
     for i in range(len(id_folds)):
         id_folds_ = listify(id_folds.copy())
         print("generating instructors ... ")
@@ -115,6 +117,10 @@ def generate_kfold_instructors(args, k=5):
 
         args_.data_config['train_ids'] = train
         args_.data_config['eval_ids'] = tem_id
+        fold_json[str(i)] = {
+            'train_ids': train,
+            'eval_ids': tem_id
+        } 
 
         train_dataset = fNIRS_mb_label_balance_leave_subject_sla(\
                         list_root=args.list_path,
@@ -130,6 +136,9 @@ def generate_kfold_instructors(args, k=5):
                         data_config=args.data_config,
                         runtime=False,
                         fold_id=i)
+    file_name = os.path.join(args_.data_config['ins_root'], 'fold_id_mapping.json')
+    with open(file_name, 'w') as f:
+        json.dump(fold_json, f)
 
 def run_leave_subjects_out(args):
     count = 0
@@ -143,13 +152,12 @@ def run_leave_subjects_out(args):
         args.name = "{}_{:02}".format(Basic_Name, i)
         info(f"Runing {args.name} | eval ids : {args.data_config['eval_ids']}")
 
-        train_loader, eval_loader = update_loader(i, args)
+        train_loader, eval_loader, test_loader = update_loader(i, args)
         model = update_model(args.model).to(device)
         optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
         criterion = nn.CrossEntropyLoss()
         exe = fNIRS_Engine(train_loader, eval_loader, None, args, writer, device)
         exe.train(model, optimizer, criterion, None)
-        exe.test(model, optimizer)
 
 def esemble_test_subjects_out(args):
     count = 0
@@ -177,9 +185,30 @@ def esemble_test_subjects_out(args):
             last=False
         exe.test(model, optimizer, ensemble_metric, last=last)
 
+def run_kfolds(args, k=5):
+    count = 0
+    accu = 0
+    Basic_Name = args.name
+    IDS = args.data_config["ids"].copy()
+    with open(os.path.join(args.data_config['ins_root'], 'fold_id_mapping.json'), 'r') as jsf:
+        fold_id_mapping = json.load(jsf)
+    for i in range(k):
+        args.data_config['train_ids'] = fold_id_mapping[str(i)]['train_ids']
+        args.data_config['eval_ids'] = fold_id_mapping[str(i)]['eval_ids']
+        args.name = "{}_{:02}".format(Basic_Name, i)
+        info(f"Runing {args.name} | eval on {args.data_config['eval_ids']}")
+
+        train_loader, eval_loader, test_loader = update_loader(i, args)
+        model = update_model(args.model).to(device)
+        optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+        criterion = nn.CrossEntropyLoss()
+        exe = fNIRS_Engine(train_loader, eval_loader, None, args, writer, device)
+        exe.train(model, optimizer, criterion, None)
+
 if __name__ == "__main__":
     # generate_instructors(args)
-    generate_kfold_instructors(args, k=5)
+    # generate_kfold_instructors(args, k=5)
     # run_leave_subjects_out(args)
+    run_kfolds(args, k=5)
     # esemble_test_subjects_out(args)
 
