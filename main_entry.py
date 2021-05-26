@@ -23,7 +23,7 @@ def parse_args():
 
 # initialization
 parser = parse_args()
-args = EXP02(parser.mode, parser.logfile)
+args = EXP03(parser.mode, parser.logfile)
 warning("STARTING >>>>>> {} ".format(args.name))
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
 ngpu, device, writer = env_init(args, logging.INFO)
@@ -185,6 +185,31 @@ def esemble_test_subjects_out(args):
             last=False
         exe.test(model, optimizer, ensemble_metric, last=last)
 
+def esemble_test_kfolds(args, k=5):
+    count = 0
+    accu = 0
+    Basic_Name = args.name
+    # IDS = args.data_config["ids"].copy()
+    ensemble_metric = Performance_Test_ensemble_multi(joint=True, self_supervise=True)
+    with open(os.path.join(args.data_config['ins_root'], 'fold_id_mapping.json'), 'r') as jsf:
+        fold_id_mapping = json.load(jsf)
+    for i in range(k):
+        args.data_config['train_ids'] = fold_id_mapping[str(i)]['train_ids']
+        args.data_config['eval_ids'] = fold_id_mapping[str(i)]['eval_ids']
+        args.name = "{}_{:02}".format(Basic_Name, i)
+        info(f"Runing {args.name} | eval on {args.data_config['eval_ids']}")
+
+        train_loader, eval_loader, test_loader = update_loader(i, args)
+        model = update_model(args.model).to(device)
+        optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+        criterion = nn.CrossEntropyLoss()
+        exe = fNIRS_Engine(train_loader, eval_loader, test_loader, args, writer, device)
+        if i == k-1:
+            last=True
+        else:
+            last=False
+        exe.test(model, optimizer, ensemble_metric, last=last)
+
 def run_kfolds(args, k=5):
     count = 0
     accu = 0
@@ -207,8 +232,9 @@ def run_kfolds(args, k=5):
 
 if __name__ == "__main__":
     # generate_instructors(args)
-    # generate_kfold_instructors(args, k=5)
+    # generate_kfold_instructors(args, k=10)
     # run_leave_subjects_out(args)
-    run_kfolds(args, k=5)
+    run_kfolds(args, k=10)
+    # esemble_test_kfolds(args, k=10)
     # esemble_test_subjects_out(args)
 
