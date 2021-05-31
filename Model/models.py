@@ -22,7 +22,7 @@ class BiGRU_Attn_Multi_Branch_SLA(nn.Module):
         out_wml = self.fc_wml(rescale_hidden)
         out_vpl = self.fc_vpl(rescale_hidden)
 
-        return out_wml, out_vpl
+        return out_wml
 
 
 

@@ -23,7 +23,7 @@ def parse_args():
 
 # initialization
 parser = parse_args()
-args = EXP03(parser.mode, parser.logfile)
+args = EXP01(parser.mode, parser.logfile)
 warning("STARTING >>>>>> {} ".format(args.name))
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
 ngpu, device, writer = env_init(args, logging.INFO)
@@ -36,10 +36,10 @@ if args.mode == 'debug':
     args.summary = False
     args.resume = False
 
-def update_loader(fold_id, args_):
+def update_loader(fold_id, args_, test_shuffle=False):
     train_dataset = fNIRS_mb_label_balance_leave_subject_sla(\
             list_root = args_.list_path,
-            steps = args_.steps_sizes,
+            steps = args_.steps_sizes,  
             mode='train',
             data_config=args_.data_config,
             runtime=True,
@@ -61,7 +61,7 @@ def update_loader(fold_id, args_):
 
     train_loader = data.DataLoader(train_dataset, batch_size=args_.batch_size, shuffle=True, drop_last=args_.drop_last)
     eval_loader = data.DataLoader(eval_dataset, batch_size=args_.batch_size, shuffle=False, drop_last=args_.drop_last)
-    test_loader = data.DataLoader(test_dataset, batch_size=args_.batch_size, shuffle=False, drop_last=args_.drop_last)
+    test_loader = data.DataLoader(test_dataset, batch_size=args_.batch_size, shuffle=test_shuffle, drop_last=args_.drop_last)
 
     return train_loader, eval_loader, test_loader
 
@@ -183,7 +183,7 @@ def esemble_test_subjects_out(args):
             last=True
         else:
             last=False
-        exe.test(model, optimizer, ensemble_metric, last=last)
+        ensemble_metric = exe.test(model, optimizer, ensemble_metric, last=last)
 
 def esemble_test_kfolds(args, k=5):
     count = 0
@@ -193,7 +193,9 @@ def esemble_test_kfolds(args, k=5):
     ensemble_metric = Performance_Test_ensemble_multi(joint=True, self_supervise=True)
     with open(os.path.join(args.data_config['ins_root'], 'fold_id_mapping.json'), 'r') as jsf:
         fold_id_mapping = json.load(jsf)
-    for i in range(k):
+    for i in range(k):  
+        # if i not in [0, k-1]:
+        #     continue        # debug wise
         args.data_config['train_ids'] = fold_id_mapping[str(i)]['train_ids']
         args.data_config['eval_ids'] = fold_id_mapping[str(i)]['eval_ids']
         args.name = "{}_{:02}".format(Basic_Name, i)
@@ -208,7 +210,7 @@ def esemble_test_kfolds(args, k=5):
             last=True
         else:
             last=False
-        exe.test(model, optimizer, ensemble_metric, last=last)
+        ensemble_metric = exe.test(model, optimizer, ensemble_metric, last=last)
 
 def run_kfolds(args, k=5):
     count = 0
@@ -230,11 +232,33 @@ def run_kfolds(args, k=5):
         exe = fNIRS_Engine(train_loader, eval_loader, None, args, writer, device)
         exe.train(model, optimizer, criterion, None)
 
+def shap_leave_one_out(args, k=5):
+    count = 0
+    accu = 0
+    Basic_Name = args.name
+    IDS = args.data_config["ids"].copy()
+    for i, id in enumerate(IDS):
+        args.data_config['train_ids'] = args.data_config['ids'].copy()
+        args.data_config['train_ids'].remove(id)
+        args.data_config['eval_ids'] = [id]
+        args.name = "{}_{:02}".format(Basic_Name, i)
+        info(f"Runing {args.name} | eval ids : {args.data_config['eval_ids']}")
+
+        train_loader, eval_loader, test_loader = update_loader(i, args, test_shuffle=True)
+        model = update_model(args.model).to(device)
+        optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+        criterion = nn.CrossEntropyLoss()
+        exe = fNIRS_Engine(train_loader, eval_loader, test_loader, args, writer, device)
+        exe.shap(model, optimizer)
+
+
+
 if __name__ == "__main__":
     # generate_instructors(args)
     # generate_kfold_instructors(args, k=10)
     # run_leave_subjects_out(args)
-    run_kfolds(args, k=10)
+    # run_kfolds(args, k=10)
     # esemble_test_kfolds(args, k=10)
     # esemble_test_subjects_out(args)
+    shap_leave_one_out(args)
 

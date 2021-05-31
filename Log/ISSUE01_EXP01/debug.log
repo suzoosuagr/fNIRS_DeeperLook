@@ -145,3 +145,731 @@
 [2021-05-25 09:46:06,098] INFO    (fnirs-66): {'rt': 920, 'ewm': 1904, 'anb': 1952, 'gng': 920}
 [2021-05-25 09:46:06,426] INFO    (fnirs-66): {'rt': 4140, 'gng': 4140, 'anb': 8784, 'ewm': 8568}
 [2021-05-25 09:46:06,538] INFO    (fnirs-66): {'anb': 1952, 'ewm': 1904, 'gng': 920, 'rt': 920}
+[2021-05-28 13:11:07,368] INFO    (main_entry-174): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-28 13:11:07,455] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:11:07,470] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-28 13:11:07,484] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-28 13:11:09,315] INFO    (engine-67): Resume from 16 epoch
+[2021-05-28 13:11:15,951] INFO    (main_entry-174): Runing ISSUE01_EXP01_01 | eval ids : ['2004']
+[2021-05-28 13:11:15,998] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:11:16,012] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-28 13:11:16,027] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-28 13:11:16,066] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 13:11:22,663] INFO    (main_entry-174): Runing ISSUE01_EXP01_02 | eval ids : ['2012']
+[2021-05-28 13:11:22,754] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:11:22,768] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-28 13:11:22,782] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-28 13:11:22,820] INFO    (engine-67): Resume from 1 epoch
+[2021-05-28 13:11:29,437] INFO    (main_entry-174): Runing ISSUE01_EXP01_03 | eval ids : ['2013']
+[2021-05-28 13:11:29,484] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:11:29,499] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 13:11:29,513] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 13:11:29,551] INFO    (engine-67): Resume from 4 epoch
+[2021-05-28 13:11:36,144] INFO    (main_entry-174): Runing ISSUE01_EXP01_04 | eval ids : ['2015']
+[2021-05-28 13:11:36,233] INFO    (fnirs-66): {'rt': 4830, 'gng': 4830, 'anb': 10248, 'ewm': 9996}
+[2021-05-28 13:11:36,248] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 13:11:36,261] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 13:11:36,298] INFO    (engine-67): Resume from 10 epoch
+[2021-05-28 13:11:42,888] INFO    (main_entry-174): Runing ISSUE01_EXP01_05 | eval ids : ['8204']
+[2021-05-28 13:11:42,935] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:11:42,949] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 13:11:42,963] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 13:11:43,002] INFO    (engine-67): Resume from 4 epoch
+[2021-05-28 13:11:49,583] INFO    (main_entry-174): Runing ISSUE01_EXP01_06 | eval ids : ['8206']
+[2021-05-28 13:11:49,673] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'ewm': 9996, 'gng': 4830}
+[2021-05-28 13:11:49,687] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-28 13:11:49,701] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-28 13:11:49,739] INFO    (engine-67): Resume from 1 epoch
+[2021-05-28 13:11:56,341] INFO    (main_entry-174): Runing ISSUE01_EXP01_07 | eval ids : ['8209']
+[2021-05-28 13:11:56,388] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:11:56,402] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 13:11:56,416] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 13:11:56,455] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 13:12:03,138] INFO    (main_entry-174): Runing ISSUE01_EXP01_08 | eval ids : ['8210']
+[2021-05-28 13:12:03,184] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:12:03,198] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 13:12:03,212] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 13:12:03,251] INFO    (engine-67): Resume from 4 epoch
+[2021-05-28 13:12:09,839] INFO    (main_entry-174): Runing ISSUE01_EXP01_09 | eval ids : ['8211']
+[2021-05-28 13:12:09,931] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:12:09,945] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 13:12:09,959] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 13:12:09,996] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 13:12:16,632] INFO    (main_entry-174): Runing ISSUE01_EXP01_10 | eval ids : ['8213']
+[2021-05-28 13:12:16,678] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:12:16,692] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 13:12:16,707] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 13:12:16,746] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 13:12:23,334] INFO    (main_entry-174): Runing ISSUE01_EXP01_11 | eval ids : ['8214']
+[2021-05-28 13:12:23,426] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:12:23,440] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 13:12:23,454] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 13:12:23,492] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 13:12:30,080] INFO    (main_entry-174): Runing ISSUE01_EXP01_12 | eval ids : ['8218']
+[2021-05-28 13:12:30,126] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:12:30,141] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 13:12:30,154] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 13:12:30,194] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 13:12:36,768] INFO    (main_entry-174): Runing ISSUE01_EXP01_13 | eval ids : ['2006']
+[2021-05-28 13:12:36,860] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:12:36,873] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-28 13:12:36,887] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-28 13:12:36,925] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 13:12:43,528] INFO    (main_entry-174): Runing ISSUE01_EXP01_14 | eval ids : ['2011']
+[2021-05-28 13:12:43,574] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:12:43,589] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-28 13:12:43,602] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-28 13:12:43,641] INFO    (engine-67): Resume from 8 epoch
+[2021-05-28 13:12:50,226] INFO    (main_entry-174): Runing ISSUE01_EXP01_15 | eval ids : ['2014']
+[2021-05-28 13:12:50,317] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:12:50,331] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-28 13:12:50,345] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-28 13:12:50,380] INFO    (engine-67): Resume from 1 epoch
+[2021-05-28 13:12:56,972] INFO    (main_entry-174): Runing ISSUE01_EXP01_16 | eval ids : ['2017']
+[2021-05-28 13:12:57,018] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:12:57,032] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 13:12:57,045] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 13:12:57,082] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 13:13:03,663] INFO    (main_entry-174): Runing ISSUE01_EXP01_17 | eval ids : ['8201']
+[2021-05-28 13:13:03,754] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:13:03,769] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-28 13:13:03,783] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-28 13:13:03,821] INFO    (engine-67): Resume from 5 epoch
+[2021-05-28 13:13:10,406] INFO    (main_entry-174): Runing ISSUE01_EXP01_18 | eval ids : ['8203']
+[2021-05-28 13:13:10,454] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:13:10,468] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 13:13:10,483] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 13:13:10,520] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 13:13:17,129] INFO    (main_entry-174): Runing ISSUE01_EXP01_19 | eval ids : ['8208']
+[2021-05-28 13:13:17,220] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:13:17,234] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 13:13:17,248] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 13:13:17,285] INFO    (engine-67): Resume from 27 epoch
+[2021-05-28 13:13:23,870] INFO    (main_entry-174): Runing ISSUE01_EXP01_20 | eval ids : ['8216']
+[2021-05-28 13:13:23,916] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:13:23,931] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 13:13:23,945] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 13:13:23,982] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 13:13:30,572] INFO    (main_entry-174): Runing ISSUE01_EXP01_21 | eval ids : ['2003']
+[2021-05-28 13:13:30,661] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 13:13:30,675] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 13:13:30,689] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 13:13:30,725] INFO    (engine-67): Resume from 13 epoch
+[2021-05-28 13:13:37,313] INFO    (engine-74): ACCURACY_wml = 0.9240056818181818 
+[2021-05-28 13:13:37,322] INFO    (engine-75): Precision_wml = [0.955      0.85142857 0.97722567] 
+[2021-05-28 13:13:37,330] INFO    (engine-76): RECALL_wml = [0.83043478 0.93907563 1.        ] 
+[2021-05-28 13:13:37,339] INFO    (engine-77): F1_wml = [0.88837209 0.89310689 0.98848168] 
+[2021-05-28 13:13:37,588] INFO    (engine-74): ACCURACY_vpl = 0.9289772727272727 
+[2021-05-28 13:13:37,597] INFO    (engine-75): Precision_vpl = [0.98128898 0.95781638 0.85877863] 
+[2021-05-28 13:13:37,606] INFO    (engine-76): RECALL_vpl = [1.         0.83913043 0.94537815] 
+[2021-05-28 13:13:37,614] INFO    (engine-77): F1_vpl = [0.99055614 0.89455388 0.9       ] 
+[2021-05-28 15:42:40,301] INFO    (main_entry-174): Runing ISSUE01_EXP01_00 | eval ids : ['2003']
+[2021-05-28 15:42:40,390] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:42:40,404] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-28 15:42:40,417] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-28 15:42:42,251] INFO    (engine-67): Resume from 16 epoch
+[2021-05-28 15:42:48,586] INFO    (main_entry-174): Runing ISSUE01_EXP01_01 | eval ids : ['8216']
+[2021-05-28 15:42:48,632] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:42:48,646] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-28 15:42:48,660] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-28 15:42:48,692] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 15:42:55,011] INFO    (main_entry-174): Runing ISSUE01_EXP01_02 | eval ids : ['8208']
+[2021-05-28 15:42:55,101] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:42:55,115] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-28 15:42:55,128] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-28 15:42:55,159] INFO    (engine-67): Resume from 1 epoch
+[2021-05-28 15:43:01,467] INFO    (main_entry-174): Runing ISSUE01_EXP01_03 | eval ids : ['8203']
+[2021-05-28 15:43:01,513] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:43:01,527] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 15:43:01,541] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 15:43:01,572] INFO    (engine-67): Resume from 4 epoch
+[2021-05-28 15:43:07,896] INFO    (main_entry-174): Runing ISSUE01_EXP01_04 | eval ids : ['8201']
+[2021-05-28 15:43:07,986] INFO    (fnirs-66): {'rt': 4830, 'gng': 4830, 'anb': 10248, 'ewm': 9996}
+[2021-05-28 15:43:07,999] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 15:43:08,013] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 15:43:08,044] INFO    (engine-67): Resume from 10 epoch
+[2021-05-28 15:43:14,357] INFO    (main_entry-174): Runing ISSUE01_EXP01_05 | eval ids : ['2017']
+[2021-05-28 15:43:14,403] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:43:14,416] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 15:43:14,430] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 15:43:14,461] INFO    (engine-67): Resume from 4 epoch
+[2021-05-28 15:43:20,768] INFO    (main_entry-174): Runing ISSUE01_EXP01_06 | eval ids : ['2014']
+[2021-05-28 15:43:20,856] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'ewm': 9996, 'gng': 4830}
+[2021-05-28 15:43:20,870] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-28 15:43:20,884] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-28 15:43:20,915] INFO    (engine-67): Resume from 1 epoch
+[2021-05-28 15:43:27,235] INFO    (main_entry-174): Runing ISSUE01_EXP01_07 | eval ids : ['2011']
+[2021-05-28 15:43:27,280] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:43:27,294] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 15:43:27,307] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 15:43:27,338] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 15:43:33,735] INFO    (main_entry-174): Runing ISSUE01_EXP01_08 | eval ids : ['2006']
+[2021-05-28 15:43:33,781] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:43:33,794] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 15:43:33,807] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 15:43:33,838] INFO    (engine-67): Resume from 4 epoch
+[2021-05-28 15:43:40,252] INFO    (main_entry-174): Runing ISSUE01_EXP01_09 | eval ids : ['8218']
+[2021-05-28 15:43:40,342] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:43:40,355] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 15:43:40,370] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 15:43:40,401] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 15:43:46,820] INFO    (main_entry-174): Runing ISSUE01_EXP01_10 | eval ids : ['8214']
+[2021-05-28 15:43:46,866] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:43:46,879] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 15:43:46,893] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 15:43:46,925] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 15:43:53,339] INFO    (main_entry-174): Runing ISSUE01_EXP01_11 | eval ids : ['8213']
+[2021-05-28 15:43:53,430] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:43:53,443] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 15:43:53,456] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 15:43:53,488] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 15:43:59,906] INFO    (main_entry-174): Runing ISSUE01_EXP01_12 | eval ids : ['8211']
+[2021-05-28 15:43:59,951] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:43:59,965] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 15:43:59,978] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 15:44:00,010] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 15:44:06,455] INFO    (main_entry-174): Runing ISSUE01_EXP01_13 | eval ids : ['8210']
+[2021-05-28 15:44:06,545] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:44:06,559] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-28 15:44:06,572] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-28 15:44:06,604] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 15:44:13,025] INFO    (main_entry-174): Runing ISSUE01_EXP01_14 | eval ids : ['8209']
+[2021-05-28 15:44:13,070] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:44:13,083] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-28 15:44:13,096] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-28 15:44:13,127] INFO    (engine-67): Resume from 8 epoch
+[2021-05-28 15:44:19,546] INFO    (main_entry-174): Runing ISSUE01_EXP01_15 | eval ids : ['8206']
+[2021-05-28 15:44:19,638] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:44:19,651] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-28 15:44:19,665] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-28 15:44:19,696] INFO    (engine-67): Resume from 1 epoch
+[2021-05-28 15:44:26,115] INFO    (main_entry-174): Runing ISSUE01_EXP01_16 | eval ids : ['8204']
+[2021-05-28 15:44:26,160] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:44:26,173] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 15:44:26,186] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 15:44:26,217] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 15:44:32,638] INFO    (main_entry-174): Runing ISSUE01_EXP01_17 | eval ids : ['2015']
+[2021-05-28 15:44:32,728] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:44:32,742] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-28 15:44:32,755] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-28 15:44:32,787] INFO    (engine-67): Resume from 5 epoch
+[2021-05-28 15:44:39,201] INFO    (main_entry-174): Runing ISSUE01_EXP01_18 | eval ids : ['2013']
+[2021-05-28 15:44:39,246] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:44:39,259] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 15:44:39,274] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 15:44:39,306] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 15:44:45,797] INFO    (main_entry-174): Runing ISSUE01_EXP01_19 | eval ids : ['2012']
+[2021-05-28 15:44:45,886] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:44:45,900] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 15:44:45,913] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 15:44:45,945] INFO    (engine-67): Resume from 27 epoch
+[2021-05-28 15:44:52,396] INFO    (main_entry-174): Runing ISSUE01_EXP01_20 | eval ids : ['2004']
+[2021-05-28 15:44:52,441] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:44:52,455] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 15:44:52,468] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 15:44:52,500] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 15:44:58,925] INFO    (main_entry-174): Runing ISSUE01_EXP01_21 | eval ids : ['2001']
+[2021-05-28 15:44:59,015] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 15:44:59,029] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 15:44:59,042] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 15:44:59,074] INFO    (engine-67): Resume from 13 epoch
+[2021-05-28 15:45:05,490] INFO    (engine-74): ACCURACY_wml = 0.9240056818181818 
+[2021-05-28 15:45:05,499] INFO    (engine-75): Precision_wml = [0.955      0.85142857 0.97722567] 
+[2021-05-28 15:45:05,506] INFO    (engine-76): RECALL_wml = [0.83043478 0.93907563 1.        ] 
+[2021-05-28 15:45:05,514] INFO    (engine-77): F1_wml = [0.88837209 0.89310689 0.98848168] 
+[2021-05-28 15:45:05,759] INFO    (engine-74): ACCURACY_vpl = 0.9289772727272727 
+[2021-05-28 15:45:05,768] INFO    (engine-75): Precision_vpl = [0.98128898 0.95781638 0.85877863] 
+[2021-05-28 15:45:05,776] INFO    (engine-76): RECALL_vpl = [1.         0.83913043 0.94537815] 
+[2021-05-28 15:45:05,784] INFO    (engine-77): F1_vpl = [0.99055614 0.89455388 0.9       ] 
+[2021-05-28 19:34:58,964] INFO    (main_entry-174): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-28 19:34:59,051] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:34:59,065] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-28 19:34:59,079] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-28 19:35:06,439] INFO    (engine-67): Resume from 16 epoch
+[2021-05-28 19:40:18,125] INFO    (main_entry-174): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-28 19:40:18,211] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:40:18,226] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-28 19:40:18,240] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-28 19:40:20,110] INFO    (engine-67): Resume from 16 epoch
+[2021-05-28 19:40:26,799] INFO    (main_entry-174): Runing ISSUE01_EXP01_01 | eval ids : ['2004']
+[2021-05-28 19:40:26,846] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:40:26,860] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-28 19:40:26,875] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-28 19:40:26,909] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 19:40:33,472] INFO    (main_entry-174): Runing ISSUE01_EXP01_02 | eval ids : ['2012']
+[2021-05-28 19:40:33,564] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:40:33,578] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-28 19:40:33,592] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-28 19:40:33,626] INFO    (engine-67): Resume from 1 epoch
+[2021-05-28 19:40:40,205] INFO    (main_entry-174): Runing ISSUE01_EXP01_03 | eval ids : ['2013']
+[2021-05-28 19:40:40,252] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:40:40,266] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 19:40:40,280] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 19:40:40,312] INFO    (engine-67): Resume from 4 epoch
+[2021-05-28 19:40:46,765] INFO    (main_entry-174): Runing ISSUE01_EXP01_04 | eval ids : ['2015']
+[2021-05-28 19:40:46,854] INFO    (fnirs-66): {'rt': 4830, 'gng': 4830, 'anb': 10248, 'ewm': 9996}
+[2021-05-28 19:40:46,868] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 19:40:46,882] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 19:40:46,915] INFO    (engine-67): Resume from 10 epoch
+[2021-05-28 19:40:53,362] INFO    (main_entry-174): Runing ISSUE01_EXP01_05 | eval ids : ['8204']
+[2021-05-28 19:40:53,408] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:40:53,422] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 19:40:53,436] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 19:40:53,468] INFO    (engine-67): Resume from 4 epoch
+[2021-05-28 19:40:59,915] INFO    (main_entry-174): Runing ISSUE01_EXP01_06 | eval ids : ['8206']
+[2021-05-28 19:41:00,004] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'ewm': 9996, 'gng': 4830}
+[2021-05-28 19:41:00,018] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-28 19:41:00,032] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-28 19:41:00,065] INFO    (engine-67): Resume from 1 epoch
+[2021-05-28 19:41:06,512] INFO    (main_entry-174): Runing ISSUE01_EXP01_07 | eval ids : ['8209']
+[2021-05-28 19:41:06,557] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:41:06,571] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 19:41:06,584] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-28 19:41:06,617] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 19:41:13,100] INFO    (main_entry-174): Runing ISSUE01_EXP01_08 | eval ids : ['8210']
+[2021-05-28 19:41:13,146] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:41:13,160] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 19:41:13,174] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 19:41:13,206] INFO    (engine-67): Resume from 4 epoch
+[2021-05-28 19:41:19,656] INFO    (main_entry-174): Runing ISSUE01_EXP01_09 | eval ids : ['8211']
+[2021-05-28 19:41:19,747] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:41:19,761] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 19:41:19,776] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 19:41:19,808] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 19:41:26,306] INFO    (main_entry-174): Runing ISSUE01_EXP01_10 | eval ids : ['8213']
+[2021-05-28 19:41:26,352] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:41:26,366] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 19:41:26,380] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 19:41:26,413] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 19:41:32,866] INFO    (main_entry-174): Runing ISSUE01_EXP01_11 | eval ids : ['8214']
+[2021-05-28 19:41:32,958] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:41:32,971] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 19:41:32,985] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-28 19:41:33,017] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 19:41:39,487] INFO    (main_entry-174): Runing ISSUE01_EXP01_12 | eval ids : ['8218']
+[2021-05-28 19:41:39,533] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:41:39,548] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 19:41:39,561] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-28 19:41:39,594] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 19:41:46,053] INFO    (main_entry-174): Runing ISSUE01_EXP01_13 | eval ids : ['2006']
+[2021-05-28 19:41:46,144] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:41:46,158] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-28 19:41:46,171] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-28 19:41:46,203] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 19:41:52,645] INFO    (main_entry-174): Runing ISSUE01_EXP01_14 | eval ids : ['2011']
+[2021-05-28 19:41:52,691] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:41:52,704] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-28 19:41:52,717] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-28 19:41:52,749] INFO    (engine-67): Resume from 8 epoch
+[2021-05-28 19:41:59,202] INFO    (main_entry-174): Runing ISSUE01_EXP01_15 | eval ids : ['2014']
+[2021-05-28 19:41:59,292] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:41:59,306] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-28 19:41:59,319] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-28 19:41:59,350] INFO    (engine-67): Resume from 1 epoch
+[2021-05-28 19:42:05,800] INFO    (main_entry-174): Runing ISSUE01_EXP01_16 | eval ids : ['2017']
+[2021-05-28 19:42:05,844] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:42:05,858] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 19:42:05,870] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 19:42:05,902] INFO    (engine-67): Resume from 6 epoch
+[2021-05-28 19:42:12,367] INFO    (main_entry-174): Runing ISSUE01_EXP01_17 | eval ids : ['8201']
+[2021-05-28 19:42:12,457] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:42:12,472] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-28 19:42:12,484] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-28 19:42:12,516] INFO    (engine-67): Resume from 5 epoch
+[2021-05-28 19:42:18,960] INFO    (main_entry-174): Runing ISSUE01_EXP01_18 | eval ids : ['8203']
+[2021-05-28 19:42:19,006] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:42:19,019] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 19:42:19,033] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-28 19:42:19,066] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 19:42:25,509] INFO    (main_entry-174): Runing ISSUE01_EXP01_19 | eval ids : ['8208']
+[2021-05-28 19:42:25,599] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:42:25,612] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 19:42:25,625] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-28 19:42:25,657] INFO    (engine-67): Resume from 27 epoch
+[2021-05-28 19:42:32,108] INFO    (main_entry-174): Runing ISSUE01_EXP01_20 | eval ids : ['8216']
+[2021-05-28 19:42:32,153] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:42:32,167] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 19:42:32,180] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 19:42:32,213] INFO    (engine-67): Resume from 0 epoch
+[2021-05-28 19:42:38,651] INFO    (main_entry-174): Runing ISSUE01_EXP01_21 | eval ids : ['2003']
+[2021-05-28 19:42:38,741] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-28 19:42:38,754] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 19:42:38,767] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-28 19:42:38,799] INFO    (engine-67): Resume from 13 epoch
+[2021-05-28 19:42:45,284] INFO    (engine-74): ACCURACY_wml = 0.8078512396694215 
+[2021-05-28 19:42:45,293] INFO    (engine-75): Precision_wml = [0.85125303 0.75655431 0.81474868] 
+[2021-05-28 19:42:45,301] INFO    (engine-76): RECALL_wml = [0.84307446 0.72031611 0.86029412] 
+[2021-05-28 19:42:45,309] INFO    (engine-77): F1_wml = [0.84714401 0.73799062 0.8369022 ] 
+[2021-05-28 19:42:45,563] INFO    (engine-74): ACCURACY_vpl = 0.805623708677686 
+[2021-05-28 19:42:45,572] INFO    (engine-75): Precision_vpl = [0.81603398 0.85331961 0.74728916] 
+[2021-05-28 19:42:45,580] INFO    (engine-76): RECALL_vpl = [0.86934389 0.82966373 0.71732845] 
+[2021-05-28 19:42:45,588] INFO    (engine-77): F1_vpl = [0.84184582 0.84132542 0.73200236] 
+[2021-05-30 16:41:40,600] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-30 16:41:42,276] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 16:41:42,301] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 16:41:42,326] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 16:41:50,866] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-30 16:43:04,864] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-30 16:43:04,921] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 16:43:04,942] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 16:43:04,964] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 16:43:07,134] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-30 16:44:18,096] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-30 16:44:18,153] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 16:44:18,175] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 16:44:18,197] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 16:44:20,338] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-30 17:42:19,179] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-30 17:42:19,913] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 17:42:19,939] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:42:19,965] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:43:16,030] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-30 17:43:16,085] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 17:43:16,108] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:43:16,130] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:43:19,212] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-30 17:44:04,204] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-30 17:44:04,263] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 17:44:04,285] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:44:04,307] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:44:07,684] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-30 17:44:46,215] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-30 17:44:46,271] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 17:44:46,292] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:44:46,314] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:44:52,528] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-30 17:45:28,003] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-30 17:45:28,059] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 17:45:28,081] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:45:28,103] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:45:32,162] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-30 17:47:21,878] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-30 17:47:21,906] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 17:47:21,908] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:47:21,911] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 17:47:24,028] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-30 17:49:55,428] INFO    (main_entry-245): Runing ISSUE01_EXP01_01 | eval ids : ['2004']
+[2021-05-30 17:49:55,456] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 17:49:55,458] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-30 17:49:55,461] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-30 17:49:55,493] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 17:52:26,388] INFO    (main_entry-245): Runing ISSUE01_EXP01_02 | eval ids : ['2012']
+[2021-05-30 17:52:26,416] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 17:52:26,419] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-30 17:52:26,421] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-30 17:52:26,456] INFO    (engine-88): Shap resume from 1 epoch
+[2021-05-30 17:54:57,457] INFO    (main_entry-245): Runing ISSUE01_EXP01_03 | eval ids : ['2013']
+[2021-05-30 17:54:57,485] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 17:54:57,488] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 17:54:57,490] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 17:54:57,524] INFO    (engine-88): Shap resume from 4 epoch
+[2021-05-30 17:57:28,841] INFO    (main_entry-245): Runing ISSUE01_EXP01_04 | eval ids : ['2015']
+[2021-05-30 17:57:28,868] INFO    (fnirs-66): {'rt': 4830, 'gng': 4830, 'anb': 10248, 'ewm': 9996}
+[2021-05-30 17:57:28,871] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 17:57:28,874] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 17:57:28,909] INFO    (engine-88): Shap resume from 10 epoch
+[2021-05-30 17:59:59,807] INFO    (main_entry-245): Runing ISSUE01_EXP01_05 | eval ids : ['8204']
+[2021-05-30 17:59:59,918] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 17:59:59,922] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 17:59:59,924] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 17:59:59,954] INFO    (engine-88): Shap resume from 4 epoch
+[2021-05-30 18:02:30,689] INFO    (main_entry-245): Runing ISSUE01_EXP01_06 | eval ids : ['8206']
+[2021-05-30 18:02:30,716] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'ewm': 9996, 'gng': 4830}
+[2021-05-30 18:02:30,718] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-30 18:02:30,721] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-30 18:02:30,754] INFO    (engine-88): Shap resume from 1 epoch
+[2021-05-30 18:05:01,578] INFO    (main_entry-245): Runing ISSUE01_EXP01_07 | eval ids : ['8209']
+[2021-05-30 18:05:01,605] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:05:01,608] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 18:05:01,611] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 18:05:01,643] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 18:07:32,752] INFO    (main_entry-245): Runing ISSUE01_EXP01_08 | eval ids : ['8210']
+[2021-05-30 18:07:32,779] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:07:32,782] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 18:07:32,785] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 18:07:32,818] INFO    (engine-88): Shap resume from 4 epoch
+[2021-05-30 18:10:03,555] INFO    (main_entry-245): Runing ISSUE01_EXP01_09 | eval ids : ['8211']
+[2021-05-30 18:10:03,670] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:10:03,672] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 18:10:03,675] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 18:10:03,707] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 18:12:34,264] INFO    (main_entry-245): Runing ISSUE01_EXP01_10 | eval ids : ['8213']
+[2021-05-30 18:12:34,290] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:12:34,293] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 18:12:34,295] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 18:12:34,327] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 18:15:05,578] INFO    (main_entry-245): Runing ISSUE01_EXP01_11 | eval ids : ['8214']
+[2021-05-30 18:15:05,604] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:15:05,607] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 18:15:05,610] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 18:15:05,642] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 18:17:36,084] INFO    (main_entry-245): Runing ISSUE01_EXP01_12 | eval ids : ['8218']
+[2021-05-30 18:17:36,196] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:17:36,199] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 18:17:36,202] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 18:17:36,235] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 18:20:06,237] INFO    (main_entry-245): Runing ISSUE01_EXP01_13 | eval ids : ['2006']
+[2021-05-30 18:20:06,263] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:20:06,266] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-30 18:20:06,268] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-30 18:20:06,300] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 18:22:36,640] INFO    (main_entry-245): Runing ISSUE01_EXP01_14 | eval ids : ['2011']
+[2021-05-30 18:22:36,667] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:22:36,669] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-30 18:22:36,672] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-30 18:22:36,704] INFO    (engine-88): Shap resume from 8 epoch
+[2021-05-30 18:25:06,835] INFO    (main_entry-245): Runing ISSUE01_EXP01_15 | eval ids : ['2014']
+[2021-05-30 18:25:06,944] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:25:06,946] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-30 18:25:06,949] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-30 18:25:06,982] INFO    (engine-88): Shap resume from 1 epoch
+[2021-05-30 18:27:36,649] INFO    (main_entry-245): Runing ISSUE01_EXP01_16 | eval ids : ['2017']
+[2021-05-30 18:27:36,675] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:27:36,678] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 18:27:36,681] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 18:27:36,713] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 18:30:05,848] INFO    (main_entry-245): Runing ISSUE01_EXP01_17 | eval ids : ['8201']
+[2021-05-30 18:30:05,874] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:30:05,877] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-30 18:30:05,880] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-30 18:30:05,915] INFO    (engine-88): Shap resume from 5 epoch
+[2021-05-30 18:32:35,870] INFO    (main_entry-245): Runing ISSUE01_EXP01_18 | eval ids : ['8203']
+[2021-05-30 18:32:35,896] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:32:35,899] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 18:32:35,901] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 18:32:35,934] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 18:35:05,857] INFO    (main_entry-245): Runing ISSUE01_EXP01_19 | eval ids : ['8208']
+[2021-05-30 18:35:05,970] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:35:05,972] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 18:35:05,975] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 18:35:06,010] INFO    (engine-88): Shap resume from 27 epoch
+[2021-05-30 18:37:35,610] INFO    (main_entry-245): Runing ISSUE01_EXP01_20 | eval ids : ['8216']
+[2021-05-30 18:37:35,636] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:37:35,640] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 18:37:35,642] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 18:37:35,676] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 18:40:05,169] INFO    (main_entry-245): Runing ISSUE01_EXP01_21 | eval ids : ['2003']
+[2021-05-30 18:40:05,195] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 18:40:05,198] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 18:40:05,200] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 18:40:05,233] INFO    (engine-88): Shap resume from 13 epoch
+[2021-05-30 19:14:30,581] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-30 19:14:30,609] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:14:30,612] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 19:14:30,615] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 19:14:32,750] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-30 19:17:04,187] INFO    (main_entry-245): Runing ISSUE01_EXP01_01 | eval ids : ['2004']
+[2021-05-30 19:17:04,216] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:17:04,219] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-30 19:17:04,221] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-30 19:17:04,253] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 19:19:34,099] INFO    (main_entry-245): Runing ISSUE01_EXP01_02 | eval ids : ['2012']
+[2021-05-30 19:19:34,127] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:19:34,130] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-30 19:19:34,132] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-30 19:19:34,164] INFO    (engine-88): Shap resume from 1 epoch
+[2021-05-30 19:22:04,718] INFO    (main_entry-245): Runing ISSUE01_EXP01_03 | eval ids : ['2013']
+[2021-05-30 19:22:04,745] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:22:04,748] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 19:22:04,751] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 19:22:04,784] INFO    (engine-88): Shap resume from 4 epoch
+[2021-05-30 19:24:35,142] INFO    (main_entry-245): Runing ISSUE01_EXP01_04 | eval ids : ['2015']
+[2021-05-30 19:24:35,169] INFO    (fnirs-66): {'rt': 4830, 'gng': 4830, 'anb': 10248, 'ewm': 9996}
+[2021-05-30 19:24:35,172] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 19:24:35,175] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 19:24:35,207] INFO    (engine-88): Shap resume from 10 epoch
+[2021-05-30 19:27:05,545] INFO    (main_entry-245): Runing ISSUE01_EXP01_05 | eval ids : ['8204']
+[2021-05-30 19:27:05,658] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:27:05,662] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 19:27:05,664] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 19:27:05,696] INFO    (engine-88): Shap resume from 4 epoch
+[2021-05-30 19:29:35,261] INFO    (main_entry-245): Runing ISSUE01_EXP01_06 | eval ids : ['8206']
+[2021-05-30 19:29:35,288] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'ewm': 9996, 'gng': 4830}
+[2021-05-30 19:29:35,291] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-30 19:29:35,293] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-30 19:29:35,326] INFO    (engine-88): Shap resume from 1 epoch
+[2021-05-30 19:32:05,008] INFO    (main_entry-245): Runing ISSUE01_EXP01_07 | eval ids : ['8209']
+[2021-05-30 19:32:05,037] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:32:05,040] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 19:32:05,043] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 19:32:05,076] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 19:34:34,708] INFO    (main_entry-245): Runing ISSUE01_EXP01_08 | eval ids : ['8210']
+[2021-05-30 19:34:34,736] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:34:34,740] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 19:34:34,742] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 19:34:34,774] INFO    (engine-88): Shap resume from 4 epoch
+[2021-05-30 19:37:04,218] INFO    (main_entry-245): Runing ISSUE01_EXP01_09 | eval ids : ['8211']
+[2021-05-30 19:37:04,332] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:37:04,335] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 19:37:04,338] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 19:37:04,370] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 19:39:33,727] INFO    (main_entry-245): Runing ISSUE01_EXP01_10 | eval ids : ['8213']
+[2021-05-30 19:39:33,754] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:39:33,757] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 19:39:33,759] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 19:39:33,791] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 19:42:03,359] INFO    (main_entry-245): Runing ISSUE01_EXP01_11 | eval ids : ['8214']
+[2021-05-30 19:42:03,386] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:42:03,389] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 19:42:03,392] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 19:42:03,417] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 19:44:32,763] INFO    (main_entry-245): Runing ISSUE01_EXP01_12 | eval ids : ['8218']
+[2021-05-30 19:44:32,878] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:44:32,881] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 19:44:32,884] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 19:44:32,914] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 19:47:02,176] INFO    (main_entry-245): Runing ISSUE01_EXP01_13 | eval ids : ['2006']
+[2021-05-30 19:47:02,203] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:47:02,205] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-30 19:47:02,208] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-30 19:47:02,241] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 19:49:31,288] INFO    (main_entry-245): Runing ISSUE01_EXP01_14 | eval ids : ['2011']
+[2021-05-30 19:49:31,316] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:49:31,318] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-30 19:49:31,321] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-30 19:49:31,352] INFO    (engine-88): Shap resume from 8 epoch
+[2021-05-30 19:52:00,758] INFO    (main_entry-245): Runing ISSUE01_EXP01_15 | eval ids : ['2014']
+[2021-05-30 19:52:00,867] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:52:00,870] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-30 19:52:00,872] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-30 19:52:00,905] INFO    (engine-88): Shap resume from 1 epoch
+[2021-05-30 19:54:30,243] INFO    (main_entry-245): Runing ISSUE01_EXP01_16 | eval ids : ['2017']
+[2021-05-30 19:54:30,270] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:54:30,273] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 19:54:30,275] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 19:54:30,308] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 19:56:59,666] INFO    (main_entry-245): Runing ISSUE01_EXP01_17 | eval ids : ['8201']
+[2021-05-30 19:56:59,693] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:56:59,695] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-30 19:56:59,698] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-30 19:56:59,729] INFO    (engine-88): Shap resume from 5 epoch
+[2021-05-30 19:59:29,040] INFO    (main_entry-245): Runing ISSUE01_EXP01_18 | eval ids : ['8203']
+[2021-05-30 19:59:29,066] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 19:59:29,069] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 19:59:29,071] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 19:59:29,103] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 20:01:58,747] INFO    (main_entry-245): Runing ISSUE01_EXP01_19 | eval ids : ['8208']
+[2021-05-30 20:01:58,860] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:01:58,863] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 20:01:58,866] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 20:01:58,900] INFO    (engine-88): Shap resume from 27 epoch
+[2021-05-30 20:04:28,457] INFO    (main_entry-245): Runing ISSUE01_EXP01_20 | eval ids : ['8216']
+[2021-05-30 20:04:28,483] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:04:28,486] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 20:04:28,489] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 20:04:28,521] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 20:06:57,997] INFO    (main_entry-245): Runing ISSUE01_EXP01_21 | eval ids : ['2003']
+[2021-05-30 20:06:58,024] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:06:58,027] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 20:06:58,029] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 20:06:58,061] INFO    (engine-88): Shap resume from 13 epoch
+[2021-05-30 20:21:04,778] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-30 20:21:04,806] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:21:04,809] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 20:21:04,812] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-30 20:21:06,934] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-30 20:23:36,872] INFO    (main_entry-245): Runing ISSUE01_EXP01_01 | eval ids : ['2004']
+[2021-05-30 20:23:36,900] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:23:36,903] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-30 20:23:36,906] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'anb': 488, 'gng': 230}
+[2021-05-30 20:23:36,939] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 20:26:06,874] INFO    (main_entry-245): Runing ISSUE01_EXP01_02 | eval ids : ['2012']
+[2021-05-30 20:26:06,901] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:26:06,904] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-30 20:26:06,906] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'gng': 230, 'ewm': 476}
+[2021-05-30 20:26:06,939] INFO    (engine-88): Shap resume from 1 epoch
+[2021-05-30 20:28:37,340] INFO    (main_entry-245): Runing ISSUE01_EXP01_03 | eval ids : ['2013']
+[2021-05-30 20:28:37,368] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:28:37,371] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 20:28:37,373] INFO    (fnirs-66): {'rt': 230, 'gng': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 20:28:37,405] INFO    (engine-88): Shap resume from 4 epoch
+[2021-05-30 20:31:07,752] INFO    (main_entry-245): Runing ISSUE01_EXP01_04 | eval ids : ['2015']
+[2021-05-30 20:31:07,780] INFO    (fnirs-66): {'rt': 4830, 'gng': 4830, 'anb': 10248, 'ewm': 9996}
+[2021-05-30 20:31:07,783] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 20:31:07,786] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 20:31:07,818] INFO    (engine-88): Shap resume from 10 epoch
+[2021-05-30 20:33:38,369] INFO    (main_entry-245): Runing ISSUE01_EXP01_05 | eval ids : ['8204']
+[2021-05-30 20:33:38,481] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:33:38,485] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 20:33:38,487] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 20:33:38,523] INFO    (engine-88): Shap resume from 4 epoch
+[2021-05-30 20:36:08,637] INFO    (main_entry-245): Runing ISSUE01_EXP01_06 | eval ids : ['8206']
+[2021-05-30 20:36:08,664] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'ewm': 9996, 'gng': 4830}
+[2021-05-30 20:36:08,667] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-30 20:36:08,670] INFO    (fnirs-66): {'gng': 230, 'anb': 488, 'ewm': 476, 'rt': 230}
+[2021-05-30 20:36:08,706] INFO    (engine-88): Shap resume from 1 epoch
+[2021-05-30 20:38:38,909] INFO    (main_entry-245): Runing ISSUE01_EXP01_07 | eval ids : ['8209']
+[2021-05-30 20:38:38,936] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:38:38,938] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 20:38:38,942] INFO    (fnirs-66): {'anb': 488, 'ewm': 476, 'gng': 230, 'rt': 230}
+[2021-05-30 20:38:38,973] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 20:41:09,177] INFO    (main_entry-245): Runing ISSUE01_EXP01_08 | eval ids : ['8210']
+[2021-05-30 20:41:09,204] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:41:09,208] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 20:41:09,210] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 20:41:09,242] INFO    (engine-88): Shap resume from 4 epoch
+[2021-05-30 20:43:39,066] INFO    (main_entry-245): Runing ISSUE01_EXP01_09 | eval ids : ['8211']
+[2021-05-30 20:43:39,181] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:43:39,185] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 20:43:39,187] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 20:43:39,220] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 20:46:09,846] INFO    (main_entry-245): Runing ISSUE01_EXP01_10 | eval ids : ['8213']
+[2021-05-30 20:46:09,872] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:46:09,875] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 20:46:09,878] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 20:46:09,911] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 20:48:40,207] INFO    (main_entry-245): Runing ISSUE01_EXP01_11 | eval ids : ['8214']
+[2021-05-30 20:48:40,235] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:48:40,237] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 20:48:40,240] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'ewm': 476, 'anb': 488}
+[2021-05-30 20:48:40,273] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 20:51:10,602] INFO    (main_entry-245): Runing ISSUE01_EXP01_12 | eval ids : ['8218']
+[2021-05-30 20:51:10,718] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:51:10,721] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 20:51:10,724] INFO    (fnirs-66): {'gng': 230, 'rt': 230, 'anb': 488, 'ewm': 476}
+[2021-05-30 20:51:10,757] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 20:53:41,337] INFO    (main_entry-245): Runing ISSUE01_EXP01_13 | eval ids : ['2006']
+[2021-05-30 20:53:41,363] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:53:41,366] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-30 20:53:41,369] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'rt': 230, 'anb': 488}
+[2021-05-30 20:53:41,401] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 20:56:11,994] INFO    (main_entry-245): Runing ISSUE01_EXP01_14 | eval ids : ['2011']
+[2021-05-30 20:56:12,020] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:56:12,023] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-30 20:56:12,025] INFO    (fnirs-66): {'anb': 488, 'gng': 230, 'rt': 230, 'ewm': 476}
+[2021-05-30 20:56:12,059] INFO    (engine-88): Shap resume from 8 epoch
+[2021-05-30 20:58:42,245] INFO    (main_entry-245): Runing ISSUE01_EXP01_15 | eval ids : ['2014']
+[2021-05-30 20:58:42,356] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 20:58:42,359] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-30 20:58:42,362] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'gng': 230, 'anb': 488}
+[2021-05-30 20:58:42,395] INFO    (engine-88): Shap resume from 1 epoch
+[2021-05-30 21:01:12,970] INFO    (main_entry-245): Runing ISSUE01_EXP01_16 | eval ids : ['2017']
+[2021-05-30 21:01:12,997] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 21:01:13,000] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 21:01:13,003] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 21:01:13,034] INFO    (engine-88): Shap resume from 6 epoch
+[2021-05-30 21:03:43,724] INFO    (main_entry-245): Runing ISSUE01_EXP01_17 | eval ids : ['8201']
+[2021-05-30 21:03:43,751] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 21:03:43,754] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-30 21:03:43,756] INFO    (fnirs-66): {'gng': 230, 'ewm': 476, 'anb': 488, 'rt': 230}
+[2021-05-30 21:03:43,789] INFO    (engine-88): Shap resume from 5 epoch
+[2021-05-30 21:06:14,250] INFO    (main_entry-245): Runing ISSUE01_EXP01_18 | eval ids : ['8203']
+[2021-05-30 21:06:14,276] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 21:06:14,279] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 21:06:14,282] INFO    (fnirs-66): {'ewm': 476, 'rt': 230, 'gng': 230, 'anb': 488}
+[2021-05-30 21:06:14,317] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 21:08:44,788] INFO    (main_entry-245): Runing ISSUE01_EXP01_19 | eval ids : ['8208']
+[2021-05-30 21:08:44,902] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 21:08:44,904] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 21:08:44,907] INFO    (fnirs-66): {'rt': 230, 'ewm': 476, 'anb': 488, 'gng': 230}
+[2021-05-30 21:08:44,939] INFO    (engine-88): Shap resume from 27 epoch
+[2021-05-30 21:11:14,779] INFO    (main_entry-245): Runing ISSUE01_EXP01_20 | eval ids : ['8216']
+[2021-05-30 21:11:14,805] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 21:11:14,808] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 21:11:14,811] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 21:11:14,845] INFO    (engine-88): Shap resume from 0 epoch
+[2021-05-30 21:13:44,973] INFO    (main_entry-245): Runing ISSUE01_EXP01_21 | eval ids : ['2003']
+[2021-05-30 21:13:44,999] INFO    (fnirs-66): {'rt': 4830, 'anb': 10248, 'gng': 4830, 'ewm': 9996}
+[2021-05-30 21:13:45,001] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 21:13:45,004] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
+[2021-05-30 21:13:45,039] INFO    (engine-88): Shap resume from 13 epoch
