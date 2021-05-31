@@ -873,3 +873,73 @@
 [2021-05-30 21:13:45,001] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
 [2021-05-30 21:13:45,004] INFO    (fnirs-66): {'ewm': 476, 'gng': 230, 'rt': 230, 'anb': 488}
 [2021-05-30 21:13:45,039] INFO    (engine-88): Shap resume from 13 epoch
+[2021-05-31 01:09:41,170] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:09:41,225] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:09:41,247] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:09:41,268] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:09:43,428] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-31 01:10:17,486] INFO    (main_entry-245): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:10:17,546] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:10:17,569] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:10:17,592] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:10:19,805] INFO    (engine-88): Shap resume from 16 epoch
+[2021-05-31 01:20:08,795] INFO    (main_entry-236): PROCESSING WML
+[2021-05-31 01:20:08,810] INFO    (main_entry-244): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:20:08,866] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:20:08,887] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:20:08,909] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:20:11,062] INFO    (engine-92): Shap resume from 16 epoch
+[2021-05-31 01:27:42,866] INFO    (main_entry-236): PROCESSING WML
+[2021-05-31 01:27:42,885] INFO    (main_entry-244): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:27:42,950] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:27:42,973] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:27:42,995] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:27:45,167] INFO    (engine-92): Shap resume from 16 epoch
+[2021-05-31 01:38:47,314] INFO    (main_entry-236): PROCESSING WML
+[2021-05-31 01:38:47,330] INFO    (main_entry-244): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:38:47,385] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:38:47,407] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:38:47,429] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:38:49,578] INFO    (engine-92): Shap resume from 16 epoch
+[2021-05-31 01:40:54,399] INFO    (main_entry-236): PROCESSING WML
+[2021-05-31 01:40:54,416] INFO    (main_entry-244): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:40:54,474] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:40:54,496] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:40:54,519] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:40:56,674] INFO    (engine-92): Shap resume from 16 epoch
+[2021-05-31 01:41:15,183] INFO    (main_entry-236): PROCESSING WML
+[2021-05-31 01:41:15,199] INFO    (main_entry-244): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:41:15,257] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:41:15,279] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:41:15,301] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:41:17,462] INFO    (engine-92): Shap resume from 16 epoch
+[2021-05-31 01:41:43,163] INFO    (main_entry-236): PROCESSING WML
+[2021-05-31 01:41:43,179] INFO    (main_entry-244): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:41:43,237] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:41:43,259] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:41:43,281] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:41:45,428] INFO    (engine-92): Shap resume from 16 epoch
+[2021-05-31 01:44:27,382] INFO    (main_entry-236): PROCESSING WML
+[2021-05-31 01:44:27,398] INFO    (main_entry-244): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:44:27,455] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:44:27,478] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:44:27,500] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:44:29,641] INFO    (engine-92): Shap resume from 16 epoch
+[2021-05-31 01:48:37,518] INFO    (main_entry-236): PROCESSING WML
+[2021-05-31 01:48:37,535] INFO    (main_entry-244): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:48:37,591] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:48:37,612] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:48:37,634] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:48:39,781] INFO    (engine-92): Shap resume from 16 epoch
+[2021-05-31 01:49:52,327] INFO    (main_entry-236): PROCESSING WML
+[2021-05-31 01:49:52,342] INFO    (main_entry-244): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:49:52,399] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:49:52,421] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:49:52,443] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:49:54,602] INFO    (engine-92): Shap resume from 16 epoch
+[2021-05-31 01:50:57,831] INFO    (main_entry-236): PROCESSING WML
+[2021-05-31 01:50:57,847] INFO    (main_entry-244): Runing ISSUE01_EXP01_00 | eval ids : ['2001']
+[2021-05-31 01:50:57,904] INFO    (fnirs-66): {'anb': 10248, 'rt': 4830, 'gng': 4830, 'ewm': 9996}
+[2021-05-31 01:50:57,926] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:50:57,948] INFO    (fnirs-66): {'rt': 230, 'anb': 488, 'ewm': 476, 'gng': 230}
+[2021-05-31 01:51:00,191] INFO    (engine-92): Shap resume from 16 epoch

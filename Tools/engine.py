@@ -9,6 +9,10 @@ import numpy as np
 class fNIRS_Engine(BaseEngine):
     def __init__(self, train_loader, eval_loader, test_loader, args, writer, device) -> None:
         super(fNIRS_Engine, self).__init__(train_loader, eval_loader, test_loader, args, writer, device) 
+        self.shap_map = {
+            'wml':0,
+            'vpl':1
+        }
 
     def train_epoch(self, epoch):
         self.model.train()
@@ -83,43 +87,52 @@ class fNIRS_Engine(BaseEngine):
                 io.imsave(os.path.join(confmat_root, "ENSEMBLE_{}.png".format(i)), conf_mat_img)
         return self.metric
 
-    def shap(self, model, optimizer):
+    def shap(self, model, optimizer, proc='wml', index=0):
         self.model, self.optimizer, start_epoch, self.min_loss = self.load_ckpt(model, optimizer)
         info(f"Shap resume from {start_epoch} epoch")
         shap_device = torch.device('cpu')
         self.model = self.model.to(shap_device)
 
         batch_data = next(iter(self.test_loader))
-        background, test_data_0, test_data_1, label_0, label_1 = self.shap_epoch(batch_data)
-        # background = background.to(shap_device)
-        # test_data_0 = test_data_0.to(shap_device)
-        # test_data_1 = test_data_1.to(shap_device)
-        
+        background = self.background_shapper(batch_data)
+        batch_data_2 = next(iter(self.test_loader))
+        test_data_0, test_data_1, label_0, label_1 = self.test_finder(batch_data_2, proc)
+
         e=shap.DeepExplainer(self.model, background)
         shap_values_0 = e.shap_values(test_data_0)
         shap_values_1 = e.shap_values(test_data_1)
 
         shap_meta_dict = {
             'cr-task':shap_values_0,
-            'label_cr_task_wml':label_0[0][55:60],
-            'id':self.args.data_config['eval_id'],
+            'label_cr_task_wml':label_0,
+            'id':index,
             'task-cr':shap_values_1,
-            "label_task_cr_wml":label_1[0][55:60],
+            "label_task_cr_wml":label_1
         }
 
         shap_save_root = os.path.join("./Visual/SHAP_VALUES", self.args.name)
         ensure(shap_save_root)
-        save_path = os.path.join(shap_save_root, 'wml_{}_b0_55_60.npy'.format(id))
+        save_path = os.path.join(shap_save_root, '{:2}_{}_b0_55_60.npy'.format(index, proc))
         np.save(save_path, shap_meta_dict)
 
-    def shap_epoch(self, batch_data):
+    def background_shapper(self, batch_data):
         augdata_0, augdata_1 = batch_data
         background = torch.cat([augdata_0[0][:50], augdata_1[0][:50]], dim=0)
-        test_data_0 = augdata_0[0][55:60]
-        test_data_1 = augdata_1[0][55:60]
-        label_0 = augdata_0[1]
-        label_1 = augdata_1[1]
-        return background, test_data_0, test_data_1, label_0, label_1
+        return background
 
+    def test_finder(self, batch_data, proc):
+        augdata_0, augdata_1 = batch_data
+        label_list = augdata_0[1][self.shap_map[proc]]
+        label_list = label_list // 2
+        target_idx = []
+        for i in range(3):
+            cand = (label_list == i).nonzero(as_tuple=True)
+            target_idx += list(cand[0])[:2]
+        target_idx = [idx.item() for idx in target_idx]
 
+        test_data_0 = augdata_0[0][target_idx]
+        test_data_1 = augdata_1[0][target_idx]
+        label_0 = augdata_0[1][target_idx]
+        label_1 = augdata_1[1][target_idx]
+        return test_data_0, test_data_1, label_0, label_1
 

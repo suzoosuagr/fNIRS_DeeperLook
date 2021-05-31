@@ -232,9 +232,8 @@ def run_kfolds(args, k=5):
         exe = fNIRS_Engine(train_loader, eval_loader, None, args, writer, device)
         exe.train(model, optimizer, criterion, None)
 
-def shap_leave_one_out(args, k=5):
-    count = 0
-    accu = 0
+def shap_leave_one_out(args, proc='wml'):
+    info(f"PROCESSING {proc.upper()}")
     Basic_Name = args.name
     IDS = args.data_config["ids"].copy()
     for i, id in enumerate(IDS):
@@ -249,9 +248,7 @@ def shap_leave_one_out(args, k=5):
         optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
         criterion = nn.CrossEntropyLoss()
         exe = fNIRS_Engine(train_loader, eval_loader, test_loader, args, writer, device)
-        exe.shap(model, optimizer)
-
-
+        exe.shap(model, optimizer, proc=proc, index=i)
 
 if __name__ == "__main__":
     # generate_instructors(args)
@@ -260,5 +257,5 @@ if __name__ == "__main__":
     # run_kfolds(args, k=10)
     # esemble_test_kfolds(args, k=10)
     # esemble_test_subjects_out(args)
-    shap_leave_one_out(args)
+    shap_leave_one_out(args, proc='wml')
 
