@@ -47,7 +47,7 @@ def release_shap_values(file_names, rel_video_name):
         rel.write(img)
     rel.release()
 
-def visual_shap_videos(args, video_root):
+def visual_shap_videos(args, video_root, proc):
     ensure(video_root)
     Basic_Name = args.name.copy()
     IDS = args.data_config["ids"].copy()
@@ -56,9 +56,22 @@ def visual_shap_videos(args, video_root):
         args.data_config['train_ids'].remove(id)
         args.data_config['eval_ids'] = [id]
         args.name = "{}_{:02}".format(Basic_Name, i)
-        
-        
+        shap_path = os.path.join('./Visual/SHAP_VALUES/', args.name, f'{i}_{proc}_b0_55_60.npy')
+        shap_meta_dict = np.load(shap_path, allow_pickle=True)
+        shap_meta_dict = shap_meta_dict[()]
 
+        sv_cr_task = shap_meta_dict['cr-task']
+        y_cr_task = shap_meta_dict['label_cr_task_wml']
+        sv_task_cr = shap_meta_dict['task-cr']
+        y_task_cr = shap_meta_dict['label_task_cr_wml']
+
+        label_map = {
+            0:'off',
+            1:'low',
+            2:'high'
+        }
+
+        video_path = os.path.join(video_root, f'{i}_{proc}_b0_55_60.mp4')
 if __name__ == '__main__':
     shap_video_save = os.path.join('../outputs/fnirs_shap_video/ISSUE01_EXP01/')
     ensure(shap_video_save)

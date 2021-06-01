@@ -132,7 +132,7 @@ class fNIRS_Engine(BaseEngine):
 
         test_data_0 = augdata_0[0][target_idx]
         test_data_1 = augdata_1[0][target_idx]
-        label_0 = augdata_0[1][target_idx]
-        label_1 = augdata_1[1][target_idx]
+        label_0 = augdata_0[1][self.shap_map[proc]][target_idx]
+        label_1 = augdata_1[1][self.shap_map[proc]][target_idx]
         return test_data_0, test_data_1, label_0, label_1
 

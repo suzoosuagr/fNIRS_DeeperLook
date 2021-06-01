@@ -258,4 +258,6 @@ if __name__ == "__main__":
     # esemble_test_kfolds(args, k=10)
     # esemble_test_subjects_out(args)
     shap_leave_one_out(args, proc='wml')
+    shap_leave_one_out(args, proc='vpl')
+
 
