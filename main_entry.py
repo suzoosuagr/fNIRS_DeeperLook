@@ -1,3 +1,4 @@
+from Tools.utils import get_files
 from Tools import env_init
 from Tools.logger import *
 import argparse
@@ -71,6 +72,32 @@ def update_model(model_name):
     else:
         raise NotImplementedError
     return model
+
+def downsample_instructors(ins_root, fold, scheme, new_root, ratio=0.41):
+    assert os.path.exists(ins_root)
+    assert fold in ['22Folds', '10Folds', '5Folds']
+    assert scheme in ['M', 'B']
+
+    ins_files = get_files(os.path.join(ins_root, fold, scheme), extension_filter='.txt')
+    save_folder = os.path.join(new_root, fold, scheme)
+    ensure(save_folder)
+    for f in ins_files:
+        basename = os.path.basename(f)
+        new_file_writer = open(os.path.join(save_folder, basename), 'w')
+        with open(f, 'r') as fp:
+            lines = fp.readlines()
+            head = lines[0]
+            lines = lines[1:] # skip the first line
+            random.shuffle(lines)
+            total_num = len(lines)
+            anchor = int(total_num * ratio)
+            msg_q = lines[:anchor]
+            new_file_writer.write(head)
+            for msg in msg_q:
+                new_file_writer.write(msg)
+        new_file_writer.close()
+        print("converted: {}".format(basename))
+    print("Done")
 
 def generate_instructors(args):
     args_ = args
@@ -256,8 +283,10 @@ if __name__ == "__main__":
     # run_leave_subjects_out(args)
     # run_kfolds(args, k=10)
     # esemble_test_kfolds(args, k=10)
-    # esemble_test_subjects_out(args)
-    shap_leave_one_out(args, proc='wml')
-    shap_leave_one_out(args, proc='vpl')
+    # # esemble_test_subjects_out(args)
+    # shap_leave_one_out(args, proc='wml')
+    # shap_leave_one_out(args, proc='vpl')
+
+    # downsample_instructors('./Data/Ins/label_balance/', '5Folds', 'M', './Data/Ins/label_balance_sub/')
 
 
