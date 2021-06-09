@@ -294,3 +294,59 @@ class fNIRS_mb_label_balance_leave_subject_sla(fNIRS_Basic):
                 self.data_files.append([l,os.path.join(data_root, deoxy_file)])
             else:
                 continue
+
+class fNIRS_mb_label_balance_leave_subject_sla_permutation_test(fNIRS_Basic):
+    """
+        multi label
+        label balance
+        leave subject
+        self supervised labeling 
+    """
+    def __init__(self, list_root, steps: list, mode, data_config, runtime=False, fold_id=0, istest=False) -> None:
+        super(fNIRS_mb_label_balance_leave_subject_sla, self).__init__(list_root, steps, mode, data_config)
+        self.class_map = {
+            "nb":[2,1],
+            "anb":[2,0],
+            "rt":[0,1],
+            'gng':[0,1],
+            'ewm':[1,2],
+            'es':[0,1],
+        }
+        self.istest = istest
+        ensure(data_config['ins_root'])
+        ins_path = os.path.join(data_config['ins_root'], 'M', f'{mode}_{fold_id}.txt')
+        if mode in ['test']:
+            ins_path = os.path.join(data_config['ins_root'], 'M', f'eval_{fold_id}.txt')
+        for sess in self.data_config["sessions"]:
+            self.collect_data_files(os.path.join(list_root, sess+'.txt'))
+        if not runtime:
+            self.label_balance_init_instructor()
+            self.save_instructor(ins_path, self.instructor, data_config)
+        else:
+            self.instructor = self.read_instructor(ins_path)
+            self.valid_label_statistic(self.instructor)
+
+    def __getitem__(self, index):
+        return self.get_cr_task_self_supervised_multi_branch(index)
+    def __len__(self):
+        return len(self.instructor)
+
+    def collect_data_files(self, file_path):
+        f = open(os.path.join(file_path), 'r')
+        lines = f.readlines()
+        f.close()
+        data_root, _ = os.path.split(lines[0].rstrip())
+        for l in lines:
+            l = l.rstrip()
+            base = os.path.basename(l)
+            meta = base.split('_')
+
+            type, id, task, part = meta
+            deoxy_file = '_'.join(['deoxy', id, task, part])
+
+            if self.mode in ["train"] and id in self.data_config['train_ids'] and task in self.data_config["train_tasks"] and part in self.data_config["parts"]:
+                self.data_files.append([l, os.path.join(data_root, deoxy_file)])
+            elif self.mode in ["eval", "test"] and id in self.data_config['eval_ids'] and task in self.data_config["eval_tasks"] and part in self.data_config["parts"]:
+                self.data_files.append([l,os.path.join(data_root, deoxy_file)])
+            else:
+                continue

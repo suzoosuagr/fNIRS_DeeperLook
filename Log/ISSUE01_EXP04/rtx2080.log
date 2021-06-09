@@ -1,0 +1,446 @@
+[2021-06-06 03:04:47,261] INFO    (main_entry-253): Runing ISSUE01_EXP04_00 | eval on ['2012', '8213', '8206']
+[2021-06-06 03:04:47,273] INFO    (fnirs-66): {'anb': 3815, 'ewm': 3703, 'rt': 1771, 'gng': 1803}
+[2021-06-06 03:04:47,276] INFO    (fnirs-66): {'anb': 574, 'ewm': 574, 'gng': 287, 'rt': 316}
+[2021-06-06 03:04:47,279] INFO    (fnirs-66): {'anb': 574, 'ewm': 574, 'gng': 287, 'rt': 316}
+[2021-06-06 03:04:51,848] INFO    (base_engine-64): Train >>> ISSUE01_EXP04_00
+[2021-06-06 03:04:51,849] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-06 03:05:51,802] INFO    (main_entry-253): Runing ISSUE01_EXP04_00 | eval on ['2012', '8213', '8206']
+[2021-06-06 03:05:51,814] INFO    (fnirs-66): {'anb': 3815, 'ewm': 3703, 'rt': 1771, 'gng': 1803}
+[2021-06-06 03:05:51,818] INFO    (fnirs-66): {'anb': 574, 'ewm': 574, 'gng': 287, 'rt': 316}
+[2021-06-06 03:05:51,821] INFO    (fnirs-66): {'anb': 574, 'ewm': 574, 'gng': 287, 'rt': 316}
+[2021-06-06 03:05:53,941] INFO    (base_engine-64): Train >>> ISSUE01_EXP04_00
+[2021-06-06 03:05:53,941] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-06 03:06:36,531] INFO    (base_engine-99): New min Val loss 3.1240228282080755 at [000]
+[2021-06-06 03:06:36,546] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:06:36,547] INFO    (base_engine-78): Epc: 1/50, val_loss:3.1240228282080755
+[2021-06-06 03:07:18,241] INFO    (base_engine-99): New min Val loss 2.8734548886617026 at [001]
+[2021-06-06 03:07:18,244] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:07:18,245] INFO    (base_engine-78): Epc: 2/50, val_loss:2.8734548886617026
+[2021-06-06 03:07:59,956] INFO    (base_engine-99): New min Val loss 2.673505703608195 at [002]
+[2021-06-06 03:07:59,960] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:07:59,960] INFO    (base_engine-78): Epc: 3/50, val_loss:2.673505703608195
+[2021-06-06 03:08:41,734] INFO    (base_engine-99): New min Val loss 2.579731985374733 at [003]
+[2021-06-06 03:08:41,738] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:08:41,738] INFO    (base_engine-78): Epc: 4/50, val_loss:2.579731985374733
+[2021-06-06 03:09:23,468] INFO    (base_engine-99): New min Val loss 2.431167787975735 at [004]
+[2021-06-06 03:09:23,472] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:09:23,472] INFO    (base_engine-78): Epc: 5/50, val_loss:2.431167787975735
+[2021-06-06 03:10:05,267] INFO    (base_engine-99): New min Val loss 2.4237192471822104 at [005]
+[2021-06-06 03:10:05,271] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:10:05,271] INFO    (base_engine-78): Epc: 6/50, val_loss:2.4237192471822104
+[2021-06-06 03:10:47,001] INFO    (base_engine-99): New min Val loss 2.3526790848484747 at [006]
+[2021-06-06 03:10:47,004] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:10:47,005] INFO    (base_engine-78): Epc: 7/50, val_loss:2.3526790848484747
+[2021-06-06 03:11:28,781] INFO    (base_engine-99): New min Val loss 2.298676186137729 at [007]
+[2021-06-06 03:11:28,785] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:11:28,785] INFO    (base_engine-78): Epc: 8/50, val_loss:2.298676186137729
+[2021-06-06 03:12:10,631] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:12:10,631] INFO    (base_engine-78): Epc: 9/50, val_loss:2.298676186137729
+[2021-06-06 03:12:52,400] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:12:52,401] INFO    (base_engine-78): Epc: 10/50, val_loss:2.298676186137729
+[2021-06-06 03:13:34,238] INFO    (base_engine-99): New min Val loss 2.202640012458519 at [010]
+[2021-06-06 03:13:34,241] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:13:34,242] INFO    (base_engine-78): Epc: 11/50, val_loss:2.202640012458519
+[2021-06-06 03:14:16,091] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:14:16,091] INFO    (base_engine-78): Epc: 12/50, val_loss:2.202640012458519
+[2021-06-06 03:14:57,871] INFO    (base_engine-99): New min Val loss 2.1897772594734475 at [012]
+[2021-06-06 03:14:57,874] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:14:57,875] INFO    (base_engine-78): Epc: 13/50, val_loss:2.1897772594734475
+[2021-06-06 03:15:39,694] INFO    (base_engine-99): New min Val loss 2.1889861115702876 at [013]
+[2021-06-06 03:15:39,697] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:15:39,698] INFO    (base_engine-78): Epc: 14/50, val_loss:2.1889861115702876
+[2021-06-06 03:16:21,576] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:16:21,576] INFO    (base_engine-78): Epc: 15/50, val_loss:2.1889861115702876
+[2021-06-06 03:17:03,335] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:17:03,336] INFO    (base_engine-78): Epc: 16/50, val_loss:2.1889861115702876
+[2021-06-06 03:17:45,099] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:17:45,100] INFO    (base_engine-78): Epc: 17/50, val_loss:2.1889861115702876
+[2021-06-06 03:18:26,846] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:18:26,846] INFO    (base_engine-78): Epc: 18/50, val_loss:2.1889861115702876
+[2021-06-06 03:19:08,598] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:19:08,599] INFO    (base_engine-78): Epc: 19/50, val_loss:2.1889861115702876
+[2021-06-06 03:19:50,453] INFO    (base_engine-102): leanring rate = [1e-05]
+[2021-06-06 03:19:50,454] WARNING (base_engine-104): Out of patience and reached lowest learning rate.
+[2021-06-06 03:19:50,454] INFO    (main_entry-253): Runing ISSUE01_EXP04_01 | eval on ['8214', '2006', '2017']
+[2021-06-06 03:19:50,465] INFO    (fnirs-66): {'ewm': 3652, 'gng': 1800, 'rt': 1840, 'anb': 3800}
+[2021-06-06 03:19:50,468] INFO    (fnirs-66): {'anb': 604, 'ewm': 599, 'rt': 272, 'gng': 276}
+[2021-06-06 03:19:50,471] INFO    (fnirs-66): {'anb': 604, 'ewm': 599, 'rt': 272, 'gng': 276}
+[2021-06-06 03:19:50,476] INFO    (base_engine-64): Train >>> ISSUE01_EXP04_01
+[2021-06-06 03:19:50,476] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-06 03:20:32,321] INFO    (base_engine-99): New min Val loss 3.350388182534112 at [000]
+[2021-06-06 03:20:32,324] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:20:32,325] INFO    (base_engine-78): Epc: 1/50, val_loss:3.350388182534112
+[2021-06-06 03:21:14,082] INFO    (base_engine-99): New min Val loss 3.214912741272538 at [001]
+[2021-06-06 03:21:14,085] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:21:14,085] INFO    (base_engine-78): Epc: 2/50, val_loss:3.214912741272538
+[2021-06-06 03:21:55,868] INFO    (base_engine-99): New min Val loss 3.188175086621885 at [002]
+[2021-06-06 03:21:55,871] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:21:55,871] INFO    (base_engine-78): Epc: 3/50, val_loss:3.188175086621885
+[2021-06-06 03:22:37,666] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:22:37,666] INFO    (base_engine-78): Epc: 4/50, val_loss:3.188175086621885
+[2021-06-06 03:23:19,442] INFO    (base_engine-99): New min Val loss 3.080534466990718 at [004]
+[2021-06-06 03:23:19,445] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:23:19,445] INFO    (base_engine-78): Epc: 5/50, val_loss:3.080534466990718
+[2021-06-06 03:24:01,276] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:24:01,276] INFO    (base_engine-78): Epc: 6/50, val_loss:3.080534466990718
+[2021-06-06 03:24:43,101] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:24:43,101] INFO    (base_engine-78): Epc: 7/50, val_loss:3.080534466990718
+[2021-06-06 03:25:24,873] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:25:24,873] INFO    (base_engine-78): Epc: 8/50, val_loss:3.080534466990718
+[2021-06-06 03:26:06,755] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:26:06,756] INFO    (base_engine-78): Epc: 9/50, val_loss:3.080534466990718
+[2021-06-06 03:26:48,542] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:26:48,542] INFO    (base_engine-78): Epc: 10/50, val_loss:3.080534466990718
+[2021-06-06 03:27:30,376] INFO    (base_engine-102): leanring rate = [1e-05]
+[2021-06-06 03:27:30,376] WARNING (base_engine-104): Out of patience and reached lowest learning rate.
+[2021-06-06 03:27:30,376] INFO    (main_entry-253): Runing ISSUE01_EXP04_02 | eval on ['2001', '8203']
+[2021-06-06 03:27:30,388] INFO    (fnirs-66): {'gng': 1927, 'ewm': 3860, 'anb': 4014, 'rt': 1875}
+[2021-06-06 03:27:30,390] INFO    (fnirs-66): {'anb': 373, 'ewm': 415, 'gng': 189, 'rt': 190}
+[2021-06-06 03:27:30,392] INFO    (fnirs-66): {'anb': 373, 'ewm': 415, 'gng': 189, 'rt': 190}
+[2021-06-06 03:27:30,398] INFO    (base_engine-64): Train >>> ISSUE01_EXP04_02
+[2021-06-06 03:27:30,398] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-06 03:28:13,095] INFO    (base_engine-99): New min Val loss 3.2176423337724476 at [000]
+[2021-06-06 03:28:13,098] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:28:13,099] INFO    (base_engine-78): Epc: 1/50, val_loss:3.2176423337724476
+[2021-06-06 03:28:55,751] INFO    (base_engine-99): New min Val loss 3.109333793322245 at [001]
+[2021-06-06 03:28:55,754] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:28:55,755] INFO    (base_engine-78): Epc: 2/50, val_loss:3.109333793322245
+[2021-06-06 03:29:38,434] INFO    (base_engine-99): New min Val loss 3.002474400732252 at [002]
+[2021-06-06 03:29:38,437] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:29:38,437] INFO    (base_engine-78): Epc: 3/50, val_loss:3.002474400732252
+[2021-06-06 03:30:21,200] INFO    (base_engine-99): New min Val loss 2.943712658352322 at [003]
+[2021-06-06 03:30:21,203] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:30:21,204] INFO    (base_engine-78): Epc: 4/50, val_loss:2.943712658352322
+[2021-06-06 03:31:03,878] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:31:03,878] INFO    (base_engine-78): Epc: 5/50, val_loss:2.943712658352322
+[2021-06-06 03:31:46,487] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:31:46,488] INFO    (base_engine-78): Epc: 6/50, val_loss:2.943712658352322
+[2021-06-06 03:32:29,237] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:32:29,237] INFO    (base_engine-78): Epc: 7/50, val_loss:2.943712658352322
+[2021-06-06 03:33:11,935] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:33:11,935] INFO    (base_engine-78): Epc: 8/50, val_loss:2.943712658352322
+[2021-06-06 03:33:54,227] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:33:54,228] INFO    (base_engine-78): Epc: 9/50, val_loss:2.943712658352322
+[2021-06-06 03:34:36,284] INFO    (base_engine-102): leanring rate = [1e-05]
+[2021-06-06 03:34:36,285] WARNING (base_engine-104): Out of patience and reached lowest learning rate.
+[2021-06-06 03:34:36,285] INFO    (main_entry-253): Runing ISSUE01_EXP04_03 | eval on ['2011', '8218']
+[2021-06-06 03:34:36,296] INFO    (fnirs-66): {'ewm': 3885, 'gng': 1869, 'anb': 4035, 'rt': 1887}
+[2021-06-06 03:34:36,299] INFO    (fnirs-66): {'ewm': 399, 'rt': 166, 'anb': 407, 'gng': 195}
+[2021-06-06 03:34:36,301] INFO    (fnirs-66): {'ewm': 399, 'rt': 166, 'anb': 407, 'gng': 195}
+[2021-06-06 03:34:36,306] INFO    (base_engine-64): Train >>> ISSUE01_EXP04_03
+[2021-06-06 03:34:36,306] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-06 03:35:18,302] INFO    (base_engine-99): New min Val loss 3.2441300286187067 at [000]
+[2021-06-06 03:35:18,305] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:35:18,306] INFO    (base_engine-78): Epc: 1/50, val_loss:3.2441300286187067
+[2021-06-06 03:36:00,429] INFO    (base_engine-99): New min Val loss 3.034593145052592 at [001]
+[2021-06-06 03:36:00,432] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:36:00,433] INFO    (base_engine-78): Epc: 2/50, val_loss:3.034593145052592
+[2021-06-06 03:36:42,474] INFO    (base_engine-99): New min Val loss 2.883772717581855 at [002]
+[2021-06-06 03:36:42,477] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:36:42,477] INFO    (base_engine-78): Epc: 3/50, val_loss:2.883772717581855
+[2021-06-06 03:37:24,491] INFO    (base_engine-99): New min Val loss 2.8240447574191623 at [003]
+[2021-06-06 03:37:24,494] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:37:24,494] INFO    (base_engine-78): Epc: 4/50, val_loss:2.8240447574191623
+[2021-06-06 03:38:06,636] INFO    (base_engine-99): New min Val loss 2.823300904697842 at [004]
+[2021-06-06 03:38:06,641] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:38:06,642] INFO    (base_engine-78): Epc: 5/50, val_loss:2.823300904697842
+[2021-06-06 03:38:48,729] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:38:48,729] INFO    (base_engine-78): Epc: 6/50, val_loss:2.823300904697842
+[2021-06-06 03:39:30,807] INFO    (base_engine-99): New min Val loss 2.677885413169861 at [006]
+[2021-06-06 03:39:30,810] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:39:30,810] INFO    (base_engine-78): Epc: 7/50, val_loss:2.677885413169861
+[2021-06-06 03:40:12,914] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:40:12,915] INFO    (base_engine-78): Epc: 8/50, val_loss:2.677885413169861
+[2021-06-06 03:40:55,100] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:40:55,100] INFO    (base_engine-78): Epc: 9/50, val_loss:2.677885413169861
+[2021-06-06 03:41:37,166] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:41:37,167] INFO    (base_engine-78): Epc: 10/50, val_loss:2.677885413169861
+[2021-06-06 03:42:19,219] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:42:19,219] INFO    (base_engine-78): Epc: 11/50, val_loss:2.677885413169861
+[2021-06-06 03:43:01,317] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:43:01,317] INFO    (base_engine-78): Epc: 12/50, val_loss:2.677885413169861
+[2021-06-06 03:43:43,376] INFO    (base_engine-102): leanring rate = [1e-05]
+[2021-06-06 03:43:43,376] WARNING (base_engine-104): Out of patience and reached lowest learning rate.
+[2021-06-06 03:43:43,377] INFO    (main_entry-253): Runing ISSUE01_EXP04_04 | eval on ['2003', '8204']
+[2021-06-06 03:43:43,388] INFO    (fnirs-66): {'ewm': 3905, 'anb': 4009, 'gng': 1894, 'rt': 1868}
+[2021-06-06 03:43:43,390] INFO    (fnirs-66): {'anb': 416, 'ewm': 387, 'gng': 176, 'rt': 188}
+[2021-06-06 03:43:43,392] INFO    (fnirs-66): {'anb': 416, 'ewm': 387, 'gng': 176, 'rt': 188}
+[2021-06-06 03:43:43,398] INFO    (base_engine-64): Train >>> ISSUE01_EXP04_04
+[2021-06-06 03:43:43,398] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-06 03:44:25,776] INFO    (base_engine-99): New min Val loss 3.215208821826511 at [000]
+[2021-06-06 03:44:25,779] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:44:25,779] INFO    (base_engine-78): Epc: 1/50, val_loss:3.215208821826511
+[2021-06-06 03:45:08,480] INFO    (base_engine-99): New min Val loss 2.9529241058561535 at [001]
+[2021-06-06 03:45:08,483] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:45:08,484] INFO    (base_engine-78): Epc: 2/50, val_loss:2.9529241058561535
+[2021-06-06 03:45:51,283] INFO    (base_engine-99): New min Val loss 2.7693883180618286 at [002]
+[2021-06-06 03:45:51,286] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:45:51,287] INFO    (base_engine-78): Epc: 3/50, val_loss:2.7693883180618286
+[2021-06-06 03:46:33,916] INFO    (base_engine-99): New min Val loss 2.723963565296597 at [003]
+[2021-06-06 03:46:33,919] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:46:33,919] INFO    (base_engine-78): Epc: 4/50, val_loss:2.723963565296597
+[2021-06-06 03:47:16,807] INFO    (base_engine-99): New min Val loss 2.535282399919298 at [004]
+[2021-06-06 03:47:16,811] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:47:16,811] INFO    (base_engine-78): Epc: 5/50, val_loss:2.535282399919298
+[2021-06-06 03:47:59,523] INFO    (base_engine-99): New min Val loss 2.4385248290167914 at [005]
+[2021-06-06 03:47:59,527] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:47:59,527] INFO    (base_engine-78): Epc: 6/50, val_loss:2.4385248290167914
+[2021-06-06 03:48:42,289] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:48:42,289] INFO    (base_engine-78): Epc: 7/50, val_loss:2.4385248290167914
+[2021-06-06 03:49:25,031] INFO    (base_engine-99): New min Val loss 2.4003780815336437 at [007]
+[2021-06-06 03:49:25,035] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:49:25,035] INFO    (base_engine-78): Epc: 8/50, val_loss:2.4003780815336437
+[2021-06-06 03:50:07,931] INFO    (base_engine-99): New min Val loss 2.3114950789345636 at [008]
+[2021-06-06 03:50:07,935] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:50:07,935] INFO    (base_engine-78): Epc: 9/50, val_loss:2.3114950789345636
+[2021-06-06 03:50:50,711] INFO    (base_engine-99): New min Val loss 2.0788214206695557 at [009]
+[2021-06-06 03:50:50,714] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:50:50,715] INFO    (base_engine-78): Epc: 10/50, val_loss:2.0788214206695557
+[2021-06-06 03:51:33,439] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:51:33,440] INFO    (base_engine-78): Epc: 11/50, val_loss:2.0788214206695557
+[2021-06-06 03:52:16,199] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:52:16,199] INFO    (base_engine-78): Epc: 12/50, val_loss:2.0788214206695557
+[2021-06-06 03:52:58,894] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:52:58,894] INFO    (base_engine-78): Epc: 13/50, val_loss:2.0788214206695557
+[2021-06-06 03:53:41,590] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:53:41,590] INFO    (base_engine-78): Epc: 14/50, val_loss:2.0788214206695557
+[2021-06-06 03:54:24,214] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:54:24,214] INFO    (base_engine-78): Epc: 15/50, val_loss:2.0788214206695557
+[2021-06-06 03:55:06,910] INFO    (base_engine-99): New min Val loss 2.0067709353235035 at [015]
+[2021-06-06 03:55:06,913] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:55:06,914] INFO    (base_engine-78): Epc: 16/50, val_loss:2.0067709353235035
+[2021-06-06 03:55:49,425] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:55:49,425] INFO    (base_engine-78): Epc: 17/50, val_loss:2.0067709353235035
+[2021-06-06 03:56:31,809] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:56:31,810] INFO    (base_engine-78): Epc: 18/50, val_loss:2.0067709353235035
+[2021-06-06 03:57:14,265] INFO    (base_engine-99): New min Val loss 1.973341292805142 at [018]
+[2021-06-06 03:57:14,268] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:57:14,268] INFO    (base_engine-78): Epc: 19/50, val_loss:1.973341292805142
+[2021-06-06 03:57:56,717] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:57:56,717] INFO    (base_engine-78): Epc: 20/50, val_loss:1.973341292805142
+[2021-06-06 03:58:39,159] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:58:39,160] INFO    (base_engine-78): Epc: 21/50, val_loss:1.973341292805142
+[2021-06-06 03:59:21,646] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 03:59:21,646] INFO    (base_engine-78): Epc: 22/50, val_loss:1.973341292805142
+[2021-06-06 04:00:04,137] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:00:04,138] INFO    (base_engine-78): Epc: 23/50, val_loss:1.973341292805142
+[2021-06-06 04:00:46,664] INFO    (base_engine-99): New min Val loss 1.897853069835239 at [023]
+[2021-06-06 04:00:46,667] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:00:46,668] INFO    (base_engine-78): Epc: 24/50, val_loss:1.897853069835239
+[2021-06-06 04:01:29,118] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:01:29,118] INFO    (base_engine-78): Epc: 25/50, val_loss:1.897853069835239
+[2021-06-06 04:02:11,367] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:02:11,367] INFO    (base_engine-78): Epc: 26/50, val_loss:1.897853069835239
+[2021-06-06 04:02:53,487] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:02:53,488] INFO    (base_engine-78): Epc: 27/50, val_loss:1.897853069835239
+[2021-06-06 04:03:35,633] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:03:35,633] INFO    (base_engine-78): Epc: 28/50, val_loss:1.897853069835239
+[2021-06-06 04:04:17,791] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:04:17,791] INFO    (base_engine-78): Epc: 29/50, val_loss:1.897853069835239
+[2021-06-06 04:05:00,160] INFO    (base_engine-102): leanring rate = [1e-05]
+[2021-06-06 04:05:00,160] WARNING (base_engine-104): Out of patience and reached lowest learning rate.
+[2021-06-06 04:05:00,160] INFO    (main_entry-253): Runing ISSUE01_EXP04_05 | eval on ['2014', '2013']
+[2021-06-06 04:05:00,171] INFO    (fnirs-66): {'anb': 4011, 'rt': 1859, 'ewm': 3934, 'gng': 1872}
+[2021-06-06 04:05:00,174] INFO    (fnirs-66): {'ewm': 382, 'anb': 399, 'rt': 186, 'gng': 200}
+[2021-06-06 04:05:00,176] INFO    (fnirs-66): {'ewm': 382, 'anb': 399, 'rt': 186, 'gng': 200}
+[2021-06-06 04:05:00,181] INFO    (base_engine-64): Train >>> ISSUE01_EXP04_05
+[2021-06-06 04:05:00,182] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-06 04:05:42,557] INFO    (base_engine-99): New min Val loss 3.3540481196509466 at [000]
+[2021-06-06 04:05:42,560] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:05:42,560] INFO    (base_engine-78): Epc: 1/50, val_loss:3.3540481196509466
+[2021-06-06 04:06:24,840] INFO    (base_engine-99): New min Val loss 3.2198345528708563 at [001]
+[2021-06-06 04:06:24,844] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:06:24,844] INFO    (base_engine-78): Epc: 2/50, val_loss:3.2198345528708563
+[2021-06-06 04:07:07,197] INFO    (base_engine-99): New min Val loss 3.180789497163561 at [002]
+[2021-06-06 04:07:07,201] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:07:07,201] INFO    (base_engine-78): Epc: 3/50, val_loss:3.180789497163561
+[2021-06-06 04:07:49,531] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:07:49,531] INFO    (base_engine-78): Epc: 4/50, val_loss:3.180789497163561
+[2021-06-06 04:08:31,836] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:08:31,836] INFO    (base_engine-78): Epc: 5/50, val_loss:3.180789497163561
+[2021-06-06 04:09:14,165] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:09:14,166] INFO    (base_engine-78): Epc: 6/50, val_loss:3.180789497163561
+[2021-06-06 04:09:56,448] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:09:56,449] INFO    (base_engine-78): Epc: 7/50, val_loss:3.180789497163561
+[2021-06-06 04:10:38,774] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:10:38,774] INFO    (base_engine-78): Epc: 8/50, val_loss:3.180789497163561
+[2021-06-06 04:11:21,033] INFO    (base_engine-102): leanring rate = [1e-05]
+[2021-06-06 04:11:21,033] WARNING (base_engine-104): Out of patience and reached lowest learning rate.
+[2021-06-06 04:11:21,033] INFO    (main_entry-253): Runing ISSUE01_EXP04_06 | eval on ['8209', '8216']
+[2021-06-06 04:11:21,044] INFO    (fnirs-66): {'ewm': 3869, 'gng': 1891, 'anb': 4003, 'rt': 1913}
+[2021-06-06 04:11:21,046] INFO    (fnirs-66): {'gng': 182, 'rt': 203, 'anb': 390, 'ewm': 392}
+[2021-06-06 04:11:21,049] INFO    (fnirs-66): {'gng': 182, 'rt': 203, 'anb': 390, 'ewm': 392}
+[2021-06-06 04:11:21,054] INFO    (base_engine-64): Train >>> ISSUE01_EXP04_06
+[2021-06-06 04:11:21,054] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-06 04:12:03,611] INFO    (base_engine-99): New min Val loss 3.14173522260454 at [000]
+[2021-06-06 04:12:03,614] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:12:03,615] INFO    (base_engine-78): Epc: 1/50, val_loss:3.14173522260454
+[2021-06-06 04:12:45,972] INFO    (base_engine-99): New min Val loss 2.8884680536058216 at [001]
+[2021-06-06 04:12:45,975] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:12:45,975] INFO    (base_engine-78): Epc: 2/50, val_loss:2.8884680536058216
+[2021-06-06 04:13:28,381] INFO    (base_engine-99): New min Val loss 2.7777067157957287 at [002]
+[2021-06-06 04:13:28,384] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:13:28,385] INFO    (base_engine-78): Epc: 3/50, val_loss:2.7777067157957287
+[2021-06-06 04:14:10,801] INFO    (base_engine-99): New min Val loss 2.6469294362597995 at [003]
+[2021-06-06 04:14:10,804] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:14:10,805] INFO    (base_engine-78): Epc: 4/50, val_loss:2.6469294362597995
+[2021-06-06 04:14:53,169] INFO    (base_engine-99): New min Val loss 2.4893460273742676 at [004]
+[2021-06-06 04:14:53,172] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:14:53,172] INFO    (base_engine-78): Epc: 5/50, val_loss:2.4893460273742676
+[2021-06-06 04:15:35,556] INFO    (base_engine-99): New min Val loss 2.486401995023092 at [005]
+[2021-06-06 04:15:35,560] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:15:35,560] INFO    (base_engine-78): Epc: 6/50, val_loss:2.486401995023092
+[2021-06-06 04:16:17,907] INFO    (base_engine-99): New min Val loss 2.340152700742086 at [006]
+[2021-06-06 04:16:17,911] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:16:17,911] INFO    (base_engine-78): Epc: 7/50, val_loss:2.340152700742086
+[2021-06-06 04:17:00,306] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:17:00,306] INFO    (base_engine-78): Epc: 8/50, val_loss:2.340152700742086
+[2021-06-06 04:17:42,620] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:17:42,620] INFO    (base_engine-78): Epc: 9/50, val_loss:2.340152700742086
+[2021-06-06 04:18:25,113] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:18:25,114] INFO    (base_engine-78): Epc: 10/50, val_loss:2.340152700742086
+[2021-06-06 04:19:07,532] INFO    (base_engine-99): New min Val loss 2.323468327522278 at [010]
+[2021-06-06 04:19:07,535] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:19:07,535] INFO    (base_engine-78): Epc: 11/50, val_loss:2.323468327522278
+[2021-06-06 04:19:49,933] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:19:49,934] INFO    (base_engine-78): Epc: 12/50, val_loss:2.323468327522278
+[2021-06-06 04:20:32,362] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:20:32,363] INFO    (base_engine-78): Epc: 13/50, val_loss:2.323468327522278
+[2021-06-06 04:21:14,709] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:21:14,709] INFO    (base_engine-78): Epc: 14/50, val_loss:2.323468327522278
+[2021-06-06 04:21:57,195] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:21:57,195] INFO    (base_engine-78): Epc: 15/50, val_loss:2.323468327522278
+[2021-06-06 04:22:39,541] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:22:39,541] INFO    (base_engine-78): Epc: 16/50, val_loss:2.323468327522278
+[2021-06-06 04:23:21,979] INFO    (base_engine-102): leanring rate = [1e-05]
+[2021-06-06 04:23:21,979] WARNING (base_engine-104): Out of patience and reached lowest learning rate.
+[2021-06-06 04:23:21,980] INFO    (main_entry-253): Runing ISSUE01_EXP04_07 | eval on ['8211', '8208']
+[2021-06-06 04:23:21,990] INFO    (fnirs-66): {'anb': 3976, 'ewm': 3905, 'gng': 1889, 'rt': 1906}
+[2021-06-06 04:23:21,993] INFO    (fnirs-66): {'gng': 184, 'rt': 199, 'ewm': 397, 'anb': 387}
+[2021-06-06 04:23:21,995] INFO    (fnirs-66): {'gng': 184, 'rt': 199, 'ewm': 397, 'anb': 387}
+[2021-06-06 04:23:22,000] INFO    (base_engine-64): Train >>> ISSUE01_EXP04_07
+[2021-06-06 04:23:22,001] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-06 04:24:04,453] INFO    (base_engine-99): New min Val loss 3.1018562051984997 at [000]
+[2021-06-06 04:24:04,457] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:24:04,457] INFO    (base_engine-78): Epc: 1/50, val_loss:3.1018562051984997
+[2021-06-06 04:24:46,849] INFO    (base_engine-99): New min Val loss 2.813882827758789 at [001]
+[2021-06-06 04:24:46,853] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:24:46,853] INFO    (base_engine-78): Epc: 2/50, val_loss:2.813882827758789
+[2021-06-06 04:25:29,373] INFO    (base_engine-99): New min Val loss 2.53084307246738 at [002]
+[2021-06-06 04:25:29,379] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:25:29,379] INFO    (base_engine-78): Epc: 3/50, val_loss:2.53084307246738
+[2021-06-06 04:26:11,735] INFO    (base_engine-99): New min Val loss 2.389642318089803 at [003]
+[2021-06-06 04:26:11,739] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:26:11,739] INFO    (base_engine-78): Epc: 4/50, val_loss:2.389642318089803
+[2021-06-06 04:26:54,121] INFO    (base_engine-99): New min Val loss 2.269313202963935 at [004]
+[2021-06-06 04:26:54,125] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:26:54,125] INFO    (base_engine-78): Epc: 5/50, val_loss:2.269313202963935
+[2021-06-06 04:27:36,501] INFO    (base_engine-99): New min Val loss 2.1206698417663574 at [005]
+[2021-06-06 04:27:36,504] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:27:36,504] INFO    (base_engine-78): Epc: 6/50, val_loss:2.1206698417663574
+[2021-06-06 04:28:18,964] INFO    (base_engine-99): New min Val loss 2.014094465308719 at [006]
+[2021-06-06 04:28:18,968] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:28:18,968] INFO    (base_engine-78): Epc: 7/50, val_loss:2.014094465308719
+[2021-06-06 04:29:01,347] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:29:01,348] INFO    (base_engine-78): Epc: 8/50, val_loss:2.014094465308719
+[2021-06-06 04:29:43,744] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:29:43,744] INFO    (base_engine-78): Epc: 9/50, val_loss:2.014094465308719
+[2021-06-06 04:30:26,207] INFO    (base_engine-99): New min Val loss 1.9718448850843642 at [009]
+[2021-06-06 04:30:26,210] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:30:26,210] INFO    (base_engine-78): Epc: 10/50, val_loss:1.9718448850843642
+[2021-06-06 04:31:08,618] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:31:08,619] INFO    (base_engine-78): Epc: 11/50, val_loss:1.9718448850843642
+[2021-06-06 04:31:51,078] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:31:51,079] INFO    (base_engine-78): Epc: 12/50, val_loss:1.9718448850843642
+[2021-06-06 04:32:33,437] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:32:33,438] INFO    (base_engine-78): Epc: 13/50, val_loss:1.9718448850843642
+[2021-06-06 04:33:15,864] INFO    (base_engine-99): New min Val loss 1.829556597603692 at [013]
+[2021-06-06 04:33:15,868] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:33:15,868] INFO    (base_engine-78): Epc: 14/50, val_loss:1.829556597603692
+[2021-06-06 04:33:58,307] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:33:58,307] INFO    (base_engine-78): Epc: 15/50, val_loss:1.829556597603692
+[2021-06-06 04:34:40,811] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:34:40,811] INFO    (base_engine-78): Epc: 16/50, val_loss:1.829556597603692
+[2021-06-06 04:35:23,249] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:35:23,250] INFO    (base_engine-78): Epc: 17/50, val_loss:1.829556597603692
+[2021-06-06 04:36:05,621] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:36:05,621] INFO    (base_engine-78): Epc: 18/50, val_loss:1.829556597603692
+[2021-06-06 04:36:48,115] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:36:48,116] INFO    (base_engine-78): Epc: 19/50, val_loss:1.829556597603692
+[2021-06-06 04:37:30,436] INFO    (base_engine-102): leanring rate = [1e-05]
+[2021-06-06 04:37:30,436] WARNING (base_engine-104): Out of patience and reached lowest learning rate.
+[2021-06-06 04:37:30,437] INFO    (main_entry-253): Runing ISSUE01_EXP04_08 | eval on ['2015', '8201']
+[2021-06-06 04:37:30,448] INFO    (fnirs-66): {'ewm': 3906, 'rt': 1863, 'gng': 1881, 'anb': 4026}
+[2021-06-06 04:37:30,450] INFO    (fnirs-66): {'rt': 188, 'ewm': 401, 'gng': 167, 'anb': 411}
+[2021-06-06 04:37:30,453] INFO    (fnirs-66): {'rt': 188, 'ewm': 401, 'gng': 167, 'anb': 411}
+[2021-06-06 04:37:30,458] INFO    (base_engine-64): Train >>> ISSUE01_EXP04_08
+[2021-06-06 04:37:30,458] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-06 04:38:12,847] INFO    (base_engine-99): New min Val loss 3.115731159845988 at [000]
+[2021-06-06 04:38:12,850] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:38:12,851] INFO    (base_engine-78): Epc: 1/50, val_loss:3.115731159845988
+[2021-06-06 04:38:55,223] INFO    (base_engine-99): New min Val loss 2.893239153756036 at [001]
+[2021-06-06 04:38:55,226] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:38:55,226] INFO    (base_engine-78): Epc: 2/50, val_loss:2.893239153756036
+[2021-06-06 04:39:37,589] INFO    (base_engine-99): New min Val loss 2.6087020768059626 at [002]
+[2021-06-06 04:39:37,592] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:39:37,593] INFO    (base_engine-78): Epc: 3/50, val_loss:2.6087020768059626
+[2021-06-06 04:40:20,073] INFO    (base_engine-99): New min Val loss 2.5653440290027194 at [003]
+[2021-06-06 04:40:20,076] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:40:20,077] INFO    (base_engine-78): Epc: 4/50, val_loss:2.5653440290027194
+[2021-06-06 04:41:02,407] INFO    (base_engine-99): New min Val loss 2.432622750600179 at [004]
+[2021-06-06 04:41:02,410] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:41:02,410] INFO    (base_engine-78): Epc: 5/50, val_loss:2.432622750600179
+[2021-06-06 04:41:44,818] INFO    (base_engine-99): New min Val loss 2.405427442656623 at [005]
+[2021-06-06 04:41:44,821] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:41:44,821] INFO    (base_engine-78): Epc: 6/50, val_loss:2.405427442656623
+[2021-06-06 04:42:27,221] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:42:27,222] INFO    (base_engine-78): Epc: 7/50, val_loss:2.405427442656623
+[2021-06-06 04:43:09,730] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:43:09,730] INFO    (base_engine-78): Epc: 8/50, val_loss:2.405427442656623
+[2021-06-06 04:43:52,151] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:43:52,151] INFO    (base_engine-78): Epc: 9/50, val_loss:2.405427442656623
+[2021-06-06 04:44:34,599] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:44:34,600] INFO    (base_engine-78): Epc: 10/50, val_loss:2.405427442656623
+[2021-06-06 04:45:16,986] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:45:16,986] INFO    (base_engine-78): Epc: 11/50, val_loss:2.405427442656623
+[2021-06-06 04:45:59,475] INFO    (base_engine-102): leanring rate = [1e-05]
+[2021-06-06 04:45:59,475] WARNING (base_engine-104): Out of patience and reached lowest learning rate.
+[2021-06-06 04:45:59,476] INFO    (main_entry-253): Runing ISSUE01_EXP04_09 | eval on ['8210', '2004']
+[2021-06-06 04:45:59,487] INFO    (fnirs-66): {'gng': 1881, 'ewm': 3905, 'anb': 4010, 'rt': 1880}
+[2021-06-06 04:45:59,489] INFO    (fnirs-66): {'rt': 185, 'anb': 406, 'gng': 172, 'ewm': 404}
+[2021-06-06 04:45:59,491] INFO    (fnirs-66): {'rt': 185, 'anb': 406, 'gng': 172, 'ewm': 404}
+[2021-06-06 04:45:59,496] INFO    (base_engine-64): Train >>> ISSUE01_EXP04_09
+[2021-06-06 04:45:59,497] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-06 04:46:41,925] INFO    (base_engine-99): New min Val loss 3.3672413428624473 at [000]
+[2021-06-06 04:46:41,929] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:46:41,929] INFO    (base_engine-78): Epc: 1/50, val_loss:3.3672413428624473
+[2021-06-06 04:47:24,328] INFO    (base_engine-99): New min Val loss 3.222044971254137 at [001]
+[2021-06-06 04:47:24,332] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:47:24,332] INFO    (base_engine-78): Epc: 2/50, val_loss:3.222044971254137
+[2021-06-06 04:48:06,706] INFO    (base_engine-99): New min Val loss 3.0699906084272595 at [002]
+[2021-06-06 04:48:06,709] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:48:06,710] INFO    (base_engine-78): Epc: 3/50, val_loss:3.0699906084272595
+[2021-06-06 04:48:49,087] INFO    (base_engine-99): New min Val loss 2.985430916150411 at [003]
+[2021-06-06 04:48:49,090] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:48:49,091] INFO    (base_engine-78): Epc: 4/50, val_loss:2.985430916150411
+[2021-06-06 04:49:31,492] INFO    (base_engine-99): New min Val loss 2.931798603799608 at [004]
+[2021-06-06 04:49:31,496] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:49:31,496] INFO    (base_engine-78): Epc: 5/50, val_loss:2.931798603799608
+[2021-06-06 04:50:13,875] INFO    (base_engine-99): New min Val loss 2.8632924954096475 at [005]
+[2021-06-06 04:50:13,878] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:50:13,878] INFO    (base_engine-78): Epc: 6/50, val_loss:2.8632924954096475
+[2021-06-06 04:50:56,264] INFO    (base_engine-99): New min Val loss 2.833101842138502 at [006]
+[2021-06-06 04:50:56,267] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:50:56,268] INFO    (base_engine-78): Epc: 7/50, val_loss:2.833101842138502
+[2021-06-06 04:51:38,613] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:51:38,613] INFO    (base_engine-78): Epc: 8/50, val_loss:2.833101842138502
+[2021-06-06 04:52:20,888] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:52:20,889] INFO    (base_engine-78): Epc: 9/50, val_loss:2.833101842138502
+[2021-06-06 04:53:03,026] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:53:03,026] INFO    (base_engine-78): Epc: 10/50, val_loss:2.833101842138502
+[2021-06-06 04:53:45,099] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:53:45,099] INFO    (base_engine-78): Epc: 11/50, val_loss:2.833101842138502
+[2021-06-06 04:54:27,221] INFO    (base_engine-102): leanring rate = [0.0001]
+[2021-06-06 04:54:27,221] INFO    (base_engine-78): Epc: 12/50, val_loss:2.833101842138502
+[2021-06-06 04:55:09,289] INFO    (base_engine-102): leanring rate = [1e-05]
+[2021-06-06 04:55:09,289] WARNING (base_engine-104): Out of patience and reached lowest learning rate.

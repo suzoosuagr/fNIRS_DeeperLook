@@ -1,0 +1,118 @@
+[2021-06-07 04:31:47,233] INFO    (main_entry-201): Runing ISSUE01_EXP05_00 | eval ids : ['2001']
+[2021-06-07 04:31:47,270] INFO    (fnirs-66): {'anb': 4177, 'ewm': 4079, 'rt': 2008, 'gng': 1996}
+[2021-06-07 04:31:47,293] INFO    (fnirs-66): {'anb': 194, 'rt': 91, 'ewm': 196, 'gng': 102}
+[2021-06-07 04:31:47,314] INFO    (fnirs-66): {'anb': 194, 'rt': 91, 'ewm': 196, 'gng': 102}
+[2021-06-07 04:31:49,473] INFO    (engine-73): Resume from 12 epoch
+[2021-06-07 04:31:52,241] INFO    (main_entry-201): Runing ISSUE01_EXP05_01 | eval ids : ['2004']
+[2021-06-07 04:31:52,277] INFO    (fnirs-66): {'ewm': 4131, 'anb': 4215, 'gng': 1992, 'rt': 1922}
+[2021-06-07 04:31:52,297] INFO    (fnirs-66): {'gng': 96, 'rt': 107, 'anb': 193, 'ewm': 187}
+[2021-06-07 04:31:52,317] INFO    (fnirs-66): {'gng': 96, 'rt': 107, 'anb': 193, 'ewm': 187}
+[2021-06-07 04:31:52,356] INFO    (engine-73): Resume from 3 epoch
+[2021-06-07 04:31:55,096] INFO    (main_entry-201): Runing ISSUE01_EXP05_02 | eval ids : ['2012']
+[2021-06-07 04:31:55,131] INFO    (fnirs-66): {'rt': 1980, 'anb': 4212, 'gng': 1972, 'ewm': 4096}
+[2021-06-07 04:31:55,151] INFO    (fnirs-66): {'rt': 97, 'anb': 187, 'ewm': 202, 'gng': 97}
+[2021-06-07 04:31:55,171] INFO    (fnirs-66): {'rt': 97, 'anb': 187, 'ewm': 202, 'gng': 97}
+[2021-06-07 04:31:55,211] INFO    (engine-73): Resume from 9 epoch
+[2021-06-07 04:31:57,978] INFO    (main_entry-201): Runing ISSUE01_EXP05_03 | eval ids : ['2013']
+[2021-06-07 04:31:58,013] INFO    (fnirs-66): {'ewm': 4122, 'anb': 4225, 'rt': 1993, 'gng': 1920}
+[2021-06-07 04:31:58,033] INFO    (fnirs-66): {'gng': 104, 'ewm': 194, 'anb': 204, 'rt': 81}
+[2021-06-07 04:31:58,053] INFO    (fnirs-66): {'gng': 104, 'ewm': 194, 'anb': 204, 'rt': 81}
+[2021-06-07 04:31:58,092] INFO    (engine-73): Resume from 8 epoch
+[2021-06-07 04:32:00,831] INFO    (main_entry-201): Runing ISSUE01_EXP05_04 | eval ids : ['2015']
+[2021-06-07 04:32:00,954] INFO    (fnirs-66): {'anb': 4229, 'rt': 1990, 'gng': 1977, 'ewm': 4064}
+[2021-06-07 04:32:00,975] INFO    (fnirs-66): {'ewm': 199, 'anb': 200, 'rt': 97, 'gng': 87}
+[2021-06-07 04:32:00,995] INFO    (fnirs-66): {'ewm': 199, 'anb': 200, 'rt': 97, 'gng': 87}
+[2021-06-07 04:32:01,033] INFO    (engine-73): Resume from 11 epoch
+[2021-06-07 04:32:03,775] INFO    (main_entry-201): Runing ISSUE01_EXP05_05 | eval ids : ['8204']
+[2021-06-07 04:32:03,810] INFO    (fnirs-66): {'anb': 4252, 'rt': 1989, 'gng': 1958, 'ewm': 4061}
+[2021-06-07 04:32:03,830] INFO    (fnirs-66): {'gng': 78, 'ewm': 186, 'anb': 212, 'rt': 107}
+[2021-06-07 04:32:03,851] INFO    (fnirs-66): {'gng': 78, 'ewm': 186, 'anb': 212, 'rt': 107}
+[2021-06-07 04:32:03,889] INFO    (engine-73): Resume from 13 epoch
+[2021-06-07 04:32:06,625] INFO    (main_entry-201): Runing ISSUE01_EXP05_06 | eval ids : ['8206']
+[2021-06-07 04:32:06,659] INFO    (fnirs-66): {'anb': 4188, 'rt': 1966, 'ewm': 4132, 'gng': 1974}
+[2021-06-07 04:32:06,679] INFO    (fnirs-66): {'anb': 191, 'gng': 90, 'ewm': 204, 'rt': 98}
+[2021-06-07 04:32:06,699] INFO    (fnirs-66): {'anb': 191, 'gng': 90, 'ewm': 204, 'rt': 98}
+[2021-06-07 04:32:06,737] INFO    (engine-73): Resume from 13 epoch
+[2021-06-07 04:32:09,494] INFO    (main_entry-201): Runing ISSUE01_EXP05_07 | eval ids : ['8209']
+[2021-06-07 04:32:09,528] INFO    (fnirs-66): {'ewm': 4113, 'rt': 1954, 'gng': 1975, 'anb': 4218}
+[2021-06-07 04:32:09,548] INFO    (fnirs-66): {'gng': 99, 'rt': 92, 'anb': 201, 'ewm': 191}
+[2021-06-07 04:32:09,568] INFO    (fnirs-66): {'gng': 99, 'rt': 92, 'anb': 201, 'ewm': 191}
+[2021-06-07 04:32:09,606] INFO    (engine-73): Resume from 7 epoch
+[2021-06-07 04:32:12,358] INFO    (main_entry-201): Runing ISSUE01_EXP05_08 | eval ids : ['8210']
+[2021-06-07 04:32:12,392] INFO    (fnirs-66): {'anb': 4186, 'ewm': 4143, 'rt': 1944, 'gng': 1987}
+[2021-06-07 04:32:12,413] INFO    (fnirs-66): {'rt': 95, 'ewm': 203, 'gng': 83, 'anb': 202}
+[2021-06-07 04:32:12,432] INFO    (fnirs-66): {'rt': 95, 'ewm': 203, 'gng': 83, 'anb': 202}
+[2021-06-07 04:32:12,470] INFO    (engine-73): Resume from 4 epoch
+[2021-06-07 04:32:15,242] INFO    (main_entry-201): Runing ISSUE01_EXP05_09 | eval ids : ['8211']
+[2021-06-07 04:32:15,277] INFO    (fnirs-66): {'ewm': 4074, 'anb': 4222, 'rt': 1982, 'gng': 1982}
+[2021-06-07 04:32:15,297] INFO    (fnirs-66): {'ewm': 187, 'gng': 96, 'anb': 204, 'rt': 96}
+[2021-06-07 04:32:15,317] INFO    (fnirs-66): {'ewm': 187, 'gng': 96, 'anb': 204, 'rt': 96}
+[2021-06-07 04:32:15,357] INFO    (engine-73): Resume from 13 epoch
+[2021-06-07 04:32:18,126] INFO    (main_entry-201): Runing ISSUE01_EXP05_10 | eval ids : ['8213']
+[2021-06-07 04:32:18,159] INFO    (fnirs-66): {'anb': 4215, 'rt': 2002, 'ewm': 4096, 'gng': 1947}
+[2021-06-07 04:32:18,181] INFO    (fnirs-66): {'gng': 90, 'ewm': 197, 'anb': 204, 'rt': 92}
+[2021-06-07 04:32:18,201] INFO    (fnirs-66): {'gng': 90, 'ewm': 197, 'anb': 204, 'rt': 92}
+[2021-06-07 04:32:18,239] INFO    (engine-73): Resume from 16 epoch
+[2021-06-07 04:32:21,008] INFO    (main_entry-201): Runing ISSUE01_EXP05_11 | eval ids : ['8214']
+[2021-06-07 04:32:21,041] INFO    (fnirs-66): {'ewm': 4094, 'gng': 1992, 'anb': 4209, 'rt': 1965}
+[2021-06-07 04:32:21,061] INFO    (fnirs-66): {'ewm': 182, 'anb': 197, 'gng': 101, 'rt': 103}
+[2021-06-07 04:32:21,083] INFO    (fnirs-66): {'ewm': 182, 'anb': 197, 'gng': 101, 'rt': 103}
+[2021-06-07 04:32:21,121] INFO    (engine-73): Resume from 2 epoch
+[2021-06-07 04:32:23,863] INFO    (main_entry-201): Runing ISSUE01_EXP05_12 | eval ids : ['8218']
+[2021-06-07 04:32:23,897] INFO    (fnirs-66): {'ewm': 4086, 'anb': 4206, 'gng': 1978, 'rt': 1990}
+[2021-06-07 04:32:23,917] INFO    (fnirs-66): {'anb': 216, 'gng': 89, 'rt': 95, 'ewm': 183}
+[2021-06-07 04:32:23,936] INFO    (fnirs-66): {'anb': 216, 'gng': 89, 'rt': 95, 'ewm': 183}
+[2021-06-07 04:32:23,976] INFO    (engine-73): Resume from 45 epoch
+[2021-06-07 04:32:26,809] INFO    (main_entry-201): Runing ISSUE01_EXP05_13 | eval ids : ['2006']
+[2021-06-07 04:32:26,844] INFO    (fnirs-66): {'gng': 1975, 'anb': 4238, 'ewm': 4026, 'rt': 2021}
+[2021-06-07 04:32:26,864] INFO    (fnirs-66): {'anb': 207, 'ewm': 201, 'rt': 88, 'gng': 87}
+[2021-06-07 04:32:26,885] INFO    (fnirs-66): {'anb': 207, 'ewm': 201, 'rt': 88, 'gng': 87}
+[2021-06-07 04:32:26,923] INFO    (engine-73): Resume from 2 epoch
+[2021-06-07 04:32:29,671] INFO    (main_entry-201): Runing ISSUE01_EXP05_14 | eval ids : ['2011']
+[2021-06-07 04:32:29,705] INFO    (fnirs-66): {'anb': 4270, 'rt': 1955, 'gng': 1973, 'ewm': 4062}
+[2021-06-07 04:32:29,727] INFO    (fnirs-66): {'ewm': 200, 'gng': 88, 'rt': 99, 'anb': 196}
+[2021-06-07 04:32:29,747] INFO    (fnirs-66): {'ewm': 200, 'gng': 88, 'rt': 99, 'anb': 196}
+[2021-06-07 04:32:29,787] INFO    (engine-73): Resume from 4 epoch
+[2021-06-07 04:32:32,556] INFO    (main_entry-201): Runing ISSUE01_EXP05_15 | eval ids : ['2014']
+[2021-06-07 04:32:32,589] INFO    (fnirs-66): {'gng': 1943, 'anb': 4229, 'ewm': 4098, 'rt': 1990}
+[2021-06-07 04:32:32,609] INFO    (fnirs-66): {'rt': 88, 'anb': 210, 'ewm': 192, 'gng': 93}
+[2021-06-07 04:32:32,629] INFO    (fnirs-66): {'rt': 88, 'anb': 210, 'ewm': 192, 'gng': 93}
+[2021-06-07 04:32:32,668] INFO    (engine-73): Resume from 4 epoch
+[2021-06-07 04:32:35,406] INFO    (main_entry-201): Runing ISSUE01_EXP05_16 | eval ids : ['2017']
+[2021-06-07 04:32:35,440] INFO    (fnirs-66): {'ewm': 4105, 'anb': 4208, 'rt': 1971, 'gng': 1976}
+[2021-06-07 04:32:35,460] INFO    (fnirs-66): {'ewm': 196, 'rt': 89, 'anb': 192, 'gng': 106}
+[2021-06-07 04:32:35,480] INFO    (fnirs-66): {'ewm': 196, 'rt': 89, 'anb': 192, 'gng': 106}
+[2021-06-07 04:32:35,518] INFO    (engine-73): Resume from 10 epoch
+[2021-06-07 04:32:38,264] INFO    (main_entry-201): Runing ISSUE01_EXP05_17 | eval ids : ['8201']
+[2021-06-07 04:32:38,300] INFO    (fnirs-66): {'anb': 4236, 'rt': 1965, 'ewm': 4108, 'gng': 1951}
+[2021-06-07 04:32:38,323] INFO    (fnirs-66): {'anb': 194, 'gng': 98, 'rt': 101, 'ewm': 190}
+[2021-06-07 04:32:38,345] INFO    (fnirs-66): {'anb': 194, 'gng': 98, 'rt': 101, 'ewm': 190}
+[2021-06-07 04:32:38,383] INFO    (engine-73): Resume from 8 epoch
+[2021-06-07 04:32:41,127] INFO    (main_entry-201): Runing ISSUE01_EXP05_18 | eval ids : ['8203']
+[2021-06-07 04:32:41,161] INFO    (fnirs-66): {'rt': 1932, 'ewm': 4072, 'anb': 4246, 'gng': 2010}
+[2021-06-07 04:32:41,181] INFO    (fnirs-66): {'anb': 191, 'rt': 93, 'ewm': 203, 'gng': 96}
+[2021-06-07 04:32:41,201] INFO    (fnirs-66): {'anb': 191, 'rt': 93, 'ewm': 203, 'gng': 96}
+[2021-06-07 04:32:41,239] INFO    (engine-73): Resume from 1 epoch
+[2021-06-07 04:32:43,985] INFO    (main_entry-201): Runing ISSUE01_EXP05_19 | eval ids : ['8208']
+[2021-06-07 04:32:44,020] INFO    (fnirs-66): {'ewm': 4125, 'anb': 4176, 'gng': 1964, 'rt': 1995}
+[2021-06-07 04:32:44,040] INFO    (fnirs-66): {'anb': 190, 'ewm': 203, 'rt': 97, 'gng': 93}
+[2021-06-07 04:32:44,059] INFO    (fnirs-66): {'anb': 190, 'ewm': 203, 'rt': 97, 'gng': 93}
+[2021-06-07 04:32:44,097] INFO    (engine-73): Resume from 12 epoch
+[2021-06-07 04:32:46,870] INFO    (main_entry-201): Runing ISSUE01_EXP05_20 | eval ids : ['8216']
+[2021-06-07 04:32:46,904] INFO    (fnirs-66): {'ewm': 4137, 'anb': 4189, 'rt': 1966, 'gng': 1968}
+[2021-06-07 04:32:46,925] INFO    (fnirs-66): {'gng': 108, 'ewm': 189, 'anb': 197, 'rt': 89}
+[2021-06-07 04:32:46,945] INFO    (fnirs-66): {'gng': 108, 'ewm': 189, 'anb': 197, 'rt': 89}
+[2021-06-07 04:32:46,984] INFO    (engine-73): Resume from 12 epoch
+[2021-06-07 04:32:49,827] INFO    (main_entry-201): Runing ISSUE01_EXP05_21 | eval ids : ['2003']
+[2021-06-07 04:32:49,861] INFO    (fnirs-66): {'anb': 4197, 'rt': 2055, 'ewm': 4014, 'gng': 1994}
+[2021-06-07 04:32:49,881] INFO    (fnirs-66): {'ewm': 183, 'anb': 195, 'gng': 108, 'rt': 97}
+[2021-06-07 04:32:49,900] INFO    (fnirs-66): {'ewm': 183, 'anb': 195, 'gng': 108, 'rt': 97}
+[2021-06-07 04:32:49,938] INFO    (engine-73): Resume from 5 epoch
+[2021-06-07 04:32:52,696] INFO    (engine-80): ACCURACY_wml = 0.7821969696969697 
+[2021-06-07 04:32:52,713] INFO    (engine-81): Precision_wml = [0.85669253 0.69753231 0.79454927] 
+[2021-06-07 04:32:52,728] INFO    (engine-82): RECALL_wml = [0.8537941  0.70348424 0.79049826] 
+[2021-06-07 04:32:52,744] INFO    (engine-83): F1_wml = [0.85524086 0.70049563 0.79251859] 
+[2021-06-07 04:32:53,008] INFO    (engine-80): ACCURACY_vpl = 0.7751736111111112 
+[2021-06-07 04:32:53,023] INFO    (engine-81): Precision_vpl = [0.78751419 0.83034026 0.70384139] 
+[2021-06-07 04:32:53,038] INFO    (engine-82): RECALL_vpl = [0.80393975 0.84920251 0.6731453 ] 
+[2021-06-07 04:32:53,053] INFO    (engine-83): F1_vpl = [0.7956422  0.83966547 0.6881512 ] 
