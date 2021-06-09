@@ -48,7 +48,7 @@ class BaseEngine():
         metric = ckpt['metric']
         return model, optimizer, epoch, metric
 
-    def train(self, model, optimizer, criterion, metric):
+    def train(self, model, optimizer, criterion, metric, permutation_test=False):
         """
             entry for training
         """
@@ -76,7 +76,10 @@ class BaseEngine():
         # EPOCH LOOP
         for epoch in range(self.args.epochs):
             info("Epc: {}/{}, val_loss:{}".format(epoch, self.args.epochs, self.min_loss))
-            train_loss = self.train_epoch(epoch)
+            if permutation_test:
+                train_loss = self.train_epoch_permutation_test(epoch)
+            else:
+                train_loss = self.train_epoch(epoch)
             # _, _ = self.eval_epoch(epoch)
 
             try:
@@ -111,6 +114,9 @@ class BaseEngine():
         raise NotImplementedError
     
     def eval_epoch(self, epoch):
+        raise NotImplementedError
+
+    def train_epoch_permutation_test(self, epoch):
         raise NotImplementedError
 
 

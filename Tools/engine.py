@@ -33,6 +33,27 @@ class fNIRS_Engine(BaseEngine):
 
         return epoch_loss / len(self.train_loader)
 
+    def train_epoch_permutation_test(self, epoch):
+        self.model.train()
+        epoch_loss = 0
+        for step, batch_data in enumerate(self.train_loader):
+            in_data, label, tr_label, oxy_file = batch_data
+            in_data = in_data.to(self.device)
+            label = torch.stack(label, dim=1).to(self.device).squeeze()
+
+            label = torch.randint_like(label, low=0, high=6).long().to(self.device)
+
+            out_wml, out_vpl = self.model(in_data)
+            loss_wml = self.criterion(out_wml, label[:, 0])
+            loss_vpl = self.criterion(out_vpl, label[:, 1])
+            loss = loss_wml + loss_vpl
+            self.optimizer.zero_grad()
+            loss.backward()
+            self.optimizer.step()
+            epoch_loss += loss.item()
+
+        return epoch_loss / len(self.train_loader)
+
     def eval_epoch(self, epoch):
         self.model.eval()
         epoch_loss = 0

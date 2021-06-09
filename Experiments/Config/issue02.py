@@ -45,7 +45,7 @@ class EXP01(Basic_Config):
 
         self.name = self.issue + '_' + self.__class__.__name__
         self.list_path = "./Data/FileList/ZSCORE_Oxy/"
-
+        self.num_permute = 10
         self.data_config = {
             "train_tasks": ["anb" , "rt","ewm", "gng"],
             "eval_tasks": ["anb" , "rt","ewm", "gng"],
@@ -57,3 +57,49 @@ class EXP01(Basic_Config):
             "parts": ["head.npy"],
             "ins_root": "./Data/Ins/label_balance/10Folds/"
         }
+
+class EXP02(EXP01):
+    def __init__(self, mode, logfile):
+        super(EXP02, self).__init__(mode, logfile)
+        self.seed = 2302
+
+class EXP03(EXP01):
+    def __init__(self, mode, logfile):
+        super(EXP03, self).__init__(mode, logfile)
+        self.seed = 2303
+
+class EXP04(EXP01):
+    def __init__(self, mode, logfile):
+        super(EXP04, self).__init__(mode, logfile)
+        self.seed = 2304
+
+class EXP05(EXP01):
+    def __init__(self, mode, logfile):
+        super(EXP05, self).__init__(mode, logfile)
+        self.seed = 2305
+
+class EXP06(EXP01):
+    def __init__(self, mode, logfile):
+        super(EXP06, self).__init__(mode, logfile)
+        self.seed = 2306
+
+class EXP07(EXP01):
+    def __init__(self, mode, logfile):
+        super(EXP07, self).__init__(mode, logfile)
+        self.seed = 2307
+
+
+class EXP08(EXP01):
+    def __init__(self, mode, logfile):
+        super(EXP08, self).__init__(mode, logfile)
+        self.seed = 2308
+
+class EXP09(EXP01):
+    def __init__(self, mode, logfile):
+        super(EXP09, self).__init__(mode, logfile)
+        self.seed = 2309
+
+class EXP10(EXP01):
+    def __init__(self, mode, logfile):
+        super(EXP10, self).__init__(mode, logfile)
+        self.seed = 2310

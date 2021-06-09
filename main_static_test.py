@@ -4,7 +4,7 @@ from Tools.logger import *
 import argparse
 from Experiments.Config.issue01 import *
 from Data.Dataset.fnirs import fNIRS_mb_label_balance_leave_subject_sla
-from Experiments.Config.issue01 import *
+from Experiments.Config.issue02 import *
 import torch.utils.data as data 
 from Model.models import BiGRU_Attn_Multi_Branch_SLA
 import torch.optim as optim
@@ -19,12 +19,15 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-m", "--mode", dest="mode", default="debug", type=str)
     parser.add_argument("-l", "--log", dest="logfile", default='debug.log', type=str)
+    parser.add_argument("-e", "--exp", dest="exp", default="EXP01", type=str)
     
     return parser.parse_args()
 
 # initialization
 parser = parse_args()
-args = EXP05(parser.mode, parser.logfile)
+if parser.exp is None:
+    raise ValueError
+args = eval(parser.exp)(parser.mode, parser.logfile)
 warning("STARTING >>>>>> {} ".format(args.name))
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
 ngpu, device, writer = env_init(args, logging.INFO)
@@ -239,7 +242,7 @@ def esemble_test_kfolds(args, k=5):
             last=False
         ensemble_metric = exe.test(model, optimizer, ensemble_metric, last=last)
 
-def run_kfolds(args, k=5):
+def run_permutation_cv_kfolds(args, pid, k=5):
     count = 0
     accu = 0
     Basic_Name = args.name
@@ -249,7 +252,7 @@ def run_kfolds(args, k=5):
     for i in range(k):
         args.data_config['train_ids'] = fold_id_mapping[str(i)]['train_ids']
         args.data_config['eval_ids'] = fold_id_mapping[str(i)]['eval_ids']
-        args.name = "{}_{:02}".format(Basic_Name, i)
+        args.name = "P_{:02}_{}_{:02}".format(pid, Basic_Name, i)
         info(f"Runing {args.name} | eval on {args.data_config['eval_ids']}")
 
         train_loader, eval_loader, test_loader = update_loader(i, args)
@@ -257,7 +260,7 @@ def run_kfolds(args, k=5):
         optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
         criterion = nn.CrossEntropyLoss()
         exe = fNIRS_Engine(train_loader, eval_loader, None, args, writer, device)
-        exe.train(model, optimizer, criterion, None)
+        exe.train(model, optimizer, criterion, None, permutation_test=True)
 
 def shap_leave_one_out(args, proc='wml'):
     info(f"PROCESSING {proc.upper()}")
@@ -278,15 +281,8 @@ def shap_leave_one_out(args, proc='wml'):
         exe.shap(model, optimizer, proc=proc, index=i)
 
 if __name__ == "__main__":
-    # generate_instructors(args)
-    # generate_kfold_instructors(args, k=10)
-    # run_leave_subjects_out(args)
-    # run_kfolds(args, k=10)
-    # esemble_test_kfolds(args, k=10)
-    # esemble_test_subjects_out(args)
-    # shap_leave_one_out(args, proc='wml')
-    # shap_leave_one_out(args, proc='vpl')
+    for i in range(args.num_permute):
+        run_permutation_cv_kfolds(args, i, k=10)
 
-    # downsample_instructors('./Data/Ins/label_balance/', '5Folds', 'M', './Data/Ins/label_balance_sub/')
 
 
