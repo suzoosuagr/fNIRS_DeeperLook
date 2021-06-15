@@ -10,7 +10,7 @@ FROM ${BUILDER_IMG} AS build-base
 LABEL maintainer="suzoosuagr" \
       description="Runtime pytorch cuda image"\
       vendor="SYR-SVS-LAB"\
-      version="1.0"
+      version="1.1"
 
 # Passing args.
 ARG PYTHON_VERSION
@@ -45,7 +45,7 @@ RUN git clone https://github.com/pyenv/pyenv.git /pyenv\
     && pyenv global ${PYTHON_VERSION}
 
 COPY ./requirements.txt /pyenv
-RUN pip install --upgrade --no-cache-dir pip
+RUN pip install --upgrade --no-cache-dir pip setuptools wheel
 RUN pip install --upgrade --no-cache-dir -r /pyenv/requirements.txt
 
 FROM ${RUNTIME_IMG} as runtime

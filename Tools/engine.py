@@ -5,6 +5,7 @@ from Tools.utils import visual_conf_mat
 import skimage.io as io
 import shap
 import numpy as np
+import json
 
 class fNIRS_Engine(BaseEngine):
     def __init__(self, train_loader, eval_loader, test_loader, args, writer, device) -> None:
@@ -41,6 +42,7 @@ class fNIRS_Engine(BaseEngine):
             in_data = in_data.to(self.device)
             label = torch.stack(label, dim=1).to(self.device).squeeze()
 
+            # NOTE: Here is where permutation happened. 
             label = torch.randint_like(label, low=0, high=6).long().to(self.device)
 
             out_wml, out_vpl = self.model(in_data)
@@ -108,6 +110,31 @@ class fNIRS_Engine(BaseEngine):
                 io.imsave(os.path.join(confmat_root, "ENSEMBLE_{}.png".format(i)), conf_mat_img)
         return self.metric
 
+    def test_save(self, model, optimizer, metric, filePath):
+        """
+            not for the ensemble. 
+        """
+        self.model, self.optimizer, start_epoch, self.min_loss = self.load_ckpt(model, optimizer)
+        info("Resumed from {} epoch".format(start_epoch))
+        self.metric = metric
+        self.metric.reset()
+        file_root = os.path.dirname(filePath)
+        ensure(file_root)
+        fp = open(filePath, 'w')
+        self.test_epoch()
+        performance = self.metric.value()
+        msg_dict = {}
+        for i in ['wml', 'vpl']:
+            conf_mat, accu, precision, recall, f1 = performance[i]
+            msg_dict[i] = {
+                'accu': [accu],
+                'precision': list(precision),
+                'recall': list(recall),
+                'f1': list(f1)
+            }
+        json.dump(msg_dict, fp, indent=4)
+        fp.close()
+
     def shap(self, model, optimizer, proc='wml', index=0):
         self.model, self.optimizer, start_epoch, self.min_loss = self.load_ckpt(model, optimizer)
         info(f"Shap resume from {start_epoch} epoch")
@@ -157,3 +184,4 @@ class fNIRS_Engine(BaseEngine):
         label_1 = augdata_1[1][self.shap_map[proc]][target_idx]
         return test_data_0, test_data_1, label_0, label_1
 
+ 

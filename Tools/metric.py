@@ -113,8 +113,6 @@ class Performance_Test_ensemble_multi(Metric):
         else:
             self.__call__supervised(pred, truth)
         
-
-
     def reset(self):
         self.confusion_matrix = {
             'wml': np.zeros((self.size, self.size)),

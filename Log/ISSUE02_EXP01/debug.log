@@ -1,22 +1,120 @@
-[2021-06-09 01:21:20,414] INFO    (main_static_test-253): Runing ISSUE02_EXP01_00 | eval on ['2012', '8213', '8206']
-[2021-06-09 01:21:20,468] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
-[2021-06-09 01:21:20,495] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
-[2021-06-09 01:21:20,520] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
-[2021-06-09 01:24:08,130] INFO    (main_static_test-253): Runing ISSUE02_EXP01_00 | eval on ['2012', '8213', '8206']
-[2021-06-09 01:24:08,183] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
-[2021-06-09 01:24:08,208] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
-[2021-06-09 01:24:08,233] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
-[2021-06-09 01:24:10,387] INFO    (base_engine-64): Train >>> ISSUE02_EXP01_00
-[2021-06-09 01:24:10,403] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
-[2021-06-09 01:24:35,151] INFO    (main_static_test-253): Runing ISSUE02_EXP01_00 | eval on ['2012', '8213', '8206']
-[2021-06-09 01:24:35,202] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
-[2021-06-09 01:24:35,228] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
-[2021-06-09 01:24:35,253] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
-[2021-06-09 01:24:37,380] INFO    (base_engine-64): Train >>> ISSUE02_EXP01_00
-[2021-06-09 01:24:37,395] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
-[2021-06-09 03:21:32,254] INFO    (main_static_test-253): Runing P_00_ISSUE02_EXP01_00 | eval on ['2012', '8213', '8206']
-[2021-06-09 03:21:32,307] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
-[2021-06-09 03:21:32,332] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
-[2021-06-09 03:21:32,358] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
-[2021-06-09 03:21:34,494] INFO    (base_engine-64): Train >>> P_00_ISSUE02_EXP01_00
-[2021-06-09 03:21:34,510] INFO    (base_engine-78): Epc: 0/50, val_loss:100000000.0
+[2021-06-15 00:49:46,577] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_00
+[2021-06-15 00:50:07,101] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 00:50:12,472] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 00:50:12,501] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 00:50:12,531] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 00:50:24,294] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 00:52:15,263] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_00
+[2021-06-15 00:52:15,278] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 00:52:15,330] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 00:52:15,356] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 00:52:15,381] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 00:52:29,364] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 00:54:30,430] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_00
+[2021-06-15 00:54:30,446] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 00:54:30,498] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 00:54:30,525] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 00:54:30,551] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 00:54:39,859] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 00:56:35,354] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_00
+[2021-06-15 00:56:35,371] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 00:56:35,424] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 00:56:35,449] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 00:56:35,474] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 00:56:48,050] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 01:00:51,239] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_00
+[2021-06-15 01:00:51,254] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 01:00:51,307] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 01:00:51,332] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 01:00:51,357] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 01:01:08,068] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 01:06:39,644] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_00
+[2021-06-15 01:06:39,659] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 01:06:39,712] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 01:06:39,739] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 01:06:39,763] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 01:06:44,539] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 01:09:26,304] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_00
+[2021-06-15 01:09:26,319] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 01:09:26,371] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 01:09:26,396] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 01:09:26,421] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 01:09:32,552] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 01:10:13,470] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_01
+[2021-06-15 01:10:13,485] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 01:10:13,637] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 01:10:13,662] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 01:10:13,689] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 01:10:19,463] INFO    (engine-118): Resumed from 5 epoch
+[2021-06-15 01:10:39,196] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_02
+[2021-06-15 01:10:39,211] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_02 | eval on ['2001', '8203']
+[2021-06-15 01:10:39,264] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 01:10:39,288] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 01:10:39,311] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 01:10:39,348] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 01:10:52,480] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_03
+[2021-06-15 01:10:52,495] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_03 | eval on ['2011', '8218']
+[2021-06-15 01:10:52,548] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 01:10:52,571] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 01:10:52,594] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 01:10:52,635] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 01:11:05,751] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_04
+[2021-06-15 01:11:05,767] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_04 | eval on ['2003', '8204']
+[2021-06-15 01:11:05,819] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 01:11:05,841] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 01:11:05,865] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 01:11:05,905] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 01:11:19,024] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_05
+[2021-06-15 01:11:19,039] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_05 | eval on ['2014', '2013']
+[2021-06-15 01:11:19,193] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 01:11:19,215] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 01:11:19,238] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 01:11:19,278] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 01:11:32,385] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_06
+[2021-06-15 01:11:32,400] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_06 | eval on ['8209', '8216']
+[2021-06-15 01:11:32,452] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 01:11:32,474] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 01:11:32,496] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 01:11:32,535] INFO    (engine-118): Resumed from 11 epoch
+[2021-06-15 01:11:45,788] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_07
+[2021-06-15 01:11:45,803] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_07 | eval on ['8211', '8208']
+[2021-06-15 01:11:45,855] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 01:11:45,877] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 01:11:45,901] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 01:11:45,942] INFO    (engine-118): Resumed from 8 epoch
+[2021-06-15 01:11:59,133] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_08
+[2021-06-15 01:11:59,148] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_08 | eval on ['2015', '8201']
+[2021-06-15 01:11:59,200] INFO    (fnirs-66): {'rt': 4600, 'gng': 4600, 'anb': 9760, 'ewm': 9520}
+[2021-06-15 01:11:59,224] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 01:11:59,351] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 01:11:59,391] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 01:12:12,637] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP01_09
+[2021-06-15 01:12:12,652] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP01_09 | eval on ['8210', '2004']
+[2021-06-15 01:12:12,704] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 01:12:12,725] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 01:12:12,748] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 01:12:12,788] INFO    (engine-118): Resumed from 7 epoch
+[2021-06-15 01:12:26,037] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP01_09_00
+[2021-06-15 01:12:26,054] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP01_09_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 01:12:26,106] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 01:12:26,130] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 01:12:26,156] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 01:12:26,193] INFO    (engine-118): Resumed from 7 epoch
+[2021-06-15 01:12:46,017] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP01_09_01
+[2021-06-15 01:12:46,032] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP01_09_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 01:12:46,083] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 01:12:46,106] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 01:12:46,132] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 01:12:46,172] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 01:13:06,047] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP01_09_02
+[2021-06-15 01:13:06,062] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP01_09_02 | eval on ['2001', '8203']
+[2021-06-15 01:13:06,209] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 01:13:06,231] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 01:13:06,254] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 01:13:06,294] INFO    (engine-118): Resumed from 8 epoch
+[2021-06-15 01:13:19,503] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP01_09_03
+[2021-06-15 01:13:19,518] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP01_09_03 | eval on ['2011', '8218']
+[2021-06-15 01:13:19,570] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 01:13:19,592] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 01:13:19,615] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 01:13:19,655] INFO    (engine-118): Resumed from 5 epoch
