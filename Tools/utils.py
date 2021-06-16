@@ -154,3 +154,10 @@ def json2dict(path:str):
     with open(path, 'r') as fp:
         data = json.load(fp)
         return data
+
+def permutation_p_value(data, mu):
+    """
+        mu is the threshold compared with
+    """
+    pValue = np.mean(data > mu)
+    return pValue
