@@ -1,0 +1,600 @@
+[2021-06-15 02:30:24,785] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP06_00
+[2021-06-15 02:30:24,786] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP06_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 02:30:24,811] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 02:30:24,816] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:30:24,821] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:30:26,944] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 02:30:38,570] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP06_01
+[2021-06-15 02:30:38,570] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP06_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 02:30:38,595] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 02:30:38,600] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:30:38,605] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:30:38,619] INFO    (engine-118): Resumed from 17 epoch
+[2021-06-15 02:30:50,193] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP06_02
+[2021-06-15 02:30:50,193] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP06_02 | eval on ['2001', '8203']
+[2021-06-15 02:30:50,304] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:30:50,307] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:30:50,311] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:30:50,325] INFO    (engine-118): Resumed from 5 epoch
+[2021-06-15 02:30:58,101] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP06_03
+[2021-06-15 02:30:58,101] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP06_03 | eval on ['2011', '8218']
+[2021-06-15 02:30:58,127] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:30:58,131] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:30:58,134] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:30:58,148] INFO    (engine-118): Resumed from 4 epoch
+[2021-06-15 02:31:05,891] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP06_04
+[2021-06-15 02:31:05,891] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP06_04 | eval on ['2003', '8204']
+[2021-06-15 02:31:05,917] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:31:05,920] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:31:05,924] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:31:05,938] INFO    (engine-118): Resumed from 12 epoch
+[2021-06-15 02:31:13,679] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP06_05
+[2021-06-15 02:31:13,679] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP06_05 | eval on ['2014', '2013']
+[2021-06-15 02:31:13,793] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:31:13,797] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:31:13,801] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:31:13,814] INFO    (engine-118): Resumed from 5 epoch
+[2021-06-15 02:31:21,568] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP06_06
+[2021-06-15 02:31:21,568] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP06_06 | eval on ['8209', '8216']
+[2021-06-15 02:31:21,593] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:31:21,597] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:31:21,600] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:31:21,613] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 02:31:29,355] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP06_07
+[2021-06-15 02:31:29,355] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP06_07 | eval on ['8211', '8208']
+[2021-06-15 02:31:29,380] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:31:29,384] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:31:29,388] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:31:29,401] INFO    (engine-118): Resumed from 3 epoch
+[2021-06-15 02:31:37,136] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP06_08
+[2021-06-15 02:31:37,136] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP06_08 | eval on ['2015', '8201']
+[2021-06-15 02:31:37,161] INFO    (fnirs-66): {'rt': 4600, 'gng': 4600, 'anb': 9760, 'ewm': 9520}
+[2021-06-15 02:31:37,164] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:31:37,168] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:31:37,181] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:31:44,926] INFO    (main_static_test-277): permutation test on P_00_ISSUE02_EXP06_09
+[2021-06-15 02:31:44,926] INFO    (main_static_test-282): Runing P_00_ISSUE02_EXP06_09 | eval on ['8210', '2004']
+[2021-06-15 02:31:45,036] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:31:45,040] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:31:45,043] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:31:45,057] INFO    (engine-118): Resumed from 16 epoch
+[2021-06-15 02:31:52,785] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP06_09_00
+[2021-06-15 02:31:52,785] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP06_09_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 02:31:52,808] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 02:31:52,812] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:31:52,816] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:31:52,826] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:32:04,414] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP06_09_01
+[2021-06-15 02:32:04,414] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP06_09_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 02:32:04,438] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 02:32:04,443] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:32:04,448] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:32:04,462] INFO    (engine-118): Resumed from 3 epoch
+[2021-06-15 02:32:16,035] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP06_09_02
+[2021-06-15 02:32:16,036] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP06_09_02 | eval on ['2001', '8203']
+[2021-06-15 02:32:16,145] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:32:16,149] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:32:16,152] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:32:16,166] INFO    (engine-118): Resumed from 5 epoch
+[2021-06-15 02:32:23,904] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP06_09_03
+[2021-06-15 02:32:23,904] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP06_09_03 | eval on ['2011', '8218']
+[2021-06-15 02:32:23,929] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:32:23,933] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:32:23,936] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:32:23,950] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:32:31,721] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP06_09_04
+[2021-06-15 02:32:31,721] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP06_09_04 | eval on ['2003', '8204']
+[2021-06-15 02:32:31,746] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:32:31,750] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:32:31,753] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:32:31,766] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:32:39,610] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP06_09_05
+[2021-06-15 02:32:39,611] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP06_09_05 | eval on ['2014', '2013']
+[2021-06-15 02:32:39,724] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:32:39,727] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:32:39,731] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:32:39,744] INFO    (engine-118): Resumed from 9 epoch
+[2021-06-15 02:32:47,491] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP06_09_06
+[2021-06-15 02:32:47,491] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP06_09_06 | eval on ['8209', '8216']
+[2021-06-15 02:32:47,516] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:32:47,519] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:32:47,523] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:32:47,536] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:32:55,262] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP06_09_07
+[2021-06-15 02:32:55,262] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP06_09_07 | eval on ['8211', '8208']
+[2021-06-15 02:32:55,286] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:32:55,290] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:32:55,293] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:32:55,306] INFO    (engine-118): Resumed from 4 epoch
+[2021-06-15 02:33:03,046] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP06_09_08
+[2021-06-15 02:33:03,046] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP06_09_08 | eval on ['2015', '8201']
+[2021-06-15 02:33:03,070] INFO    (fnirs-66): {'rt': 4600, 'gng': 4600, 'anb': 9760, 'ewm': 9520}
+[2021-06-15 02:33:03,074] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:33:03,077] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:33:03,091] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:33:10,826] INFO    (main_static_test-277): permutation test on P_01_P_00_ISSUE02_EXP06_09_09
+[2021-06-15 02:33:10,826] INFO    (main_static_test-282): Runing P_01_P_00_ISSUE02_EXP06_09_09 | eval on ['8210', '2004']
+[2021-06-15 02:33:10,937] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:33:10,940] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:33:10,944] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:33:10,957] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:33:18,702] INFO    (main_static_test-277): permutation test on P_02_P_01_P_00_ISSUE02_EXP06_09_09_00
+[2021-06-15 02:33:18,703] INFO    (main_static_test-282): Runing P_02_P_01_P_00_ISSUE02_EXP06_09_09_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 02:33:18,725] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 02:33:18,729] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:33:18,734] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:33:18,743] INFO    (engine-118): Resumed from 10 epoch
+[2021-06-15 02:33:30,397] INFO    (main_static_test-277): permutation test on P_02_P_01_P_00_ISSUE02_EXP06_09_09_01
+[2021-06-15 02:33:30,398] INFO    (main_static_test-282): Runing P_02_P_01_P_00_ISSUE02_EXP06_09_09_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 02:33:30,422] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 02:33:30,427] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:33:30,431] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:33:30,445] INFO    (engine-118): Resumed from 9 epoch
+[2021-06-15 02:33:42,093] INFO    (main_static_test-277): permutation test on P_02_P_01_P_00_ISSUE02_EXP06_09_09_02
+[2021-06-15 02:33:42,093] INFO    (main_static_test-282): Runing P_02_P_01_P_00_ISSUE02_EXP06_09_09_02 | eval on ['2001', '8203']
+[2021-06-15 02:33:42,203] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:33:42,207] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:33:42,210] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:33:42,224] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 02:33:50,024] INFO    (main_static_test-277): permutation test on P_02_P_01_P_00_ISSUE02_EXP06_09_09_03
+[2021-06-15 02:33:50,024] INFO    (main_static_test-282): Runing P_02_P_01_P_00_ISSUE02_EXP06_09_09_03 | eval on ['2011', '8218']
+[2021-06-15 02:33:50,049] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:33:50,053] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:33:50,056] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:33:50,070] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:33:57,947] INFO    (main_static_test-277): permutation test on P_02_P_01_P_00_ISSUE02_EXP06_09_09_04
+[2021-06-15 02:33:57,947] INFO    (main_static_test-282): Runing P_02_P_01_P_00_ISSUE02_EXP06_09_09_04 | eval on ['2003', '8204']
+[2021-06-15 02:33:57,971] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:33:57,975] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:33:57,978] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:33:57,992] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 02:34:05,680] INFO    (main_static_test-277): permutation test on P_02_P_01_P_00_ISSUE02_EXP06_09_09_05
+[2021-06-15 02:34:05,681] INFO    (main_static_test-282): Runing P_02_P_01_P_00_ISSUE02_EXP06_09_09_05 | eval on ['2014', '2013']
+[2021-06-15 02:34:05,705] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:34:05,796] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:34:05,800] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:34:05,813] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 02:34:13,353] INFO    (main_static_test-277): permutation test on P_02_P_01_P_00_ISSUE02_EXP06_09_09_06
+[2021-06-15 02:34:13,353] INFO    (main_static_test-282): Runing P_02_P_01_P_00_ISSUE02_EXP06_09_09_06 | eval on ['8209', '8216']
+[2021-06-15 02:34:13,378] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:34:13,381] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:34:13,385] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:34:13,398] INFO    (engine-118): Resumed from 11 epoch
+[2021-06-15 02:34:20,941] INFO    (main_static_test-277): permutation test on P_02_P_01_P_00_ISSUE02_EXP06_09_09_07
+[2021-06-15 02:34:20,942] INFO    (main_static_test-282): Runing P_02_P_01_P_00_ISSUE02_EXP06_09_09_07 | eval on ['8211', '8208']
+[2021-06-15 02:34:20,965] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:34:20,969] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:34:20,972] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:34:20,985] INFO    (engine-118): Resumed from 8 epoch
+[2021-06-15 02:34:28,526] INFO    (main_static_test-277): permutation test on P_02_P_01_P_00_ISSUE02_EXP06_09_09_08
+[2021-06-15 02:34:28,526] INFO    (main_static_test-282): Runing P_02_P_01_P_00_ISSUE02_EXP06_09_09_08 | eval on ['2015', '8201']
+[2021-06-15 02:34:28,550] INFO    (fnirs-66): {'rt': 4600, 'gng': 4600, 'anb': 9760, 'ewm': 9520}
+[2021-06-15 02:34:28,553] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:34:28,557] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:34:28,570] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:34:36,110] INFO    (main_static_test-277): permutation test on P_02_P_01_P_00_ISSUE02_EXP06_09_09_09
+[2021-06-15 02:34:36,110] INFO    (main_static_test-282): Runing P_02_P_01_P_00_ISSUE02_EXP06_09_09_09 | eval on ['8210', '2004']
+[2021-06-15 02:34:36,220] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:34:36,223] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:34:36,226] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:34:36,239] INFO    (engine-118): Resumed from 12 epoch
+[2021-06-15 02:34:43,824] INFO    (main_static_test-277): permutation test on P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_00
+[2021-06-15 02:34:43,824] INFO    (main_static_test-282): Runing P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 02:34:43,846] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 02:34:43,851] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:34:43,855] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:34:43,864] INFO    (engine-118): Resumed from 5 epoch
+[2021-06-15 02:34:55,192] INFO    (main_static_test-277): permutation test on P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_01
+[2021-06-15 02:34:55,192] INFO    (main_static_test-282): Runing P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 02:34:55,216] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 02:34:55,221] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:34:55,226] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:34:55,239] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 02:35:06,537] INFO    (main_static_test-277): permutation test on P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_02
+[2021-06-15 02:35:06,537] INFO    (main_static_test-282): Runing P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_02 | eval on ['2001', '8203']
+[2021-06-15 02:35:06,648] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:35:06,651] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:35:06,655] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:35:06,668] INFO    (engine-118): Resumed from 3 epoch
+[2021-06-15 02:35:14,211] INFO    (main_static_test-277): permutation test on P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_03
+[2021-06-15 02:35:14,211] INFO    (main_static_test-282): Runing P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_03 | eval on ['2011', '8218']
+[2021-06-15 02:35:14,236] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:35:14,239] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:35:14,242] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:35:14,256] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:35:21,876] INFO    (main_static_test-277): permutation test on P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_04
+[2021-06-15 02:35:21,877] INFO    (main_static_test-282): Runing P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_04 | eval on ['2003', '8204']
+[2021-06-15 02:35:21,902] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:35:21,905] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:35:21,909] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:35:21,922] INFO    (engine-118): Resumed from 7 epoch
+[2021-06-15 02:35:29,720] INFO    (main_static_test-277): permutation test on P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_05
+[2021-06-15 02:35:29,721] INFO    (main_static_test-282): Runing P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_05 | eval on ['2014', '2013']
+[2021-06-15 02:35:29,745] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:35:29,748] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:35:29,752] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:35:29,766] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:35:37,550] INFO    (main_static_test-277): permutation test on P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_06
+[2021-06-15 02:35:37,550] INFO    (main_static_test-282): Runing P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_06 | eval on ['8209', '8216']
+[2021-06-15 02:35:37,658] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:35:37,661] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:35:37,665] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:35:37,678] INFO    (engine-118): Resumed from 5 epoch
+[2021-06-15 02:35:45,468] INFO    (main_static_test-277): permutation test on P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_07
+[2021-06-15 02:35:45,468] INFO    (main_static_test-282): Runing P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_07 | eval on ['8211', '8208']
+[2021-06-15 02:35:45,493] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:35:45,496] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:35:45,500] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:35:45,514] INFO    (engine-118): Resumed from 12 epoch
+[2021-06-15 02:35:53,228] INFO    (main_static_test-277): permutation test on P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_08
+[2021-06-15 02:35:53,229] INFO    (main_static_test-282): Runing P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_08 | eval on ['2015', '8201']
+[2021-06-15 02:35:53,253] INFO    (fnirs-66): {'rt': 4600, 'gng': 4600, 'anb': 9760, 'ewm': 9520}
+[2021-06-15 02:35:53,256] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:35:53,260] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:35:53,273] INFO    (engine-118): Resumed from 11 epoch
+[2021-06-15 02:36:00,895] INFO    (main_static_test-277): permutation test on P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09
+[2021-06-15 02:36:00,896] INFO    (main_static_test-282): Runing P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09 | eval on ['8210', '2004']
+[2021-06-15 02:36:01,007] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:36:01,011] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:36:01,014] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:36:01,027] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:36:08,653] INFO    (main_static_test-277): permutation test on P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_00
+[2021-06-15 02:36:08,653] INFO    (main_static_test-282): Runing P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 02:36:08,676] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 02:36:08,680] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:36:08,684] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:36:08,694] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:36:20,151] INFO    (main_static_test-277): permutation test on P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_01
+[2021-06-15 02:36:20,151] INFO    (main_static_test-282): Runing P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 02:36:20,176] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 02:36:20,180] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:36:20,185] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:36:20,198] INFO    (engine-118): Resumed from 4 epoch
+[2021-06-15 02:36:31,620] INFO    (main_static_test-277): permutation test on P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_02
+[2021-06-15 02:36:31,620] INFO    (main_static_test-282): Runing P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_02 | eval on ['2001', '8203']
+[2021-06-15 02:36:31,643] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:36:31,647] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:36:31,650] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:36:31,664] INFO    (engine-118): Resumed from 8 epoch
+[2021-06-15 02:36:39,380] INFO    (main_static_test-277): permutation test on P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_03
+[2021-06-15 02:36:39,380] INFO    (main_static_test-282): Runing P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_03 | eval on ['2011', '8218']
+[2021-06-15 02:36:39,405] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:36:39,409] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:36:39,412] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:36:39,425] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 02:36:47,042] INFO    (main_static_test-277): permutation test on P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_04
+[2021-06-15 02:36:47,043] INFO    (main_static_test-282): Runing P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_04 | eval on ['2003', '8204']
+[2021-06-15 02:36:47,067] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:36:47,070] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:36:47,073] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:36:47,086] INFO    (engine-118): Resumed from 9 epoch
+[2021-06-15 02:36:54,772] INFO    (main_static_test-277): permutation test on P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_05
+[2021-06-15 02:36:54,772] INFO    (main_static_test-282): Runing P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_05 | eval on ['2014', '2013']
+[2021-06-15 02:36:54,796] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:36:54,799] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:36:54,803] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:36:54,816] INFO    (engine-118): Resumed from 11 epoch
+[2021-06-15 02:37:02,487] INFO    (main_static_test-277): permutation test on P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_06
+[2021-06-15 02:37:02,487] INFO    (main_static_test-282): Runing P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_06 | eval on ['8209', '8216']
+[2021-06-15 02:37:02,596] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:37:02,599] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:37:02,603] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:37:02,616] INFO    (engine-118): Resumed from 4 epoch
+[2021-06-15 02:37:10,214] INFO    (main_static_test-277): permutation test on P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_07
+[2021-06-15 02:37:10,214] INFO    (main_static_test-282): Runing P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_07 | eval on ['8211', '8208']
+[2021-06-15 02:37:10,238] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:37:10,241] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:37:10,244] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:37:10,258] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 02:37:17,844] INFO    (main_static_test-277): permutation test on P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_08
+[2021-06-15 02:37:17,845] INFO    (main_static_test-282): Runing P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_08 | eval on ['2015', '8201']
+[2021-06-15 02:37:17,868] INFO    (fnirs-66): {'rt': 4600, 'gng': 4600, 'anb': 9760, 'ewm': 9520}
+[2021-06-15 02:37:17,872] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:37:17,875] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:37:17,888] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:37:25,512] INFO    (main_static_test-277): permutation test on P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09
+[2021-06-15 02:37:25,512] INFO    (main_static_test-282): Runing P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09 | eval on ['8210', '2004']
+[2021-06-15 02:37:25,624] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:37:25,627] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:37:25,631] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:37:25,644] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 02:37:33,276] INFO    (main_static_test-277): permutation test on P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_00
+[2021-06-15 02:37:33,276] INFO    (main_static_test-282): Runing P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 02:37:33,298] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 02:37:33,302] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:37:33,306] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:37:33,316] INFO    (engine-118): Resumed from 12 epoch
+[2021-06-15 02:37:44,774] INFO    (main_static_test-277): permutation test on P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_01
+[2021-06-15 02:37:44,775] INFO    (main_static_test-282): Runing P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 02:37:44,799] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 02:37:44,804] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:37:44,808] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:37:44,822] INFO    (engine-118): Resumed from 3 epoch
+[2021-06-15 02:37:56,251] INFO    (main_static_test-277): permutation test on P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_02
+[2021-06-15 02:37:56,252] INFO    (main_static_test-282): Runing P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_02 | eval on ['2001', '8203']
+[2021-06-15 02:37:56,276] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:37:56,279] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:37:56,282] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:37:56,296] INFO    (engine-118): Resumed from 3 epoch
+[2021-06-15 02:38:04,060] INFO    (main_static_test-277): permutation test on P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_03
+[2021-06-15 02:38:04,061] INFO    (main_static_test-282): Runing P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_03 | eval on ['2011', '8218']
+[2021-06-15 02:38:04,085] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:38:04,088] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:38:04,092] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:38:04,105] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:38:11,723] INFO    (main_static_test-277): permutation test on P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_04
+[2021-06-15 02:38:11,723] INFO    (main_static_test-282): Runing P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_04 | eval on ['2003', '8204']
+[2021-06-15 02:38:11,746] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:38:11,750] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:38:11,753] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:38:11,766] INFO    (engine-118): Resumed from 3 epoch
+[2021-06-15 02:38:19,475] INFO    (main_static_test-277): permutation test on P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_05
+[2021-06-15 02:38:19,476] INFO    (main_static_test-282): Runing P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_05 | eval on ['2014', '2013']
+[2021-06-15 02:38:19,500] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:38:19,504] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:38:19,507] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:38:19,520] INFO    (engine-118): Resumed from 4 epoch
+[2021-06-15 02:38:27,147] INFO    (main_static_test-277): permutation test on P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_06
+[2021-06-15 02:38:27,147] INFO    (main_static_test-282): Runing P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_06 | eval on ['8209', '8216']
+[2021-06-15 02:38:27,257] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:38:27,260] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:38:27,264] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:38:27,277] INFO    (engine-118): Resumed from 10 epoch
+[2021-06-15 02:38:34,888] INFO    (main_static_test-277): permutation test on P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_07
+[2021-06-15 02:38:34,888] INFO    (main_static_test-282): Runing P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_07 | eval on ['8211', '8208']
+[2021-06-15 02:38:34,912] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:38:34,916] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:38:34,919] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:38:34,932] INFO    (engine-118): Resumed from 3 epoch
+[2021-06-15 02:38:42,533] INFO    (main_static_test-277): permutation test on P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_08
+[2021-06-15 02:38:42,533] INFO    (main_static_test-282): Runing P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_08 | eval on ['2015', '8201']
+[2021-06-15 02:38:42,556] INFO    (fnirs-66): {'rt': 4600, 'gng': 4600, 'anb': 9760, 'ewm': 9520}
+[2021-06-15 02:38:42,560] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:38:42,563] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:38:42,576] INFO    (engine-118): Resumed from 5 epoch
+[2021-06-15 02:38:50,192] INFO    (main_static_test-277): permutation test on P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09
+[2021-06-15 02:38:50,192] INFO    (main_static_test-282): Runing P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09 | eval on ['8210', '2004']
+[2021-06-15 02:38:50,305] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:38:50,308] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:38:50,311] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:38:50,324] INFO    (engine-118): Resumed from 3 epoch
+[2021-06-15 02:38:57,937] INFO    (main_static_test-277): permutation test on P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_00
+[2021-06-15 02:38:57,937] INFO    (main_static_test-282): Runing P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 02:38:57,959] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 02:38:57,964] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:38:57,968] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:38:57,978] INFO    (engine-118): Resumed from 16 epoch
+[2021-06-15 02:39:09,438] INFO    (main_static_test-277): permutation test on P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_01
+[2021-06-15 02:39:09,438] INFO    (main_static_test-282): Runing P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 02:39:09,462] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 02:39:09,467] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:39:09,472] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:39:09,485] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:39:20,939] INFO    (main_static_test-277): permutation test on P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_02
+[2021-06-15 02:39:20,940] INFO    (main_static_test-282): Runing P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_02 | eval on ['2001', '8203']
+[2021-06-15 02:39:20,963] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:39:20,966] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:39:20,970] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:39:20,983] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:39:28,703] INFO    (main_static_test-277): permutation test on P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_03
+[2021-06-15 02:39:28,703] INFO    (main_static_test-282): Runing P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_03 | eval on ['2011', '8218']
+[2021-06-15 02:39:28,728] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:39:28,731] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:39:28,734] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:39:28,747] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:39:36,354] INFO    (main_static_test-277): permutation test on P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_04
+[2021-06-15 02:39:36,354] INFO    (main_static_test-282): Runing P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_04 | eval on ['2003', '8204']
+[2021-06-15 02:39:36,378] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:39:36,381] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:39:36,384] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:39:36,398] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 02:39:44,010] INFO    (main_static_test-277): permutation test on P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_05
+[2021-06-15 02:39:44,010] INFO    (main_static_test-282): Runing P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_05 | eval on ['2014', '2013']
+[2021-06-15 02:39:44,034] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:39:44,038] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:39:44,041] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:39:44,054] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:39:51,704] INFO    (main_static_test-277): permutation test on P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_06
+[2021-06-15 02:39:51,705] INFO    (main_static_test-282): Runing P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_06 | eval on ['8209', '8216']
+[2021-06-15 02:39:51,814] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:39:51,818] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:39:51,821] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:39:51,834] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 02:39:59,453] INFO    (main_static_test-277): permutation test on P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_07
+[2021-06-15 02:39:59,453] INFO    (main_static_test-282): Runing P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_07 | eval on ['8211', '8208']
+[2021-06-15 02:39:59,477] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:39:59,480] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:39:59,484] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:39:59,497] INFO    (engine-118): Resumed from 8 epoch
+[2021-06-15 02:40:07,110] INFO    (main_static_test-277): permutation test on P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_08
+[2021-06-15 02:40:07,110] INFO    (main_static_test-282): Runing P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_08 | eval on ['2015', '8201']
+[2021-06-15 02:40:07,134] INFO    (fnirs-66): {'rt': 4600, 'gng': 4600, 'anb': 9760, 'ewm': 9520}
+[2021-06-15 02:40:07,138] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:40:07,141] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:40:07,154] INFO    (engine-118): Resumed from 4 epoch
+[2021-06-15 02:40:14,760] INFO    (main_static_test-277): permutation test on P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09
+[2021-06-15 02:40:14,761] INFO    (main_static_test-282): Runing P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09 | eval on ['8210', '2004']
+[2021-06-15 02:40:14,785] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:40:14,877] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:40:14,880] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:40:14,893] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 02:40:22,420] INFO    (main_static_test-277): permutation test on P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_00
+[2021-06-15 02:40:22,421] INFO    (main_static_test-282): Runing P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 02:40:22,442] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 02:40:22,446] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:40:22,451] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:40:22,460] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 02:40:33,811] INFO    (main_static_test-277): permutation test on P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_01
+[2021-06-15 02:40:33,812] INFO    (main_static_test-282): Runing P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 02:40:33,836] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 02:40:33,840] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:40:33,845] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:40:33,858] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 02:40:45,141] INFO    (main_static_test-277): permutation test on P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_02
+[2021-06-15 02:40:45,141] INFO    (main_static_test-282): Runing P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_02 | eval on ['2001', '8203']
+[2021-06-15 02:40:45,164] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:40:45,167] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:40:45,171] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:40:45,184] INFO    (engine-118): Resumed from 4 epoch
+[2021-06-15 02:40:52,730] INFO    (main_static_test-277): permutation test on P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_03
+[2021-06-15 02:40:52,731] INFO    (main_static_test-282): Runing P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_03 | eval on ['2011', '8218']
+[2021-06-15 02:40:52,840] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:40:52,843] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:40:52,847] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:40:52,860] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:41:00,403] INFO    (main_static_test-277): permutation test on P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_04
+[2021-06-15 02:41:00,403] INFO    (main_static_test-282): Runing P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_04 | eval on ['2003', '8204']
+[2021-06-15 02:41:00,427] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:41:00,430] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:41:00,433] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:41:00,446] INFO    (engine-118): Resumed from 5 epoch
+[2021-06-15 02:41:07,967] INFO    (main_static_test-277): permutation test on P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_05
+[2021-06-15 02:41:07,968] INFO    (main_static_test-282): Runing P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_05 | eval on ['2014', '2013']
+[2021-06-15 02:41:07,992] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:41:07,995] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:41:07,999] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:41:08,013] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:41:15,582] INFO    (main_static_test-277): permutation test on P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_06
+[2021-06-15 02:41:15,583] INFO    (main_static_test-282): Runing P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_06 | eval on ['8209', '8216']
+[2021-06-15 02:41:15,694] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:41:15,697] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:41:15,701] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:41:15,714] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:41:23,254] INFO    (main_static_test-277): permutation test on P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_07
+[2021-06-15 02:41:23,254] INFO    (main_static_test-282): Runing P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_07 | eval on ['8211', '8208']
+[2021-06-15 02:41:23,278] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:41:23,281] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:41:23,284] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:41:23,297] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 02:41:30,810] INFO    (main_static_test-277): permutation test on P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_08
+[2021-06-15 02:41:30,810] INFO    (main_static_test-282): Runing P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_08 | eval on ['2015', '8201']
+[2021-06-15 02:41:30,834] INFO    (fnirs-66): {'rt': 4600, 'gng': 4600, 'anb': 9760, 'ewm': 9520}
+[2021-06-15 02:41:30,837] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:41:30,841] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:41:30,854] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 02:41:38,433] INFO    (main_static_test-277): permutation test on P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09
+[2021-06-15 02:41:38,433] INFO    (main_static_test-282): Runing P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09 | eval on ['8210', '2004']
+[2021-06-15 02:41:38,458] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:41:38,461] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:41:38,465] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:41:38,478] INFO    (engine-118): Resumed from 10 epoch
+[2021-06-15 02:41:46,012] INFO    (main_static_test-277): permutation test on P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_00
+[2021-06-15 02:41:46,013] INFO    (main_static_test-282): Runing P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 02:41:46,109] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 02:41:46,113] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:41:46,117] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:41:46,126] INFO    (engine-118): Resumed from 9 epoch
+[2021-06-15 02:41:57,549] INFO    (main_static_test-277): permutation test on P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_01
+[2021-06-15 02:41:57,549] INFO    (main_static_test-282): Runing P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 02:41:57,574] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 02:41:57,579] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:41:57,584] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:41:57,597] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 02:42:08,948] INFO    (main_static_test-277): permutation test on P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_02
+[2021-06-15 02:42:08,948] INFO    (main_static_test-282): Runing P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_02 | eval on ['2001', '8203']
+[2021-06-15 02:42:08,972] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:42:08,975] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:42:08,979] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:42:08,992] INFO    (engine-118): Resumed from 3 epoch
+[2021-06-15 02:42:16,547] INFO    (main_static_test-277): permutation test on P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_03
+[2021-06-15 02:42:16,547] INFO    (main_static_test-282): Runing P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_03 | eval on ['2011', '8218']
+[2021-06-15 02:42:16,654] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:42:16,657] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:42:16,661] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:42:16,674] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:42:24,199] INFO    (main_static_test-277): permutation test on P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_04
+[2021-06-15 02:42:24,199] INFO    (main_static_test-282): Runing P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_04 | eval on ['2003', '8204']
+[2021-06-15 02:42:24,223] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:42:24,227] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:42:24,230] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:42:24,243] INFO    (engine-118): Resumed from 1 epoch
+[2021-06-15 02:42:31,777] INFO    (main_static_test-277): permutation test on P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_05
+[2021-06-15 02:42:31,778] INFO    (main_static_test-282): Runing P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_05 | eval on ['2014', '2013']
+[2021-06-15 02:42:31,802] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:42:31,805] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:42:31,808] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:42:31,821] INFO    (engine-118): Resumed from 4 epoch
+[2021-06-15 02:42:39,360] INFO    (main_static_test-277): permutation test on P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_06
+[2021-06-15 02:42:39,360] INFO    (main_static_test-282): Runing P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_06 | eval on ['8209', '8216']
+[2021-06-15 02:42:39,471] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:42:39,475] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:42:39,478] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:42:39,492] INFO    (engine-118): Resumed from 5 epoch
+[2021-06-15 02:42:47,093] INFO    (main_static_test-277): permutation test on P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_07
+[2021-06-15 02:42:47,094] INFO    (main_static_test-282): Runing P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_07 | eval on ['8211', '8208']
+[2021-06-15 02:42:47,117] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:42:47,121] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:42:47,124] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:42:47,137] INFO    (engine-118): Resumed from 9 epoch
+[2021-06-15 02:42:54,672] INFO    (main_static_test-277): permutation test on P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_08
+[2021-06-15 02:42:54,673] INFO    (main_static_test-282): Runing P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_08 | eval on ['2015', '8201']
+[2021-06-15 02:42:54,697] INFO    (fnirs-66): {'rt': 4600, 'gng': 4600, 'anb': 9760, 'ewm': 9520}
+[2021-06-15 02:42:54,700] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:42:54,703] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:42:54,716] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:43:02,254] INFO    (main_static_test-277): permutation test on P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09
+[2021-06-15 02:43:02,254] INFO    (main_static_test-282): Runing P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09 | eval on ['8210', '2004']
+[2021-06-15 02:43:02,278] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:43:02,282] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:43:02,374] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:43:02,387] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:43:09,961] INFO    (main_static_test-277): permutation test on P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_00
+[2021-06-15 02:43:09,961] INFO    (main_static_test-282): Runing P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_00 | eval on ['2012', '8213', '8206']
+[2021-06-15 02:43:09,983] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'ewm': 9044, 'gng': 4370}
+[2021-06-15 02:43:09,987] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:43:09,991] INFO    (fnirs-66): {'gng': 690, 'anb': 1464, 'rt': 690, 'ewm': 1428}
+[2021-06-15 02:43:10,000] INFO    (engine-118): Resumed from 3 epoch
+[2021-06-15 02:43:21,366] INFO    (main_static_test-277): permutation test on P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_01
+[2021-06-15 02:43:21,366] INFO    (main_static_test-282): Runing P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_01 | eval on ['8214', '2006', '2017']
+[2021-06-15 02:43:21,390] INFO    (fnirs-66): {'rt': 4370, 'anb': 9272, 'gng': 4370, 'ewm': 9044}
+[2021-06-15 02:43:21,396] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:43:21,400] INFO    (fnirs-66): {'gng': 690, 'ewm': 1428, 'rt': 690, 'anb': 1464}
+[2021-06-15 02:43:21,413] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 02:43:32,792] INFO    (main_static_test-277): permutation test on P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_02
+[2021-06-15 02:43:32,793] INFO    (main_static_test-282): Runing P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_02 | eval on ['2001', '8203']
+[2021-06-15 02:43:32,816] INFO    (fnirs-66): {'anb': 9760, 'rt': 4600, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:43:32,820] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:43:32,823] INFO    (fnirs-66): {'rt': 460, 'anb': 976, 'ewm': 952, 'gng': 460}
+[2021-06-15 02:43:32,836] INFO    (engine-118): Resumed from 5 epoch
+[2021-06-15 02:43:40,365] INFO    (main_static_test-277): permutation test on P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_03
+[2021-06-15 02:43:40,366] INFO    (main_static_test-282): Runing P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_03 | eval on ['2011', '8218']
+[2021-06-15 02:43:40,475] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:43:40,479] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:43:40,482] INFO    (fnirs-66): {'anb': 976, 'gng': 460, 'rt': 460, 'ewm': 952}
+[2021-06-15 02:43:40,495] INFO    (engine-118): Resumed from 5 epoch
+[2021-06-15 02:43:48,014] INFO    (main_static_test-277): permutation test on P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_04
+[2021-06-15 02:43:48,015] INFO    (main_static_test-282): Runing P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_04 | eval on ['2003', '8204']
+[2021-06-15 02:43:48,038] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:43:48,042] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:43:48,045] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:43:48,059] INFO    (engine-118): Resumed from 6 epoch
+[2021-06-15 02:43:55,655] INFO    (main_static_test-277): permutation test on P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_05
+[2021-06-15 02:43:55,655] INFO    (main_static_test-282): Runing P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_05 | eval on ['2014', '2013']
+[2021-06-15 02:43:55,680] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:43:55,684] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:43:55,687] INFO    (fnirs-66): {'rt': 460, 'gng': 460, 'anb': 976, 'ewm': 952}
+[2021-06-15 02:43:55,700] INFO    (engine-118): Resumed from 4 epoch
+[2021-06-15 02:44:03,271] INFO    (main_static_test-277): permutation test on P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_06
+[2021-06-15 02:44:03,272] INFO    (main_static_test-282): Runing P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_06 | eval on ['8209', '8216']
+[2021-06-15 02:44:03,296] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:44:03,387] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:44:03,390] INFO    (fnirs-66): {'ewm': 952, 'anb': 976, 'gng': 460, 'rt': 460}
+[2021-06-15 02:44:03,403] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:44:10,987] INFO    (main_static_test-277): permutation test on P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_07
+[2021-06-15 02:44:10,987] INFO    (main_static_test-282): Runing P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_07 | eval on ['8211', '8208']
+[2021-06-15 02:44:11,011] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:44:11,015] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:44:11,018] INFO    (fnirs-66): {'rt': 460, 'ewm': 952, 'anb': 976, 'gng': 460}
+[2021-06-15 02:44:11,032] INFO    (engine-118): Resumed from 2 epoch
+[2021-06-15 02:44:18,591] INFO    (main_static_test-277): permutation test on P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_08
+[2021-06-15 02:44:18,591] INFO    (main_static_test-282): Runing P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_08 | eval on ['2015', '8201']
+[2021-06-15 02:44:18,615] INFO    (fnirs-66): {'rt': 4600, 'gng': 4600, 'anb': 9760, 'ewm': 9520}
+[2021-06-15 02:44:18,618] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:44:18,622] INFO    (fnirs-66): {'anb': 976, 'ewm': 952, 'gng': 460, 'rt': 460}
+[2021-06-15 02:44:18,635] INFO    (engine-118): Resumed from 0 epoch
+[2021-06-15 02:44:26,163] INFO    (main_static_test-277): permutation test on P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_09
+[2021-06-15 02:44:26,163] INFO    (main_static_test-282): Runing P_09_P_08_P_07_P_06_P_05_P_04_P_03_P_02_P_01_P_00_ISSUE02_EXP06_09_09_09_09_09_09_09_09_09_09 | eval on ['8210', '2004']
+[2021-06-15 02:44:26,187] INFO    (fnirs-66): {'rt': 4600, 'anb': 9760, 'gng': 4600, 'ewm': 9520}
+[2021-06-15 02:44:26,191] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:44:26,194] INFO    (fnirs-66): {'gng': 460, 'ewm': 952, 'rt': 460, 'anb': 976}
+[2021-06-15 02:44:26,207] INFO    (engine-118): Resumed from 7 epoch

@@ -4,6 +4,7 @@ from PIL import Image
 from mlxtend.plotting import plot_confusion_matrix
 import matplotlib.pyplot as plt
 import numpy as np
+import json
 
 
 def visual_conf_mat(conf_mat, class_names):
@@ -133,3 +134,23 @@ def auto_select_gpu(mem_bound=500, utility_bound=0, gpus=(0, 1, 2, 3, 4, 5, 6, 7
     print("Setting GPU: {}".format(selected_gpus))
     os.environ['CUDA_VISIBLE_DEVICES'] = ','.join(selected_gpus)
     return selected_gpus
+
+def dict2json(data, path:str, indent=4):
+    """
+    - create the dirname if path not exist, 
+    - save in .json format, with indent=4    
+    """
+    try:
+        assert path.endswith('.json')
+    except AssertionError:
+        path = os.path.join(os.path.dirname(path), os.path.basename(path).split('.')[0]+'.json')
+
+    file_root = os.path.dirname(path)
+    ensure(file_root)
+    with open(path, 'w') as fp:
+        json.dump(data, fp, indent=indent)
+    
+def json2dict(path:str):
+    with open(path, 'r') as fp:
+        data = json.load(fp)
+        return data
