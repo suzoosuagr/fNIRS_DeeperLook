@@ -55,10 +55,64 @@ vpl_recall = np.mean([0.83541956, 0.8509332,  0.63625758])
 vpl_f1 = np.mean([0.79840496, 0.84895259, 0.66895621] )
 
 
-# %% wml - accu
-# fig, axs = plt.subplots(1,1, plt.tight_layout=True)
-# axs[0].hist(wml_mean, bins=15)
-permutation_p_value(wml_metrics['accu'], wml_mean_accu)
+# %% plot for wml
+fig, axs = plt.subplots(2,2, sharey=True, tight_layout=True)
+axs[0, 0].hist(wml_metrics['accu'], bins=100)
+axs[0, 0].axvline(x=wml_mean_accu, linestyle='--', color='red')
+axs[0, 0].axvline(x=np.mean(wml_metrics['accu']), linestyle='--', color='black')
+p_value = permutation_p_value(wml_metrics['accu'], wml_mean_accu)
+axs[0, 0].title.set_text(f"Accuracy | wml \n p-value: {p_value}")
+
+axs[1, 0].hist(wml_metrics['precision'], bins=100)
+axs[1, 0].axvline(x=wml_precision, linestyle='--', color='red')
+axs[1, 0].axvline(x=np.mean(wml_metrics['precision']), linestyle='--', color='black')
+p_value = permutation_p_value(wml_metrics['precision'], wml_precision)
+axs[1, 0].title.set_text(f"mean Precision | wml \n p-value: {p_value}")
 
 
+axs[1, 1].hist(wml_metrics['recall'], bins=100)
+axs[1, 1].axvline(x=wml_recall, linestyle='--', color='red')
+axs[1, 1].axvline(x=np.mean(wml_metrics['recall']), linestyle='--', color='black')
+p_value = permutation_p_value(wml_metrics['recall'], wml_recall)
+axs[1, 1].title.set_text(f"mean Recall | wml \n p-value: {p_value}")
+
+
+axs[0, 1].hist(wml_metrics['f1'], bins=100)
+axs[0, 1].axvline(x=wml_f1, linestyle='--', color='red')
+axs[0, 1].axvline(x=np.mean(wml_metrics['f1']), linestyle='--', color='black')
+p_value = permutation_p_value(wml_metrics['f1'], wml_f1)
+axs[0, 1].title.set_text(f"mean F1-score | wml \n p-value: {p_value}")
+
+plt.savefig('./Visual/Permutation_Test/wml_10folds.png', dpi=80, transparent=False, bbox_inches='tight')
+plt.close('all')
+# %% plot for vpl
+fig, axs = plt.subplots(2,2, sharey=True, tight_layout=True)
+axs[0, 0].hist(vpl_metrics['accu'], bins=100)
+axs[0, 0].axvline(x=vpl_mean_accu, linestyle='--', color='red')
+axs[0, 0].axvline(x=np.mean(vpl_metrics['accu']), linestyle='--', color='black')
+p_value = permutation_p_value(vpl_metrics['accu'], vpl_mean_accu)
+axs[0, 0].title.set_text(f"Accuracy | vpl \n p-value: {p_value}")
+
+axs[1, 0].hist(vpl_metrics['precision'], bins=100)
+axs[1, 0].axvline(x=vpl_precision, linestyle='--', color='red')
+axs[1, 0].axvline(x=np.mean(vpl_metrics['precision']), linestyle='--', color='black')
+p_value = permutation_p_value(vpl_metrics['precision'], vpl_precision)
+axs[1, 0].title.set_text(f"mean Precision | vpl \n p-value: {p_value}")
+
+
+axs[1, 1].hist(vpl_metrics['recall'], bins=100)
+axs[1, 1].axvline(x=vpl_recall, linestyle='--', color='red')
+axs[1, 1].axvline(x=np.mean(vpl_metrics['recall']), linestyle='--', color='black')
+p_value = permutation_p_value(vpl_metrics['recall'], vpl_recall)
+axs[1, 1].title.set_text(f"mean Recall | vpl \n p-value: {p_value}")
+
+
+axs[0, 1].hist(vpl_metrics['f1'], bins=100)
+axs[0, 1].axvline(x=vpl_f1, linestyle='--', color='red')
+axs[0, 1].axvline(x=np.mean(vpl_metrics['f1']), linestyle='--', color='black')
+p_value = permutation_p_value(vpl_metrics['f1'], vpl_f1)
+axs[0, 1].title.set_text(f"mean F1-score | vpl \n p-value: {p_value}")
+
+plt.savefig('./Visual/Permutation_Test/vpl_10folds.png', dpi=80, transparent=False, bbox_inches='tight')
+plt.close('all')
 # %%
