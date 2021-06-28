@@ -1,6 +1,7 @@
 # %% initialization
 import numpy as np
 from numpy.core.fromnumeric import shape
+from numpy.lib.npyio import load
 from Data.Dataset.fnirs import fNIRS_mb_label_balance_leave_subject
 import pandas as pd
 from Experiments.Config.issue03 import *
@@ -11,6 +12,7 @@ import scipy.stats as stats
 from skfeature.function.similarity_based import fisher_score as Fs
 from Tools.utils import ensure
 from tqdm import trange
+from sklearn.svm import SVC
 
 args = EXP01('debug', 'standard.log')
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
@@ -66,7 +68,7 @@ def feature_selection(dataset, featFunc, topk=6):
         selected_feat.append(rank[:topk])
     return selected_feat, feat_pool, label_pool
 
-def kfoldFeatSave(args, k, featFunc):
+def kfoldFeatSave(args, k, featFunc, mode='preprocess'):
     Basic_Name = args.name
     feat_order = ['Oxy', 'Deoxy']
     with open(os.path.join(args.data_config['ins_root'], 'fold_id_mapping.json'), 'r') as jsf:
@@ -104,10 +106,10 @@ def kfoldFeatSave(args, k, featFunc):
             fswriter.write(f'Selected {feat_order[i]}=='+','.join([str(s) for s in fs[i].tolist()])+'\n')
         fswriter.close()
 
-def load_data(root, fold_id):
-    feat_path = os.path.join(root, fold_id, 'featPool.npy')
-    label_path = os.path.join(root, fold_id, 'labelPool.npy')
-    fs_path = os.path.join(root, fold_id, 'featSelection.txt')
+def load_data(root, fold_id, featFunc):
+    feat_path = os.path.join(root, '{:02}'.format(fold_id), f'featPool_{featFunc.__name__}.npy')
+    label_path = os.path.join(root, '{:02}'.format(fold_id), f'labelPool_{featFunc.__name__}.npy')
+    fs_path = os.path.join(root, '{:02}'.format(fold_id), f'featSelection_{featFunc.__name__}.txt')
     featPool = np.load(feat_path)
     labelPool = np.load(label_path)
     with open(fs_path, 'r') as f:
@@ -120,11 +122,82 @@ def load_data(root, fold_id):
 
     return featPool, labelPool, oxy_index, deoxy_index
 
-if __name__ == "__main__":
-    for func in [mean, var, skew, kurtosis, slope]:
-        kfoldFeatSave(args, k=10, featFunc=func)
-        
+class svmEngine():
+    def __init__(self, k, funcList, args) -> None:
+        self.k = k
+        self.funcList = funcList
+        self.args = args
 
-    # featPool, LabelPool, oxy_index, deoxy_index = load_data(save_root, '00')
-    # print("Read. ")
-# %%
+    def extractFeat(self):
+        for func in self.funcList:
+            kfoldFeatSave(self.args, k=self.k, featFunc=func)
+
+    def runTrain(self):
+        args = self.args
+        BasicName = args.name
+        with open(os.path.join(args.data_config['ins_root'], 'fold_id_mapping.json'), 'r') as jsf:
+            fold_id_mapping = json.load(jsf)
+        for fold_id in range(self.k):
+            print("="*10)
+            args.data_config['train_ids'] = fold_id_mapping[str(fold_id)]['train_ids']
+            args.data_config['eval_ids'] = fold_id_mapping[str(fold_id)]['eval_ids']
+            args.name = "{}_{:02}".format(BasicName, fold_id)
+            print(f"Runing {args.name} | eval on {args.data_config['eval_ids']}")
+            for func in [mean, var, skew, kurtosis, slope]:
+                featPool, labelPool, oxy_index, deoxy_index = load_data(save_root, fold_id, func)
+                clf = trainSVM(featPool, labelPool, oxy_index, deoxy_index)
+                testFeat, testLabel = extractTestFeature(args, fold_id, oxy_index, deoxy_index, func)
+                preds = clf.predict(testFeat)
+                with open(os.path.join(save_root, '{:02}'.format(fold_id), f'Results_{func.__name__}.txt'), 'w') as resWriter:
+                    for i in range(len(preds)):
+                        msg = f"{preds[i]},{testLabel[i]}\n"
+                        resWriter.write(msg)
+                print("Results saved.")
+
+
+
+def trainSVM(X, y, oxy_index, deoxy_index):
+    oxy_feat = X[0][:,oxy_index]
+    deoxy_feat = X[1][:,deoxy_index]
+    selected_feature = np.concatenate((oxy_feat, deoxy_feat), axis=1)
+    clf = SVC(kernel='linear')
+    clf.fit(selected_feature, y)
+    return clf
+    
+def extractTestFeature(args, fold_id, oxy_index, deoxy_index, featFunc):
+    test_dataset = fNIRS_mb_label_balance_leave_subject(\
+                list_root = args.list_path,
+                steps = args.steps_sizes,
+                mode='eval',
+                data_config=args.data_config,
+                runtime=True,
+                fold_id=fold_id)
+    featPool = []
+    labelPool = []
+    for i in range(len(test_dataset)):
+        data, label, oxy_files =test_dataset[i]
+        feat = featFunc(data)
+        featPool.append(feat)
+        labelPool.append(label)
+    featPool = np.stack(featPool, axis=1)
+
+    # pick feat
+    oxy_feat = featPool[0][:,oxy_index]
+    deoxy_feat = featPool[1][:,deoxy_index]
+    feat = np.concatenate((oxy_feat, deoxy_feat), axis=1)
+    return feat, labelPool
+    
+
+if __name__ == "__main__":
+    # fold_id = 0
+    # for func in [mean, var, skew, kurtosis, slope]:
+    # #     kfoldFeatSave(args, k=10, featFunc=func)
+    #     featPool, labelPool, oxy_index, deoxy_index = load_data(save_root, '00', slope)
+    #     # clf = trainSVM(featPool, labelPool, oxy_index, deoxy_index)
+    #     feat, labelPool = extractTestFeature(args, fold_id, oxy_index, deoxy_index, slope)
+    #     # preds = clf.predict(feat)
+    #     print("-")
+    engine = svmEngine(k=10, funcList=[mean, var, skew, kurtosis, slope], args=args)
+    engine.runTrain()
+    
+
