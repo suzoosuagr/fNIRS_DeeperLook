@@ -155,3 +155,23 @@ class EXP05(EXP01):
             "parts": ["head.npy"],
             "ins_root": "./Data/Ins/label_balance_sub/22Folds/"
         }
+
+
+class EXP00(EXP01):
+    """
+        this is just used for generate the instructions. 
+        different folds
+    """
+    def __init__(self, mode, logfile):
+        super(EXP00, self).__init__(mode, logfile)
+        self.data_config = {
+            "train_tasks": ["anb" , "rt","ewm", "gng"],
+            "eval_tasks": ["anb" , "rt","ewm", "gng"],
+            "ids":      ["2001", "2004", "2012", "2013", "2015",
+                        "8204","8206","8209","8210","8211","8213",
+                        "8214","8218", "2006", "2011", "2014", "2017", 
+                        "8201", "8203","8208","8216", "2003"],  # no subject named 8012
+            "sessions": ["s1","s2"],
+            "parts": ["head.npy"],
+            "ins_root": "./Data/Ins/label_balance_none_zscore/10Folds/"
+        }

@@ -110,7 +110,10 @@ class fNIRS_Basic(data.Dataset):
         data = F.pad(data, (0, 1, 0, 1), 'constant', 0)
         return data 
 
-    def load_data_(self, index):
+    def load_data_(self, index, trans=True):
+        """
+            trans would let the model from 1d -> 2d. 
+        """
         assert len(self.instructor) > 0
         oxy_file, deoxy_file, start_cr, start_task, label = self.instructor[index]
         start_cr = int(start_cr)
@@ -136,6 +139,8 @@ class fNIRS_Basic(data.Dataset):
         deoxy_cr_sample = deoxy_cr[start_cr: start_cr + cr_duration]
         deoxy_task_sample = deoxy_task[start_cr: start_cr + task_duration]
 
+        if not trans:
+            return np.stack([oxy_cr_sample, deoxy_cr_sample], axis=1), np.stack([oxy_task_sample, deoxy_task_sample], axis=1), label, oxy_file
         cr = self.gen_2d(oxy_cr_sample, deoxy_cr_sample)
         task = self.gen_2d(oxy_task_sample, deoxy_task_sample)
         return cr, task, label, oxy_file
@@ -350,3 +355,20 @@ class fNIRS_mb_label_balance_leave_subject_sla_permutation_test(fNIRS_Basic):
                 self.data_files.append([l,os.path.join(data_root, deoxy_file)])
             else:
                 continue
+
+class fNIRS_mb_label_balance_leave_subject(fNIRS_mb_label_balance_leave_subject_sla):
+    def __init__(self, list_root, steps: list, mode, data_config, runtime, fold_id, istest=False) -> None:
+        super(fNIRS_mb_label_balance_leave_subject, self).__init__(list_root, steps, mode, data_config, runtime=runtime, fold_id=fold_id, istest=istest)
+        self.class_map = {
+            "anb": 1,
+            "rt":0,
+            "gng":0,
+            "ewm":2
+        }
+
+    def __getitem__(self, index):
+        return self.get_tast_multi_branch(index)
+
+    def get_tast_multi_branch(self, index):
+        cr, task, label, oxy_file = self.load_data_(index, trans=False)  # didn't do the 1d to 2d trans
+        return task.astype(np.float32), label, oxy_file

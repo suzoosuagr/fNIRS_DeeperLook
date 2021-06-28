@@ -287,6 +287,6 @@ if __name__ == "__main__":
     # shap_leave_one_out(args, proc='wml')
     # shap_leave_one_out(args, proc='vpl')
 
-    # downsample_instructors('./Data/Ins/label_balance/', '5Folds', 'M', './Data/Ins/label_balance_sub/')
+    downsample_instructors('./Data/Ins/label_balance_none_zscore/', '10Folds', 'M', './Data/Ins/label_balance_sub_none_zscore/')
 
 
