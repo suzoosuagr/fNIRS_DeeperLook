@@ -13,6 +13,7 @@ from skfeature.function.similarity_based import fisher_score as Fs
 from Tools.utils import ensure
 from tqdm import trange
 from sklearn.svm import SVC
+from Tools.metric import Performance_Test_ensemble_multi
 
 args = EXP01('debug', 'standard.log')
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
@@ -186,7 +187,27 @@ def extractTestFeature(args, fold_id, oxy_index, deoxy_index, featFunc):
     deoxy_feat = featPool[1][:,deoxy_index]
     feat = np.concatenate((oxy_feat, deoxy_feat), axis=1)
     return feat, labelPool
-    
+
+def fisherSelectedSVMMetrics(k, funcList):
+    for func in funcList:
+        esemble_metric = Performance_Test_ensemble_multi(joint=True, self_supervise=False)
+        for fold_id in range(k):
+            results_root = os.path.join(save_root, '{:02}'.format(fold_id))
+            result_path = os.path.join(results_root, f'Results_{func.__name__}.txt')
+            with open(result_path, 'r') as f:
+                lines = f.readlines()
+                lines = [l.rstrip() for l in lines]
+                for l in lines:
+                    p, t = l.split(',')
+                    esemble_metric(int(p), int(t), svm=True)
+        print(f"Fold_ID: {fold_id} | Selected Feature: {func.__name__} | esemble results")
+        results = esemble_metric.value()
+        print(results)
+
+
+
+
+            
 
 if __name__ == "__main__":
     # fold_id = 0
@@ -197,7 +218,16 @@ if __name__ == "__main__":
     #     feat, labelPool = extractTestFeature(args, fold_id, oxy_index, deoxy_index, slope)
     #     # preds = clf.predict(feat)
     #     print("-")
-    engine = svmEngine(k=10, funcList=[mean, var, skew, kurtosis, slope], args=args)
-    engine.runTrain()
     
-
+# +++++++++++++++++++++++++++++++++++++++++++++
+#        The Engine Entry
+# +++++++++++++++++++++++++++++++++++++++++++++
+    
+    # engine = svmEngine(k=10, funcList=[mean, var, skew, kurtosis, slope], args=args)
+    # engine.runTrain()
+    
+# +++++++++++++++++++++++++++++++++++++++++++++++++++
+#       Test SVM based on the predictions records
+# +++++++++++++++++++++++++++++++++++++++++++++++++++
+    fisherSelectedSVMMetrics(k=10, funcList=[mean, var, skew, kurtosis, slope])
+# %%
