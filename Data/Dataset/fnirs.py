@@ -359,12 +359,15 @@ class fNIRS_mb_label_balance_leave_subject_sla_permutation_test(fNIRS_Basic):
 class fNIRS_mb_label_balance_leave_subject(fNIRS_mb_label_balance_leave_subject_sla):
     def __init__(self, list_root, steps: list, mode, data_config, runtime, fold_id, istest=False) -> None:
         super(fNIRS_mb_label_balance_leave_subject, self).__init__(list_root, steps, mode, data_config, runtime=runtime, fold_id=fold_id, istest=istest)
-        self.class_map = {
-            "anb": 1,
-            "rt":0,
-            "gng":0,
+        self.class_map = {   # change it for vpl and wml. 
+            "anb": 0,
+            "rt":1,
+            "gng":1,
             "ewm":2
         }
+        # self.class_map_vpl = {
+        #     "anb": 
+        # }
 
     def __getitem__(self, index):
         return self.get_tast_multi_branch(index)

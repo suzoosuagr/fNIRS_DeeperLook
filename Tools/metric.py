@@ -165,6 +165,7 @@ class Performance_Test_ensemble_multi(Metric):
             'vpl': np.zeros((size, size)),
             # 'apl': np.zeros((size, size))
         }
+        self.singlar_confMat = np.zeros((size, size))
         self.size = size
         self.total = 0.0 + 1e-8
         self.correct = 0.0
@@ -207,11 +208,8 @@ class Performance_Test_ensemble_multi(Metric):
                 # self.confusion_matrix['apl'][t[2]][p[2]] += 1
 
     def __call_svm(self, pred, truth):
-        pred = self.joint_label[pred]
-        truth = self.joint_label[truth]
+        self.singlar_confMat[truth][pred] += 1.0
 
-        self.confusion_matrix['wml'][truth[0]][pred[0]] += 1.0
-        self.confusion_matrix['vpl'][truth[1]][pred[1]] += 1.0
 
     def __call__self_supervised(self, pred, truth):
         # task_label = truth[0]
@@ -275,13 +273,30 @@ class Performance_Test_ensemble_multi(Metric):
 
         return confusion_matrix, accu, precision, recall, f1
 
-    def value(self):
+    def sing_get_value(self):
+        confusion_matrix = self.singlar_confMat
+        TP = confusion_matrix.diagonal()
+        precision = TP / confusion_matrix.sum(0)
+        recall = TP / confusion_matrix.sum(1)
+
+        f1 = (2*precision*recall) / (precision + recall)
+
+        accu = TP.sum()
+        accu = TP.sum() / confusion_matrix.sum()
+
+        return confusion_matrix, accu, precision, recall, f1
+
+    def value(self, singular=False):
         """
         calculate the precision and recall. 
         https://en.wikipedia.org/wiki/Confusion_matrix
         
         """
         results = {}
+        if singular:
+            results = self.sing_get_value()
+            return results
+
         for i in ['wml', 'vpl']:
             results[i] = self._get_value(i)
         try:

@@ -6,6 +6,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import json
 
+def msg(func):
+    def inner1(*args, **kwargs):
+        print("="*20)
+        out = func(*args, **kwargs)
+        return out
+    return inner1
 
 def visual_conf_mat(conf_mat, class_names):
     fig, ax = plot_confusion_matrix(conf_mat=conf_mat, colorbar=True, show_absolute=False, show_normed=True, class_names=class_names)

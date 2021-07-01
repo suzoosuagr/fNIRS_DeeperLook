@@ -13,12 +13,16 @@ from skfeature.function.similarity_based import fisher_score as Fs
 from Tools.utils import ensure
 from tqdm import trange
 from sklearn.svm import SVC
+from sklearn.model_selection import GridSearchCV
 from Tools.metric import Performance_Test_ensemble_multi
+
+
 
 args = EXP01('debug', 'standard.log')
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
 setup_global_logger(args.mode, logging.INFO, logpath=args.logpath)
-save_root = './Files/svm/'
+save_root = './Files/svmfisherZscoreVPL/'
+pca_save_root = './Files/svmPCA/'
 ensure(save_root)
 
 # %% features inside time window 
@@ -28,7 +32,7 @@ def mean(data):
         - data: ndarray with shape [N,C,Channels]; contining oxy or deoxy only. 
                 N is the time. calculate mean over time. 
     @outputs:
-        - out: shape [1,C,Channels]
+        - out: shape [C,Channels]
     """
     m = np.mean(data, axis=0, keepdims=False)
     return m
@@ -50,6 +54,10 @@ def slope(data):
     dx = len(data)
     slop = dy/dx
     return slop
+
+def peak(data):
+    p = np.amax(data, axis=0)
+    return p 
 
 # %%
 def feature_selection(dataset, featFunc, topk=6):
@@ -120,6 +128,7 @@ def load_data(root, fold_id, featFunc):
         deoxy_index = lines[1].split('==')[-1].split(',')
         oxy_index = [int(v) for v in oxy_index]
         deoxy_index = [int(v) for v in deoxy_index]
+    
 
     return featPool, labelPool, oxy_index, deoxy_index
 
@@ -138,30 +147,51 @@ class svmEngine():
         BasicName = args.name
         with open(os.path.join(args.data_config['ins_root'], 'fold_id_mapping.json'), 'r') as jsf:
             fold_id_mapping = json.load(jsf)
-        for fold_id in range(self.k):
-            print("="*10)
-            args.data_config['train_ids'] = fold_id_mapping[str(fold_id)]['train_ids']
-            args.data_config['eval_ids'] = fold_id_mapping[str(fold_id)]['eval_ids']
-            args.name = "{}_{:02}".format(BasicName, fold_id)
-            print(f"Runing {args.name} | eval on {args.data_config['eval_ids']}")
-            for func in [mean, var, skew, kurtosis, slope]:
+        for func in [mean, var, skew, kurtosis, slope]:
+            for fold_id in range(self.k):
+                ensure(os.path.join(save_root, '{:02}'.format(fold_id)))
+                print("="*10)
+                args.data_config['train_ids'] = fold_id_mapping[str(fold_id)]['train_ids']
+                args.data_config['eval_ids'] = fold_id_mapping[str(fold_id)]['eval_ids']
+                args.name = "{}_{:02}".format(BasicName, fold_id)
+                print(f"Runing {args.name} | eval on {args.data_config['eval_ids']}")
                 featPool, labelPool, oxy_index, deoxy_index = load_data(save_root, fold_id, func)
+                # featPool = stats.zscore(featPool, axis=1) # normalize the features. 
                 clf = trainSVM(featPool, labelPool, oxy_index, deoxy_index)
                 testFeat, testLabel = extractTestFeature(args, fold_id, oxy_index, deoxy_index, func)
                 preds = clf.predict(testFeat)
                 with open(os.path.join(save_root, '{:02}'.format(fold_id), f'Results_{func.__name__}.txt'), 'w') as resWriter:
                     for i in range(len(preds)):
                         msg = f"{preds[i]},{testLabel[i]}\n"
-                        resWriter.write(msg)
+                        resWriter.write(msg)                    
+                # df = pd.DataFrame(clf.cv_results_)
+                # df.to_csv(os.path.join(save_root, '{:02}'.format(fold_id), f'cv_results_{func.__name__}.csv'))
+                # return
                 print("Results saved.")
 
 
+
+def trainSVM_GS(X, y, oxy_index, deoxy_index):
+    oxy_feat = X[0][:,oxy_index]
+    deoxy_feat = X[1][:,deoxy_index]
+    selected_feature = np.concatenate((oxy_feat, deoxy_feat), axis=1)
+    para_dict = {
+        'C':[1, 10, 100, 1000]
+    }
+    svm = SVC(kernel='linear')
+    clf = GridSearchCV(svm, param_grid=para_dict)
+    clf.fit(selected_feature, y)
+    return clf
 
 def trainSVM(X, y, oxy_index, deoxy_index):
     oxy_feat = X[0][:,oxy_index]
     deoxy_feat = X[1][:,deoxy_index]
     selected_feature = np.concatenate((oxy_feat, deoxy_feat), axis=1)
+    # para_dict = {
+    #     'C':[1, 10, 100, 1000]
+    # }
     clf = SVC(kernel='linear')
+    # clf = GridSearchCV(svm, param_grid=para_dict)
     clf.fit(selected_feature, y)
     return clf
     
@@ -189,6 +219,7 @@ def extractTestFeature(args, fold_id, oxy_index, deoxy_index, featFunc):
     return feat, labelPool
 
 def fisherSelectedSVMMetrics(k, funcList):
+    info("fisher score selected SVM")
     for func in funcList:
         esemble_metric = Performance_Test_ensemble_multi(joint=True, self_supervise=False)
         for fold_id in range(k):
@@ -200,9 +231,21 @@ def fisherSelectedSVMMetrics(k, funcList):
                 for l in lines:
                     p, t = l.split(',')
                     esemble_metric(int(p), int(t), svm=True)
-        print(f"Fold_ID: {fold_id} | Selected Feature: {func.__name__} | esemble results")
-        results = esemble_metric.value()
-        print(results)
+        print("="*10)
+        print(f"Selected Feature: {func.__name__} | esemble results")
+        performance = esemble_metric.value(singular=True)
+        # for i in ['wml', 'vpl']:
+        #     conf_mat, accu, precision, recall, f1 = performance[i]
+        #     info("ACCURACY_{} = {} ".format(i, accu))
+        #     info("Precision_{} = {} ".format(i, precision))
+        #     info("RECALL_{} = {} ".format(i, recall))
+        #     info("F1_{} = {} ".format(i, f1))
+        conf_mat, accu, precision, recall, f1 = performance
+        i = save_root.split('/')[-2]
+        info("ACCURACY_{} = {} ".format(i, accu))
+        info("Precision_{} = {} ".format(i, precision))
+        info("RECALL_{} = {} ".format(i, recall))
+        info("F1_{} = {} ".format(i, f1))
 
 
 
@@ -224,10 +267,12 @@ if __name__ == "__main__":
 # +++++++++++++++++++++++++++++++++++++++++++++
     
     # engine = svmEngine(k=10, funcList=[mean, var, skew, kurtosis, slope], args=args)
+    engine = svmEngine(k=10, funcList=[peak], args=args)
+    engine.extractFeat()
     # engine.runTrain()
     
 # +++++++++++++++++++++++++++++++++++++++++++++++++++
 #       Test SVM based on the predictions records
 # +++++++++++++++++++++++++++++++++++++++++++++++++++
-    fisherSelectedSVMMetrics(k=10, funcList=[mean, var, skew, kurtosis, slope])
+    # fisherSelectedSVMMetrics(k=10, funcList=[mean, var, skew, kurtosis, slope])
 # %%

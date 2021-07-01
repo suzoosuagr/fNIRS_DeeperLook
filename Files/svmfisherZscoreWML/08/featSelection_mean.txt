@@ -1,0 +1,2 @@
+Selected Oxy==48,5,45,35,44,47
+Selected Deoxy==45,35,48,44,47,46

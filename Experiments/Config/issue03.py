@@ -25,6 +25,7 @@ class EXP01(Basic_Config):
     self - supervised 50 50 25
     full-size label-balanced data
     leave one subject out (22 folds)
+    normalized
     """
     def __init__(self, mode, logfile):
         super(EXP01, self).__init__()
@@ -44,7 +45,7 @@ class EXP01(Basic_Config):
                         "8201", "8203","8208","8216", "2003"],  # no subject named 8012
             "sessions": ["s1","s2"],
             "parts": ["head.npy"],
-            "ins_root": "./Data/Ins/label_balance_none_zscore/10Folds/"
+            "ins_root": "./Data/Ins/label_balance_sub/10Folds/"
         }
         self.steps_sizes = [50, 50, 25]
         self.drop_last = True
