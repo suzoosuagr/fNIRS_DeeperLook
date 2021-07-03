@@ -6,6 +6,8 @@ import torch.nn as nn
 import torch.utils.data as data
 import torch.nn.functional as F
 import random
+
+from torch.utils.data.dataset import Dataset
 from Tools.logger import *
 
 """
@@ -360,10 +362,10 @@ class fNIRS_mb_label_balance_leave_subject(fNIRS_mb_label_balance_leave_subject_
     def __init__(self, list_root, steps: list, mode, data_config, runtime, fold_id, istest=False) -> None:
         super(fNIRS_mb_label_balance_leave_subject, self).__init__(list_root, steps, mode, data_config, runtime=runtime, fold_id=fold_id, istest=istest)
         self.class_map = {   # change it for vpl and wml. 
-            "anb": 0,
-            "rt":1,
-            "gng":1,
-            "ewm":2
+            "anb": 2,
+            "rt":0,
+            "gng":0,
+            "ewm":1
         }
         # self.class_map_vpl = {
         #     "anb": 
@@ -375,3 +377,99 @@ class fNIRS_mb_label_balance_leave_subject(fNIRS_mb_label_balance_leave_subject_
     def get_tast_multi_branch(self, index):
         cr, task, label, oxy_file = self.load_data_(index, trans=False)  # didn't do the 1d to 2d trans
         return task.astype(np.float32), label, oxy_file
+
+
+class Ann_mb_label_balance(Dataset):
+    def __init__(self, data_root, mode, funcList, fold_id=0) -> None:
+        super(Ann_mb_label_balance, self).__init__()
+        self.data_root = data_root
+        self.fold_id = fold_id
+        self.mode = mode
+        if self.mode in ['train']:
+            prefix = ''
+        elif self.mode in ['test', 'eval']:
+            prefix = 'test_'
+
+        # load the data...
+        feature_list = []
+        self.label = np.load(os.path.join(data_root, '{:02}'.format(fold_id), prefix+f'labelPool_{funcList[0]}.npy')).astype(np.int64)
+        for func in funcList:
+            featPath = os.path.join(data_root, '{:02}'.format(fold_id), prefix+f'featPool_{func}.npy')
+            feature_list.append(np.load(featPath))
+        self.data = np.concatenate(feature_list, axis=0).astype(np.float32)
+        self.data = np.swapaxes(self.data, 0, 1).transpose(1, 0, 2).reshape(-1, 12*52)
+    
+    def __getitem__(self, index):
+        x = self.data[index]
+        y = self.label[index]
+        return x, y
+        
+    def forward(self, index):
+        return 9
+        
+    def __len__(self):
+        return len(self.label)
+
+
+class CNN_mb_label_balance_WML(fNIRS_Basic):
+    def __init__(self, list_root, steps: list, mode, data_config, runtime=False, fold_id=0, istest=False) -> None:
+        super(CNN_mb_label_balance_WML, self).__init__(list_root, steps, mode, data_config)
+        self.class_map = {
+            "nb":2,
+            "anb":2,
+            "rt":0,
+            'gng':0,
+            'ewm':1,
+            'es':0,
+        }
+        self.istest = istest
+        ins_path = os.path.join(data_config['ins_root'], 'M', f'{mode}_{fold_id}.txt')
+        if mode in ['test']:
+            ins_path = os.path.join(data_config['ins_root'], 'M', f'eval_{fold_id}.txt')
+
+        for sess in self.data_config['sessions']:
+            self.collect_data_files(os.path.join(list_root, sess+'.txt'))
+        self.instructor = self.read_instructor(ins_path)
+        self.valid_label_statistic(self.instructor)
+
+    def collect_data_files(self, file_path):
+        f = open(os.path.join(file_path), 'r')
+        lines = f.readlines()
+        f.close()
+        data_root, _ = os.path.split(lines[0].rstrip())
+        for l in lines:
+            l = l.rstrip()
+            base = os.path.basename(l)
+            meta = base.split('_')
+
+            type, id, task, part = meta
+            deoxy_file = '_'.join(['deoxy', id, task, part])
+
+            if self.mode in ["train"] and id in self.data_config['train_ids'] and task in self.data_config["train_tasks"] and part in self.data_config["parts"]:
+                self.data_files.append([l, os.path.join(data_root, deoxy_file)])
+            elif self.mode in ["eval", "test"] and id in self.data_config['eval_ids'] and task in self.data_config["eval_tasks"] and part in self.data_config["parts"]:
+                self.data_files.append([l,os.path.join(data_root, deoxy_file)])
+            else:
+                continue
+    
+    def __getitem__(self, index):
+        return self.get_task_multi_branch(index)
+
+    def get_task_multi_branch(self, index):
+        cr, task, label, oxy_file = self.load_data_(index, trans=False)
+        return task.astype(np.float32), label, oxy_file
+
+    def __len__(self):
+        return len(self.instructor)
+
+class CNN_mb_label_balance_VPL(CNN_mb_label_balance_WML):
+    def __init__(self, list_root, steps: list, mode, data_config, runtime=False, fold_id=0, istest=False) -> None:
+        super(CNN_mb_label_balance_VPL, self).__init__(list_root, steps, mode, data_config, runtime=runtime, fold_id=fold_id, istest=istest)
+        self.class_map = {
+            "nb":1,
+            "anb":0,
+            "rt":1,
+            'gng':1,
+            'ewm':2,
+            'es':1,
+        }

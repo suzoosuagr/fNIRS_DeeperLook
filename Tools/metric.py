@@ -20,6 +20,38 @@ class Metric():
     def name(self):
         raise NotImplementedError
 
+class PerformanceTestEnsembleMB(Metric):
+    def __init__(self, size):
+        super(PerformanceTestEnsembleMB, self).__init__()
+        self.size=size
+        self.confMat = np.zeros((size, size))
+
+    def __call__(self, pred, label):
+        pred = pred.cpu()
+        truth = label.cpu()
+        pred = F.softmax(pred, dim=1)
+        pred = torch.argmax(pred, dim=1).long()
+        for p, t in zip(pred, truth):
+            self.confMat[p][t] += 1.0
+        
+    def value(self):
+        confusion_matrix = self.confMat
+        TP = confusion_matrix.diagonal()
+        precision = TP / confusion_matrix.sum(0)
+        recall = TP / confusion_matrix.sum(1)
+
+        f1 = (2*precision*recall) / (precision + recall)
+
+        accu = TP.sum()
+        accu = TP.sum() / confusion_matrix.sum()
+        return confusion_matrix, accu, precision, recall, f1
+
+    def reset(self):
+        self.confMat = np.zeros((self.size, self.size))
+        
+
+
+
 class Performance_Test_ensemble_binary(Metric):
     def __init__(self, joint=False, self_supervise=False):
         """

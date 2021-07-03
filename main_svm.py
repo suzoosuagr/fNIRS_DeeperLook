@@ -21,7 +21,7 @@ from Tools.metric import Performance_Test_ensemble_multi
 args = EXP01('debug', 'standard.log')
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
 setup_global_logger(args.mode, logging.INFO, logpath=args.logpath)
-save_root = './Files/svmfisherZscoreVPL/'
+save_root = './Files/svmfisherZscoreWML/'
 pca_save_root = './Files/svmPCA/'
 ensure(save_root)
 
@@ -70,11 +70,11 @@ def feature_selection(dataset, featFunc, topk=6):
         feat_pool.append(feat)
         label_pool.append(label)
     feat_pool = np.stack(feat_pool, axis=1) # [C, N, Channels], where C is the oxy and deoxy stuff
-    for i in trange(2):
-        feat_ = feat_pool[i,:,:]
-        fisher_score = Fs.fisher_score(feat_, label_pool)
-        rank = Fs.feature_ranking(fisher_score)
-        selected_feat.append(rank[:topk])
+    # for i in trange(2):
+    #     feat_ = feat_pool[i,:,:]
+    #     fisher_score = Fs.fisher_score(feat_, label_pool)
+    #     rank = Fs.feature_ranking(fisher_score)
+    #     selected_feat.append(rank[:topk])
     return selected_feat, feat_pool, label_pool
 
 def kfoldFeatSave(args, k, featFunc, mode='preprocess'):
@@ -107,13 +107,15 @@ def kfoldFeatSave(args, k, featFunc, mode='preprocess'):
         print(f"Test : {len(test_dataset)}")
         saveKroot = os.path.join(save_root, '{:02}'.format(fold_id))
         ensure(saveKroot)
-        fswriter = open(os.path.join(saveKroot, f'featSelection_{featFunc.__name__}.txt'), 'w')
-        fs, feat_pool, label_pool = feature_selection(train_dataset, featFunc)
-        np.save(os.path.join(saveKroot, f'featPool_{featFunc.__name__}.npy'), feat_pool)
-        np.save(os.path.join(saveKroot, f'labelPool_{featFunc.__name__}.npy'), label_pool)
-        for i in range(2):
-            fswriter.write(f'Selected {feat_order[i]}=='+','.join([str(s) for s in fs[i].tolist()])+'\n')
-        fswriter.close()
+        # fswriter = open(os.path.join(saveKroot, f'featSelection_{featFunc.__name__}.txt'), 'w')
+        # fs, feat_pool, label_pool = feature_selection(train_dataset, featFunc)
+        fs, feat_pool, label_pool = feature_selection(test_dataset, featFunc)
+
+        np.save(os.path.join(saveKroot, f'test_featPool_{featFunc.__name__}.npy'), feat_pool)
+        np.save(os.path.join(saveKroot, f'test_labelPool_{featFunc.__name__}.npy'), label_pool)
+        # for i in range(2):
+        #     fswriter.write(f'Selected {feat_order[i]}=='+','.join([str(s) for s in fs[i].tolist()])+'\n')
+        # fswriter.close()
 
 def load_data(root, fold_id, featFunc):
     feat_path = os.path.join(root, '{:02}'.format(fold_id), f'featPool_{featFunc.__name__}.npy')
@@ -267,7 +269,7 @@ if __name__ == "__main__":
 # +++++++++++++++++++++++++++++++++++++++++++++
     
     # engine = svmEngine(k=10, funcList=[mean, var, skew, kurtosis, slope], args=args)
-    engine = svmEngine(k=10, funcList=[peak], args=args)
+    engine = svmEngine(k=10, funcList=[mean, var, skew, kurtosis, slope, peak], args=args)
     engine.extractFeat()
     # engine.runTrain()
     

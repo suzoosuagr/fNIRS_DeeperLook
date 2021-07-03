@@ -7,6 +7,78 @@ import shap
 import numpy as np
 import json
 
+class Ann_Engine(BaseEngine):
+    def __init__(self, train_loader, eval_loader, test_loader, args, writer, device) -> None:
+        super(Ann_Engine, self).__init__(train_loader, eval_loader, test_loader, args, writer, device)
+
+    def train_epoch(self, epoch):
+        self.model.train()
+        epoch_loss = 0
+        for step, batch_data in enumerate(self.train_loader):
+            X, Y, _ = batch_data
+            X = X.to(self.device)
+            Y = Y.to(self.device)
+
+            B, L, C, C_ = X.shape
+            inputs = X.view(B, L, C*C_)
+            inputs = inputs.permute(0, 2, 1)
+            out = self.model(inputs)
+            loss =  self.criterion(out, Y)
+            self.optimizer.zero_grad()
+            loss.backward()
+            self.optimizer.step()
+            epoch_loss += loss.item()
+        return epoch_loss / len(self.train_loader)
+
+    def eval_epoch(self, epoch):
+        self.model.eval()
+        epoch_loss = 0
+        for step, batch_data in enumerate(self.eval_loader):
+            X, Y, _= batch_data
+            X = X.to(self.device)
+            Y = Y.to(self.device)
+            B, L, C, C_ = X.shape
+            inputs = X.view(B, L, C*C_)
+            inputs = inputs.permute(0, 2, 1)
+            with torch.no_grad():
+                out = self.model(inputs)
+                loss =  self.criterion(out, Y)
+                epoch_loss += loss.item()
+        return epoch_loss / len(self.train_loader)
+
+    def test_epoch(self, epoch):
+        self.model.eval()
+        epoch_loss = 0
+        for step, batch_data in enumerate(self.test_loader):
+            X, Y, _= batch_data
+            X = X.to(self.device)
+            Y = Y.to(self.device)
+            B, L, C, C_ = X.shape
+            inputs = X.view(B, L, C*C_)
+            inputs = inputs.permute(0, 2, 1)
+            with torch.no_grad():
+                out = self.model(inputs)
+                self.metric(out, Y)
+        
+    def ensemble_test(self, model, optimizer, metric, prefix, last=False):
+        self.model, self.optimizer, start_epoch, self.min_loss = self.load_ckpt(model, optimizer)
+        self.metric = metric
+        info(f"Resume from {start_epoch} epoch")
+        self.test_epoch(start_epoch)
+
+        if last:
+            confMat, accu, precision, recall, f1 = self.metric.value()
+            info("ACCURACY_{} = {} ".format(prefix, accu))
+            info("Precision_{} = {} ".format(prefix, precision))
+            info("RECALL_{} = {} ".format(prefix, recall))
+            info("F1_{} = {} ".format(prefix, f1))
+
+        return self.metric
+
+
+
+
+
 class fNIRS_Engine(BaseEngine):
     def __init__(self, train_loader, eval_loader, test_loader, args, writer, device) -> None:
         super(fNIRS_Engine, self).__init__(train_loader, eval_loader, test_loader, args, writer, device) 
