@@ -96,7 +96,7 @@ class EXP02(Basic_Config):
 
 class EXP03(Basic_Config):
     """
-    ANN 
+    CNN 
     
     multi - classification
     self - supervised 50 50 25

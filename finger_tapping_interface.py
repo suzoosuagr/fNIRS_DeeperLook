@@ -8,7 +8,19 @@ from scipy.stats import stats
 
 dataRoot = '../data/fNIRS_Data/fNIRS_finger_tapping_data_with_headers/'
 saveBigChucksPath = '../data/fNIRS_Data/fNIRS_finger_tapping_big_chunks/'
+filelistPath = './Data/FileList/finger_tap_ZSCORE_OXY/'
 ensure(saveBigChucksPath)
+ensure(filelistPath)
+
+# %% get the big chucks.
+def generatefileList(filelistPath):
+    fileList = get_files(saveBigChucksPath, extension_filter='.npy')
+    with open (os.path.join(filelistPath, 's1.txt'), 'w') as fwriter:
+        for f in fileList:
+            if os.path.basename(f).split('_')[0] == 'oxy':
+                msg = f+'\n'
+                fwriter.write(msg)
+    print("DONE, generation")
 
 def butterBandpass(lowcut, highcut, fs, order=1):
     nyq = 0.5*fs
@@ -67,8 +79,10 @@ def withHead2BigChuncks(condiFiles, dataFiles, saveBigChucksPath):
         deoxydf = df_d[[f'CH_{i}_DeOxy' for i in range(48)]]
         bandOxy_array = butterBandpassFilter(oxydf.values, 0.01, 0.5, 10.2)
         bandDeOxy_array = butterBandpassFilter(deoxydf.values, 0.01, 0.5, 10.2)
-        bandOxy_array = zscoreNorm(bandOxy_array)
-        bandDeOxy_array = zscoreNorm(bandDeOxy_array)
+
+        data = zscoreNorm(bandOxy_array)
+        ddata = zscoreNorm(bandDeOxy_array)
+
         # probe_index = np.arange(len(bandOxy_array)).reshape(-1, 1)+1
         # df_probe_oxy= pd.DataFrame(probe_index, columns=['Probe1(Oxy)'])
         # df_probe_deoxy = pd.DataFrame(probe_index, columns=['Probe1(Oxy)'])
@@ -77,7 +91,10 @@ def withHead2BigChuncks(condiFiles, dataFiles, saveBigChucksPath):
         # df_oxy = pd.concat([df_probe_oxy, df_oxy], axis=1)
         df_deoxy = pd.DataFrame(bandDeOxy_array, index=range(len(bandOxy_array)), columns=[f'CH{i}' for i in range(48)])
         # df_deoxy = pd.concat([df_probe_deoxy, df_deoxy], axis=1)
-        condiMeta = readCondi(c)
+        try:
+            condiMeta = readCondi(c)
+        except:
+            continue
         if condiMeta is None:
             continue
         chuckSlice(condiMeta, df_oxy, df_deoxy, saveBigChucksPath, c)
@@ -99,6 +116,7 @@ def chuckSlice(meta, df_oxy, df_deoxy, save_path, condi_file):
             print("ERROR: {id}_{task}->start:{start}, end:{end}")
         assert len(data) == len(ddata)
 
+
         np.save(new_oxy_file, data)
         np.save(new_deoxy_file, ddata)
 
@@ -110,7 +128,7 @@ def readCondi(c):
         4:'RH', # right tapping 120 
         6:'LH',
         8:'BH', # both tapping 120
-        5:'BL', 
+        5:'RL', 
         7:'LL',
         9:'BL',
         2:'REST', # start of the rest
@@ -127,6 +145,7 @@ def readCondi(c):
         except AssertionError:
             return None
         condi_meta = {}
+        # here might be wrong. . 
         for i in range(num):
             li = lines[i*4:i*4+4]
             cr_start = int(li[0].split(';')[-2])
@@ -137,29 +156,7 @@ def readCondi(c):
             condi_meta['CR'+label_map[int(li[2].split(';')[-1])]] = [cr_start, cr_end]
         return condi_meta
 
-
-
 withHead2BigChuncks(condiFiles, dataFiles, saveBigChucksPath)
+generatefileList(filelistPath)
 
-
-# %%
-# data = dataFiles[0]
-# condi = condiFiles[0]
-
-# df_d = pd.read_csv(data)
-# # %%
-# df_d.head()
-# # %%
-# # df_d[['CH_0_Oxy', 'CH_1_Oxy']]
-# df_d[[f'CH_{i}_Oxy' for i in range(48)]]
-# df_filter = butterBandpassFilter(df_d.values, 0.01, 0.5, 10.2)
-# # %%  TODO here.
-# a = np.array([[1, 1, 2, 3], [2, 4, 5, 6]])
-# df_a = pd.DataFrame(a, index=range(len(a)), columns=['Probe1(Oxy)', 'CH0', 'CH1', 'CH2'])
-# new_data = df_a[[f'CH{i}' for i in range(3)]].values - 0.5 
-# first_col = np.arange(len(new_data)).reshape(-1, 1)+1
-# df_first = pd.DataFrame(first_col, columns=['Probe1(Oxy)'])
-# # %%
-# df_b = pd.DataFrame(new_data, index=range(len(new_data)), columns=['CH0', 'CH1', 'CH2'])
-# pd.concat([df_first, df_b], axis=1)
-# %%
+# %% Prepare instructio

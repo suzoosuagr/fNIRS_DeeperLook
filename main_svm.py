@@ -1,6 +1,7 @@
 # %% initialization
 import numpy as np
 from numpy.core.fromnumeric import shape
+from numpy.lib.function_base import median
 from numpy.lib.npyio import load
 from Data.Dataset.fnirs import fNIRS_mb_label_balance_leave_subject
 import pandas as pd
@@ -249,7 +250,36 @@ def fisherSelectedSVMMetrics(k, funcList):
         info("RECALL_{} = {} ".format(i, recall))
         info("F1_{} = {} ".format(i, f1))
 
-
+def fisherSelectedSVMMetrics_byFolds(k, funcList):
+    info("fisher score selected SVM")
+    search_records = open('./Files/cnn/SVM_mean_10FoldsCV_Metric_WML_new.txt', 'w')
+    for func in funcList:
+        for fold_id in range(k):
+            results_root = os.path.join(save_root, '{:02}'.format(fold_id))
+            result_path = os.path.join(results_root, f'Results_{func.__name__}.txt')
+            esemble_metric = Performance_Test_ensemble_multi(joint=True, self_supervise=False)
+            with open(result_path, 'r') as f:
+                lines = f.readlines()
+                lines = [l.rstrip() for l in lines]
+                for l in lines:
+                    p, t = l.split(',')
+                    esemble_metric(int(p), int(t), svm=True)
+            # print("="*10)
+            print(f"Selected Feature: {func.__name__} | esemble results")
+            performance = esemble_metric.value(singular=True)
+        # for i in ['wml', 'vpl']:
+        #     conf_mat, accu, precision, recall, f1 = performance[i]
+        #     info("ACCURACY_{} = {} ".format(i, accu))
+        #     info("Precision_{} = {} ".format(i, precision))
+        #     info("RECALL_{} = {} ".format(i, recall))
+        #     info("F1_{} = {} ".format(i, f1))
+            conf_mat, accu, precision, recall, f1 = performance
+            fL = save_root.split('/')[-2]
+            search_records.write("+"*20+f"Fold id {fold_id}"+'\n')
+            search_records.write("ACCURACY_{} = {}\n".format(fL, accu))
+            search_records.write("Precision{} = {}\n".format(fL, precision))
+            search_records.write("Recall_{} = {}\n".format(fL, recall))
+            search_records.write("F1_{} = {}\n".format(fL, f1))
 
 
             
@@ -269,12 +299,12 @@ if __name__ == "__main__":
 # +++++++++++++++++++++++++++++++++++++++++++++
     
     # engine = svmEngine(k=10, funcList=[mean, var, skew, kurtosis, slope], args=args)
-    engine = svmEngine(k=10, funcList=[mean, var, skew, kurtosis, slope, peak], args=args)
-    engine.extractFeat()
+    # engine = svmEngine(k=10, funcList=[mean, var, skew, kurtosis, slope, peak], args=args)
+    # engine.extractFeat()
     # engine.runTrain()
     
 # +++++++++++++++++++++++++++++++++++++++++++++++++++
 #       Test SVM based on the predictions records
 # +++++++++++++++++++++++++++++++++++++++++++++++++++
-    # fisherSelectedSVMMetrics(k=10, funcList=[mean, var, skew, kurtosis, slope])
+    fisherSelectedSVMMetrics_byFolds(k=10, funcList=[mean])
 # %%

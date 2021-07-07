@@ -70,7 +70,7 @@ class Naive_Embedding(nn.Module):
         x = F.pad(x, (0,1,0,1), 'constant',0)
         for t in range(x.size(1)):
             x1 = self.conv(x[:, t, :,:,:])
-            x1 = F.avg_pool2d(x1, (3, 11))
+            x1 = F.avg_pool2d(x1, (4, 8))  # (4, 8) for fnirs finger tapping.
             x1 = x1.squeeze()
             embed_seq.append(x1)
         embed_seq = torch.stack(embed_seq, dim=1)

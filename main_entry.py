@@ -4,7 +4,6 @@ from Tools.logger import *
 import argparse
 from Experiments.Config.issue01 import *
 from Data.Dataset.fnirs import fNIRS_mb_label_balance_leave_subject_sla
-from Experiments.Config.issue01 import *
 import torch.utils.data as data 
 from Model.models import BiGRU_Attn_Multi_Branch_SLA
 import torch.optim as optim
@@ -12,7 +11,7 @@ from Tools.engine import fNIRS_Engine
 import random
 import numpy as np
 import json
-
+import scipy.stats as st
 from Tools.metric import Performance_Test_ensemble_multi
 import pandas as pd
 
@@ -25,7 +24,7 @@ def parse_args():
 
 # initialization
 parser = parse_args()
-args = EXP05(parser.mode, parser.logfile)
+args = EXP04(parser.mode, parser.logfile)
 warning("STARTING >>>>>> {} ".format(args.name))
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
 ngpu, device, writer = env_init(args, logging.INFO)
@@ -240,6 +239,26 @@ def esemble_test_kfolds(args, k=5):
             last=False
         ensemble_metric = exe.test(model, optimizer, ensemble_metric, last=last)
 
+def fold_test(args, k=10):
+    count = 0
+    Basic_Name = args.name
+    with open(os.path.join(args.data_config['ins_root'], 'fold_id_mapping.json'), 'r') as jsf:
+        fold_id_mapping = json.load(jsf)
+    for i in range(k):
+        metric = Performance_Test_ensemble_multi(joint=True, self_supervise=True)
+        args.data_config['train_ids'] = fold_id_mapping[str(i)]['train_ids']
+        args.data_config['eval_ids'] = fold_id_mapping[str(i)]['eval_ids']
+        args.name = "{}_{:02}".format(Basic_Name, i)
+        info(f"Runing {args.name} | eval on {args.data_config['eval_ids']}")
+
+        train_loader, eval_loader, test_loader = update_loader(i, args)
+        model = update_model(args.model).to(device)
+        optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+        criterion = nn.CrossEntropyLoss()
+        exe = fNIRS_Engine(train_loader, eval_loader, test_loader, args, writer, device)
+        info(f'fold id is {i}')
+        exe.test(model, optimizer, metric, last=True)
+
 def run_kfolds(args, k=5):
     count = 0
     accu = 0
@@ -284,10 +303,13 @@ if __name__ == "__main__":
     # run_leave_subjects_out(args)
     # run_kfolds(args, k=10)
     # esemble_test_kfolds(args, k=10)
+    # fold_test(args, k=10)
     # esemble_test_subjects_out(args)
     # shap_leave_one_out(args, proc='wml')
     # shap_leave_one_out(args, proc='vpl')
 
-    downsample_instructors('./Data/Ins/label_balance_none_zscore/', '10Folds', 'M', './Data/Ins/label_balance_sub_none_zscore/')
+    # downsample_instructors('./Data/Ins/label_balance_none_zscore/', '10Folds', 'M', './Data/Ins/label_balance_sub_none_zscore/')
+
+
 
 

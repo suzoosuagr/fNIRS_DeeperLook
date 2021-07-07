@@ -2,7 +2,6 @@ from Tools.utils import get_files
 from Tools import env_init
 from Tools.logger import *
 import argparse
-from Experiments.Config.issue01 import *
 from Data.Dataset.fnirs import fNIRS_mb_label_balance_leave_subject_sla
 from Experiments.Config.issue02 import *
 import torch.utils.data as data 

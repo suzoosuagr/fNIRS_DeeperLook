@@ -168,16 +168,16 @@ class fNIRS_Basic(data.Dataset):
         else:
             return [l*2 + 1 for l in label]
 
-    def label_balance_init_instructor(self):
+    def  label_balance_init_instructor(self):
         """
             balance the sample step/ratio base on label
         """
-        task_ratio = {
-            'anb':1,
-            'ewm':1,
-            'rt':1,
-            'gng':1
-        }
+        # task_ratio = {
+        #     'anb':1,
+        #     'ewm':1,
+        #     'rt':1,
+        #     'gng':1
+        # }
         essemble_cr_length = [0] * 6
         essemble_task_length = [0] * 6
 

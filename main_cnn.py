@@ -6,7 +6,7 @@ from numpy.lib.npyio import load
 from Data.Dataset.fnirs import CNN_mb_label_balance_WML, CNN_mb_label_balance_VPL
 import pandas as pd
 from Experiments.Config.issue03 import *
-from Tools.logger import *
+from Tools.logger import * 
 import torch.utils.data as data 
 from Tools import env_init
 import os
@@ -69,6 +69,7 @@ def update_loader(fold_id, args_):
 
 def update_model(model_name, filterList=[32]):
     if model_name == 'CNN1':
+        # model = CNN1(96, filterList, 3)
         model = CNN1(104, filterList, 3)
     # elif model_name == 'CNN2':
     #     # model = CNN
@@ -102,13 +103,43 @@ def run_kfolds(args, filterList, k=5, mode='test'):
             ensemble_metrics = exe.ensemble_test(model, optimizer, ensemble_metrics, Basic_Name, last=last)
     return ensemble_metrics.value()
 
+def run_kfolds_foldwise(args, filterList, k=5, mode='test'):
+    Basic_Name = args.name
+    search_records = open('./Files/cnn/CNN1_10FoldsCV_Metric_VPL_new.txt', 'w')
+    
+    with open(os.path.join(args.data_config['ins_root'], 'fold_id_mapping.json'), 'r') as jsf:
+        fold_id_mapping = json.load(jsf)
+    for fold_id in range(k):
+        ensemble_metrics = PerformanceTestEnsembleMB(size=3)
+        args.data_config['train_ids'] = fold_id_mapping[str(fold_id)]['train_ids']
+        args.data_config['eval_ids'] = fold_id_mapping[str(fold_id)]['eval_ids']
+        args.name = "{}_{:02}".format(Basic_Name, fold_id)
+        info(f"Runing {args.name} | eval on {args.data_config['eval_ids']}")
+
+        train_loader, eval_loader, test_loader = update_loader(fold_id, args)
+        model = update_model(args.model, filterList).to(device)
+        optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+        criterion = nn.CrossEntropyLoss()
+        exe = Ann_Engine(train_loader, eval_loader, test_loader, args, writer, device)
+        if mode in ['train', 'full']:
+            exe.train(model, optimizer, criterion, None)
+        if mode in ['test', 'full']:
+            ensemble_metrics = exe.ensemble_test(model, optimizer, ensemble_metrics, Basic_Name, last=True)
+            confMat, accu, precision, recall, f1 = ensemble_metrics.value()
+            search_records.write("+"*20+f"Fold id {fold_id}"+'\n')
+            search_records.write("ACCURACY_{} = {}\n".format(fL, accu))
+            search_records.write("Precision{} = {}\n".format(fL, precision))
+            search_records.write("Recall_{} = {}\n".format(fL, recall))
+            search_records.write("F1_{} = {}\n".format(fL, f1))
+    return 
+
 if __name__ == '__main__':
     basic_name = args.name
-    search_records = open('./Files/cnn/CNN1_10FoldsCV_Metric_VPL.txt', 'w')
-    for fL in [[32]]:
-        confMat, accu, precision, recall, f1 = run_kfolds(args, fL, k=10, mode='full')
-        search_records.write("+"*20+'\n')
-        search_records.write("ACCURACY_{} = {}\n".format(fL, accu))
-        search_records.write("Precision{} = {}\n".format(fL, precision))
-        search_records.write("Recall_{} = {}\n".format(fL, recall))
-        search_records.write("F1_{} = {}\n".format(fL, f1))
+    
+    for fL in [[64]]:
+        run_kfolds_foldwise(args, fL, k=10, mode='full')
+        # search_records.write("+"*20+'\n')
+        # search_records.write("ACCURACY_{} = {}\n".format(fL, accu))
+        # search_records.write("Precision{} = {}\n".format(fL, precision))
+        # search_records.write("Recall_{} = {}\n".format(fL, recall))
+        # search_records.write("F1_{} = {}\n".format(fL, f1))
