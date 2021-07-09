@@ -160,3 +160,7 @@ withHead2BigChuncks(condiFiles, dataFiles, saveBigChucksPath)
 generatefileList(filelistPath)
 
 # %% Prepare instructio
+testpath = '../data/fNIRS_Data/fNIRS_finger_tapping_data_with_headers/hb_participant_1.csv'
+df = pd.read_csv(testpath)
+df.head()
+# %%

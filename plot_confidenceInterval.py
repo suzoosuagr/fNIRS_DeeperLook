@@ -5,11 +5,11 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data_sla = pd.read_csv('./Files/conf_interval/cnn_data.csv')
+data_sla = pd.read_csv('./Files/conf_interval/sla_data.csv')
 y_types = ('Accu', 'Percision', 'Recall', 'F1', 'Accu', 'Percision', 'Recall', 'F1')
 # fig, ax = plt.subplots()
 A = 0.95
-y = [0.7232, 0.7241, 0.7278, 0.7256, 0.6862, 0.7204, 0.7298, 0.7237]
+y = [0.6832, 0.6814, 0.6856, 0.68, 0.6852, 0.6849, 0.6875, 0.6823]
 # xind = np.arange(4)
 data_sla_ndarry = data_sla.values
 # yerror = []

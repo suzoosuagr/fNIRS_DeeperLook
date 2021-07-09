@@ -22,7 +22,7 @@ from Tools.metric import Performance_Test_ensemble_multi
 args = EXP01('debug', 'standard.log')
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
 setup_global_logger(args.mode, logging.INFO, logpath=args.logpath)
-save_root = './Files/svmfisherZscoreWML/'
+save_root = './Files/svmfisherZscoreVPL/'
 pca_save_root = './Files/svmPCA/'
 ensure(save_root)
 
@@ -252,7 +252,7 @@ def fisherSelectedSVMMetrics(k, funcList):
 
 def fisherSelectedSVMMetrics_byFolds(k, funcList):
     info("fisher score selected SVM")
-    search_records = open('./Files/cnn/SVM_mean_10FoldsCV_Metric_WML_new.txt', 'w')
+    search_records = open('./Files/cnn/SVM_mean_10FoldsCV_Metric_VPL_new.txt', 'w')
     for func in funcList:
         for fold_id in range(k):
             results_root = os.path.join(save_root, '{:02}'.format(fold_id))
