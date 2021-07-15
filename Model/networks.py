@@ -1,3 +1,6 @@
+from torch.nn.modules import padding
+from torch.nn.modules.batchnorm import BatchNorm2d
+from Tools.metric import Performance_Test_ensemble_multi
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -35,6 +38,41 @@ class Down(nn.Module):
             return self.norm(x)
         return x
 
+class DownSq(nn.Module):
+    def __init__(self, in_ch, out_ch, norm=nn.BatchNorm2d):
+        super(DownSq, self).__init__()
+        self.down = nn.Sequential(
+            nn.Conv2d(in_ch, out_ch, kernel_size=(1, 3), stride=(1, 2), padding=(0, 1)),
+            norm(out_ch),
+            nn.ReLU(inplace=True)
+        )
+
+    def forward(self, x):
+        x = self.down(x)
+        return x
+
+class BasicResBlockSq(nn.Module):
+    def __init__(self, in_ch, growth_rate, kernel_size=(1, 3), stride=1, padding=(0, 1)):
+        super(BasicResBlockSq, self).__init__()
+        self.res_func = nn.Sequential(
+            nn.Conv2d(in_ch, growth_rate, kernel_size=kernel_size, stride=stride, padding=padding, bias=False),
+            nn.BatchNorm2d(growth_rate),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(growth_rate, growth_rate, kernel_size=kernel_size, stride=stride, padding=padding, bias=False),
+            nn.BatchNorm2d(growth_rate)
+        )
+        self.shortcut = nn.Sequential(
+            nn.Conv2d(in_ch, growth_rate, kernel_size=kernel_size, stride=stride, padding=padding, bias=False),
+            nn.BatchNorm2d(growth_rate)
+        )
+
+    def forward(self, x):
+        res = self.res_func(x)
+        short = self.shortcut(x)
+        x = res + short 
+        x = torch.relu(x)
+        return x
+
 class Up(nn.Module):
     def __init__(self, in_ch, out_ch, scale=2, norm=nn.BatchNorm2d):
         super(Up, self).__init__()
@@ -70,7 +108,34 @@ class Naive_Embedding(nn.Module):
         x = F.pad(x, (0,1,0,1), 'constant',0)
         for t in range(x.size(1)):
             x1 = self.conv(x[:, t, :,:,:])
-            x1 = F.avg_pool2d(x1, (4, 8))  # (4, 8) for fnirs finger tapping.
+            x1 = F.adaptive_avg_pool2d(x1, (1, 1))  # (4, 8) for fnirs finger tapping.
+            x1 = x1.squeeze()
+            embed_seq.append(x1)
+        embed_seq = torch.stack(embed_seq, dim=1)
+        return embed_seq
+
+class FingerTapEmbd(nn.Module):
+    def __init__(self, in_ch, emb_ch, norm=nn.BatchNorm2d):
+        super(FingerTapEmbd, self).__init__()
+        self.in_ch = in_ch
+        self.emb_ch = emb_ch
+        self.conv0 = nn.Sequential(
+            BasicResBlockSq(in_ch, 16),
+            DownSq(16, 32),
+        )
+        self.conv1 = nn.Sequential(
+            BasicResBlockSq(32, 32, kernel_size=3, stride=1, padding=1),
+            Down(32, 64),
+            BasicResBlockSq(64, emb_ch, kernel_size=3, stride=1, padding=1)
+        )
+    
+    def forward(self, x):
+        embed_seq = []
+        x = F.pad(x, (0,1,0,1), 'constant',0)
+        for t in range(x.size(1)):
+            x1 = self.conv0(x[:, t, :,:,:])
+            x1 = self.conv1(x1)
+            x1 = F.adaptive_avg_pool2d(x1, (1, 1))  # (4, 8) for fnirs finger tapping.
             x1 = x1.squeeze()
             embed_seq.append(x1)
         embed_seq = torch.stack(embed_seq, dim=1)
@@ -96,4 +161,5 @@ class Attn(nn.Module):
         attention_output = torch.bmm(attention_weight, value) # [batch_size, 1, hidden_ch*2]
         attention_output = attention_output.squeeze(1)        # [batch_size, hidden_ch*2]
 
-        return attention_output, attention_weight.squeeze(1)
+        # return attention_output, attention_weight.squeeze(1)
+        return attention_output

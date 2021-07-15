@@ -6,9 +6,10 @@ import os
 from scipy.signal import butter, lfilter
 from scipy.stats import stats
 
-dataRoot = '../data/fNIRS_Data/fNIRS_finger_tapping_data_with_headers/'
-saveBigChucksPath = '../data/fNIRS_Data/fNIRS_finger_tapping_big_chunks/'
-filelistPath = './Data/FileList/finger_tap_ZSCORE_OXY/'
+# dataRoot = '../data/fNIRS_Data/fNIRS_finger_tapping_data_with_headers/'
+dataRoot = '../data/fNIRS_Data/fNIRS_Natalie/FingerTapping_filterz/'
+saveBigChucksPath = '../data/fNIRS_Data/fNIRS_Natalie/fNIRS_finger_tapping_big_chunks/'
+filelistPath = './Data/FileList/fNIRS_Natalie_Zscore_Oxy/'
 ensure(saveBigChucksPath)
 ensure(filelistPath)
 
@@ -47,7 +48,7 @@ def matchFiles(dataRoot):
     for i in condiFiles:
         basename = os.path.basename(i)
         _, id, _, _ = basename.split('_')
-        datafile = os.path.join(dataRoot, datafileHead+f'{id}.csv')
+        datafile = os.path.join(dataRoot, datafileHead+f'{id}_filterz.csv')
         if os.path.exists(datafile):
             matchDataFiles.append(datafile)
             matchCondiFiles.append(i)
@@ -99,7 +100,29 @@ def withHead2BigChuncks(condiFiles, dataFiles, saveBigChucksPath):
             continue
         chuckSlice(condiMeta, df_oxy, df_deoxy, saveBigChucksPath, c)
         count += 1
-    print(f"processed {count}/{total}")
+        print(f"processed {count}/{total}")
+
+def NatalieData2Bigchucks(condiFiles, dataFiles, saveBigChucksRoot):
+    """
+        Natalie Data, without heads, and index. first 0-47:Oxy || 48-95 Doxy
+    """
+    count = 0
+    total = len(dataFiles)
+    condiFiles = redirect_files(condiFiles, './temp/')
+    for c, d in zip(condiFiles, dataFiles):
+        df_d = pd.read_csv(d, header=None)
+        oxydf = df_d.loc[:,[i for i in range(48)]]
+        deoxydf = df_d.loc[:, [i+48 for i in range(48)]]
+
+        try:
+            condiMeta = readCondi(c)
+        except:
+            continue
+        if condiMeta is None:
+            continue
+        chuckSlice(condiMeta, oxydf, deoxydf, saveBigChucksRoot, c)
+        count += 1
+        print(f"processed {count}/{total}")
 
 def chuckSlice(meta, df_oxy, df_deoxy, save_path, condi_file):
     id = os.path.basename(condi_file).split('/')[-1].split("_")[1]
@@ -156,11 +179,12 @@ def readCondi(c):
             condi_meta['CR'+label_map[int(li[2].split(';')[-1])]] = [cr_start, cr_end]
         return condi_meta
 
-withHead2BigChuncks(condiFiles, dataFiles, saveBigChucksPath)
+# withHead2BigChuncks(condiFiles, dataFiles, saveBigChucksPath)
 generatefileList(filelistPath)
+# NatalieData2Bigchucks(condiFiles, dataFiles, saveBigChucksPath)
 
 # %% Prepare instructio
-testpath = '../data/fNIRS_Data/fNIRS_finger_tapping_data_with_headers/hb_participant_1.csv'
-df = pd.read_csv(testpath)
-df.head()
-# %%
+# testpath = '../data/fNIRS_Data/fNIRS_finger_tapping_data_with_headers/hb_participant_1.csv'
+# df = pd.read_csv(testpath)
+# df.head()
+# # %%

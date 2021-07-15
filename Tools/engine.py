@@ -75,10 +75,6 @@ class Ann_Engine(BaseEngine):
 
         return self.metric
 
-
-
-
-
 class fNIRS_Engine(BaseEngine):
     def __init__(self, train_loader, eval_loader, test_loader, args, writer, device) -> None:
         super(fNIRS_Engine, self).__init__(train_loader, eval_loader, test_loader, args, writer, device) 
@@ -144,7 +140,7 @@ class fNIRS_Engine(BaseEngine):
                 epoch_loss += loss.item()
         return epoch_loss / len(self.eval_loader)
 
-    def test_epoch(self):
+    def test_epoch(self, mask=None):
         self.model.eval()
         epoch_loss = 0
         for step, batch_data in enumerate(self.test_loader):
@@ -152,6 +148,10 @@ class fNIRS_Engine(BaseEngine):
 
             data_0 = augdata_0[0].to(self.device)
             data_1 = augdata_1[0].to(self.device)
+
+            if mask is not None:
+                data_0 = self.apply_mask_zero(mask, data_0, 0)
+                data_1 = self.apply_mask_zero(mask, data_1, 1)
 
             label_0 = torch.stack(augdata_0[1], dim=1).to(self.device).squeeze()
             label_1 = torch.stack(augdata_1[1], dim=1).to(self.device).squeeze()
@@ -161,12 +161,32 @@ class fNIRS_Engine(BaseEngine):
                 out_wml_1, out_vpl_1 = self.model(data_1)
                 self.metric([torch.stack([out_wml_0.data, out_vpl_0.data], dim=2), torch.stack([out_wml_1.data, out_vpl_1.data], dim=2)], [label_0.data, label_1.data])
 
-    def test(self, model, optimizer, metric, last=False):
+    def apply_mask(self, mask, data, type=0):
+        for m in mask:
+            if type==0:
+                # cr-task
+                data[:,50:,:,m[0], m[1]] = data[:,:50,:,m[0], m[1]]
+            else:
+                # task-cr
+                data[:,:50,:,m[0], m[1]] = data[:,50:,:,m[0], m[1]]
+        return data
+
+    def apply_mask_zero(self, mask, data, type=0):
+        for m in mask:
+            if type==0:
+                # cr-task
+                data[:,50:,:,m[0], m[1]] = torch.zeros_like(data[:,50:,:,m[0], m[1]])
+            else:
+                # task-cr
+                data[:,:50,:,m[0], m[1]] = torch.zeros_like(data[:,50:,:,m[0], m[1]])
+        return data
+
+    def test(self, model, optimizer, metric, mask=None, last=False):
         self.model, self.optimizer, start_epoch, self.min_loss = self.load_ckpt(model, optimizer)
         self.metric = metric
         # self.metric.reset()
         info("Resume from {} epoch".format(start_epoch))
-        self.test_epoch()
+        self.test_epoch(mask)
         
         if last:
             performance = self.metric.value()
@@ -232,7 +252,7 @@ class fNIRS_Engine(BaseEngine):
 
         shap_save_root = os.path.join("./Visual/SHAP_VALUES", self.args.name)
         ensure(shap_save_root)
-        save_path = os.path.join(shap_save_root, '{:2}_{}_b0_55_60.npy'.format(index, proc))
+        save_path = os.path.join(shap_save_root, '{}_{}_b0_55_60.npy'.format(index, proc))
         np.save(save_path, shap_meta_dict)
 
     def background_shapper(self, batch_data):

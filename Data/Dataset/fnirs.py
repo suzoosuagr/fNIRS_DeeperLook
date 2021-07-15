@@ -168,7 +168,7 @@ class fNIRS_Basic(data.Dataset):
         else:
             return [l*2 + 1 for l in label]
 
-    def  label_balance_init_instructor(self):
+    def label_balance_init_instructor(self):
         """
             balance the sample step/ratio base on label
         """

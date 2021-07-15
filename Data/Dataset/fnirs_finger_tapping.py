@@ -36,7 +36,7 @@ class fNIRS_FingerTap_mb_K_fold_sla(fNIRS_Basic):
             'BH':[2, 2],
             'RL':[0, 1],
             'LL':[1, 0],
-            'BL':[1, 1]
+            'BL':[1, 1],
         }
         self.istest = istest
         ensure(data_config['ins_root'])
@@ -127,7 +127,7 @@ class fNIRS_FingerTap_mb_K_fold_sla(fNIRS_Basic):
         cr_deoxy = os.path.join(root, '_'.join(['deoxy', id, task, part]))
         return cr_oxy, cr_deoxy
 
-    def  label_balance_init_instructor(self):
+    def label_balance_init_instructor(self):
         """
             balance the sample step/ratio base on label
         """
@@ -243,3 +243,7 @@ class fNIRS_FingerTap_mb_K_fold(fNIRS_FingerTap_mb_K_fold_sla):
     def get_cr_task_self_supervised_multi_branch(self, index):
         cr, task, label, oxy_file = self.load_data_(index)
         return task.astype(np.float32), label, oxy_file
+
+class fNIRS_FingerTap_mb_K_fold_normal(fNIRS_FingerTap_mb_K_fold_sla):
+    def __init__(self, list_root, steps: list, mode, data_config, runtime, fold_id, istest=False) -> None:
+        super().__init__(list_root, steps, mode, data_config, runtime=runtime, fold_id=fold_id, istest=istest)

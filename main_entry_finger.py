@@ -5,7 +5,7 @@ import argparse
 from Experiments.Config.issue04 import *
 from Data.Dataset.fnirs_finger_tapping import fNIRS_FingerTap_mb_K_fold_sla
 import torch.utils.data as data 
-from Model.models import BiGRU_Attn_Multi_Branch_SLA
+from Model.models import BiGRU_Attn_Multi_Branch_SLA, BiGRUFingerTap
 import torch.optim as optim
 from Tools.engine import fNIRS_Engine
 import random
@@ -24,7 +24,7 @@ def parse_args():
 
 # initialization
 parser = parse_args()
-args = EXP01(parser.mode, parser.logfile)
+args = EXP03(parser.mode, parser.logfile)
 warning("STARTING >>>>>> {} ".format(args.name))
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
 ngpu, device, writer = env_init(args, logging.INFO)
@@ -69,6 +69,8 @@ def update_loader(fold_id, args_, test_shuffle=False):
 def update_model(model_name):
     if model_name == 'BiGRU_Attn_Multi_Branch_SLA':
         model = BiGRU_Attn_Multi_Branch_SLA(2, 16, 8, 6, nn.BatchNorm2d)
+    elif model_name == 'BiGRUFingerTap':
+        model = BiGRUFingerTap(2, 16, 8, 6, nn.BatchNorm2d)
     else:
         raise NotImplementedError
     return model
@@ -154,7 +156,7 @@ def generate_kfold_instructors(args, kfold=5, pick=3):
     for i in range(len(id_folds)):
         id_folds_ = listify(id_folds.copy())
         print("generating instructors ... ")
-        print(f"[{i}/{len(IDS)}]managing {id}")
+        print(f"[{i+1}/{len(IDS)}]managing {id}")
         tem_id = id_folds_[i]
         id_folds_.remove(tem_id)
         train = []
@@ -301,10 +303,10 @@ def shap_leave_one_out(args, proc='wml'):
 
 if __name__ == "__main__":
     # generate_instructors(args)
-    # generate_kfold_instructors(args, kfold=5, pick=args.data_config['pick']) 
+    # generate_kfold_instructors(args, kfold=11, pick=args.data_config['pick']) 
     # run_leave_subjects_out(args)
-    # run_kfolds(args, k=5)
-    esemble_test_kfolds(args, k=5)
+    run_kfolds(args, k=11)
+    # esemble_test_kfolds(args, k=11)
     # esemble_test_subjects_out(args)
     # shap_leave_one_out(args, proc='wml')
     # shap_leave_one_out(args, proc='vpl')

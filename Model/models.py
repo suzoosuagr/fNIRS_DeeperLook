@@ -3,7 +3,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.modules import dropout
 from torch.nn.modules.activation import ReLU
-from Model.networks import Naive_Embedding, Attn
+from Model.networks import FingerTapEmbd, Naive_Embedding, Attn
+
+
+
 
 class BiGRU_Attn_Multi_Branch_SLA(nn.Module):
     def __init__(self, in_ch, emb_ch, hidden_ch, out_ch, norm):
@@ -19,11 +22,18 @@ class BiGRU_Attn_Multi_Branch_SLA(nn.Module):
         x = F.relu(x)
         output, hidden = self.bigru(x)
         hidden = torch.cat((hidden[-2,:,:], hidden[-1,:,:]), dim=-1)
-        rescale_hidden, atten_weight = self.attn(query=hidden, key=output, value=output)
+        # rescale_hidden, atten_weight = self.attn(query=hidden, key=output, value=output)
+        rescale_hidden = self.attn(query=hidden, key=output, value=output)
         out_wml = self.fc_wml(rescale_hidden)
         out_vpl = self.fc_vpl(rescale_hidden)
 
         return out_wml, out_vpl
+        # return out_vpl
+
+class BiGRUFingerTap(BiGRU_Attn_Multi_Branch_SLA):
+    def __init__(self, in_ch, emb_ch, hidden_ch, out_ch, norm):
+        super(BiGRUFingerTap, self).__init__(in_ch, emb_ch, hidden_ch, out_ch, norm)
+        self.embd = FingerTapEmbd(in_ch, emb_ch)
 
 class ANN(nn.Module):
     def __init__(self, in_ch, hidden_layer, out_ch):

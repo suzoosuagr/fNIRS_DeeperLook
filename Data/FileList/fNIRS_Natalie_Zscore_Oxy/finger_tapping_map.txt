@@ -1,0 +1,51 @@
+1,9999,28,Male,finger tapping,none,none
+2,9999,28,Male,finger tapping,none,none
+3,9999,28,Male,finger tapping,none,none
+4,9999,28,Male,finger tapping,none,none
+5,9999,28,Male,finger tapping,none,none
+6,9999,28,Male,finger tapping,none,none
+7,9999,28,Male,finger tapping,none,none
+8,9999,28,Male,finger tapping,none,none
+9,9999,28,Male,finger tapping,none,none
+10,9999,28,Male,finger tapping,none,none
+11,9999,28,Male,finger tapping,none,none
+12,9999,28,Male,finger tapping,none,none
+13,9999,28,Male,finger tapping,none,none
+14,9999,28,Male,finger tapping,none,none
+15,9999,28,Male,finger tapping,none,none
+16,9999,28,Male,finger tapping,none,none
+17,9999,28,Male,finger tapping,none,none
+18,9998,25,Male,Finger Tapping,Critical noise on right hand side back.,53:31.5
+19,9998,25,Male,Finger Tapping,Critical Noise right  side back,19:35.7
+20,9997,24,Male,Finger-tapping,none,26:49.9
+21,9997,24,Male,Finger-tapping,none,37:51.7
+22,9997,24,Male,Finger-tapping,none,46:38.1
+23,9996,40,Female,Finger-tapping,none,09:48.6
+24,9996,40,Female,Finger-tapping,none,17:45.5
+25,9996,40,Female,Finger-tapping,none,25:28.2
+26,9996,40,Female,Finger-tapping,none,32:29.0
+27,9996,40,Female,Finger-tapping,none,40:02.4
+28,9998,25,Male,Finger-tapping,none,05:44.4
+29,9995,26,Male,Finger tapping,none,21:39.3
+30,9995,21,Male,finger tapping,none,17:43.5
+31,9995,21,Male,finger tapping,none,30:09.5
+32,9995,21,Male,finger tapping,none,42:42.7
+33,9999,28,Male,finger tapping,none,21:24.2
+34,9994,21,Male,Finger Tapping,none,05:59.6
+35,9994,21,Male,Finger Tapping,none,16:42.1
+36,9994,21,Male,Finger Tapping,none,23:30.1
+37,9999,28,Male,Finger Tapping,none,51:34.5
+38,9993,19,Male,finger tapping,none,21:14.5
+39,9993,19,Male,finger tapping,none,33:02.5
+40,9993,19,Male,finger tapping,none,40:16.2
+41,9992,27,Female,finger tapping,none,13:12.5
+42,9992,27,Female,finger tapping,none,21:55.4
+43,9998,25,Male,finger tapping,none,37:04.6
+44,9998,25,Male,finger tapping,none,44:12.6
+45,9991,29,Female,finger tapping,none,53:16.6
+46,9991,29,Female,finger tapping,none,01:36.5
+47,9991,29,Female,finger tapping,none,08:09.0
+48,9990,20,Female,finger tapping,none,37:53.8
+49,9990,20,Female,finger tapping,none,47:29.4
+50,9990,20,Female,finger tapping,none,54:14.9
+51,9989,20,Male,finger tapping,Took off cap before stopping recording.,23:44.3
