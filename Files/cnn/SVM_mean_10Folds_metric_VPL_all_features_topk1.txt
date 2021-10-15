@@ -1,0 +1,50 @@
+++++++++++++++++++++Fold id 0
+ACCURACY_svmfisherZscoreVPL = 0.10908052541404911
+PrecisionsvmfisherZscoreVPL = [0.         0.17535545 0.14084507]
+Recall_svmfisherZscoreVPL = [0.         0.19337979 0.13937282]
+F1_svmfisherZscoreVPL = [       nan 0.18392709 0.14010508]
+++++++++++++++++++++Fold id 1
+ACCURACY_svmfisherZscoreVPL = 0.173043974871502
+PrecisionsvmfisherZscoreVPL = [0.         0.22644928 0.28802589]
+Recall_svmfisherZscoreVPL = [0.         0.20868114 0.29470199]
+F1_svmfisherZscoreVPL = [       nan 0.21720243 0.2913257 ]
+++++++++++++++++++++Fold id 2
+ACCURACY_svmfisherZscoreVPL = 0.1319622964867181
+PrecisionsvmfisherZscoreVPL = [0.         0.24423963 0.12903226]
+Recall_svmfisherZscoreVPL = [0.         0.25542169 0.12868633]
+F1_svmfisherZscoreVPL = [       nan 0.24970554 0.12885906]
+++++++++++++++++++++Fold id 3
+ACCURACY_svmfisherZscoreVPL = 0.12853470437017994
+PrecisionsvmfisherZscoreVPL = [0.         0.21369863 0.2962963 ]
+Recall_svmfisherZscoreVPL = [0.         0.19548872 0.17690418]
+F1_svmfisherZscoreVPL = [       nan 0.20418848 0.22153846]
+++++++++++++++++++++Fold id 4
+ACCURACY_svmfisherZscoreVPL = 0.16195372750642673
+PrecisionsvmfisherZscoreVPL = [0.         0.18944099 0.29767442]
+Recall_svmfisherZscoreVPL = [0.         0.15762274 0.30769231]
+F1_svmfisherZscoreVPL = [       nan 0.17207334 0.30260047]
+++++++++++++++++++++Fold id 5
+ACCURACY_svmfisherZscoreVPL = 0.2930591259640103
+PrecisionsvmfisherZscoreVPL = [0.18478261 0.07228916 0.5077951 ]
+Recall_svmfisherZscoreVPL = [0.2642487  0.03141361 0.57142857]
+F1_svmfisherZscoreVPL = [0.21748401 0.04379562 0.53773585]
+++++++++++++++++++++Fold id 6
+ACCURACY_svmfisherZscoreVPL = 0.1456726649528706
+PrecisionsvmfisherZscoreVPL = [0.         0.28703704 0.0974026 ]
+Recall_svmfisherZscoreVPL = [0.         0.39540816 0.03846154]
+F1_svmfisherZscoreVPL = [       nan 0.33261803 0.05514706]
+++++++++++++++++++++Fold id 7
+ACCURACY_svmfisherZscoreVPL = 0.2133676092544987
+PrecisionsvmfisherZscoreVPL = [0.08955224 0.00977199 0.375     ]
+Recall_svmfisherZscoreVPL = [0.06266319 0.00755668 0.57364341]
+F1_svmfisherZscoreVPL = [0.07373272 0.00852273 0.453524  ]
+++++++++++++++++++++Fold id 8
+ACCURACY_svmfisherZscoreVPL = 0.012853470437017995
+PrecisionsvmfisherZscoreVPL = [0.         0.05376344 0.        ]
+Recall_svmfisherZscoreVPL = [0.         0.03740648 0.        ]
+F1_svmfisherZscoreVPL = [       nan 0.04411765        nan]
+++++++++++++++++++++Fold id 9
+ACCURACY_svmfisherZscoreVPL = 0.08997429305912596
+PrecisionsvmfisherZscoreVPL = [0.0907441  0.17133956 0.        ]
+Recall_svmfisherZscoreVPL = [0.14005602 0.13613861 0.        ]
+F1_svmfisherZscoreVPL = [0.11013216 0.15172414        nan]

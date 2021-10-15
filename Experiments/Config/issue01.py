@@ -132,6 +132,8 @@ class EXP04(EXP01):
             "ins_root": "./Data/Ins/label_balance_sub/10Folds/"
         }
 
+        self.summary = True
+
 
 class EXP05(EXP01):
     """
@@ -175,3 +177,12 @@ class EXP00(EXP01):
             "parts": ["head.npy"],
             "ins_root": "./Data/Ins/label_balance_none_zscore/10Folds/"
         }
+
+class EXPXX(EXP04):
+    """
+        Identity to the exp04, just for getting the tensorboards records. 
+    """
+    def __init__(self, mode, logfile):
+        super(EXPXX, self).__init__(mode, logfile)
+        self.ckpt_root = "../model_weights/fNIRS_DeeperLook/"
+        self.summary = True

@@ -58,6 +58,12 @@ def update_model(model_name):
         raise NotImplementedError
     return model
 
+def run_summary():
+    model = ANN(12*52, [256, 128], 3).to(device)
+    psummary = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    print("The number of parameters {}".format(psummary))
+       
+
 def run_kfolds(args, basic_name, data_root, k=10, mode='test'):
     count = 0
     accu = 0
@@ -87,23 +93,25 @@ def run_kfolds(args, basic_name, data_root, k=10, mode='test'):
 
 if __name__ == "__main__":
     # grid search
-    basic_name = args.name
-    search_records = open('./Files/ann/search_results_ANN_a.txt', 'w')
-    for path in ['./Files/svmfisherZscoreWML/', './Files/svmfisherZscoreVPL/']:
-        max_search_accu = 0
-        for lr in [1e-3]:
-            for batch_size in [32]:
-                args.lr = lr
-                args.batch_size = batch_size
-                confMat, accu, precision, recall, f1 = run_kfolds(args, basic_name, data_root=path, k=10, mode='full')
-                if accu > max_search_accu:
-                    max_search_accu = accu
-                    search_records.write("="*20+'\n')
-                    search_records.write(f"MAX ACCU UPDATED: LR->{lr}, BatchSize->{batch_size}\n")
-                search_records.write("+"*20+'\n')
-                search_records.write("ACCURACY_{} = {}\n".format(path.split('/')[-2], accu))
-                search_records.write("Precision{} = {}\n".format(path.split('/')[-2], precision))
-                search_records.write("Recall_{} = {}\n".format(path.split('/')[-2], recall))
-                search_records.write("F1_{} = {}\n".format(path.split('/')[-2], f1))
+    # basic_name = args.name
+    # search_records = open('./Files/ann/search_results_ANN_a.txt', 'w')
+    # for path in ['./Files/svmfisherZscoreWML/', './Files/svmfisherZscoreVPL/']:
+    #     max_search_accu = 0
+    #     for lr in [1e-3]:
+    #         for batch_size in [32]:
+    #             args.lr = lr
+    #             args.batch_size = batch_size
+    #             confMat, accu, precision, recall, f1 = run_kfolds(args, basic_name, data_root=path, k=10, mode='full')
+    #             if accu > max_search_accu:
+    #                 max_search_accu = accu
+    #                 search_records.write("="*20+'\n')
+    #                 search_records.write(f"MAX ACCU UPDATED: LR->{lr}, BatchSize->{batch_size}\n")
+    #             search_records.write("+"*20+'\n')
+    #             search_records.write("ACCURACY_{} = {}\n".format(path.split('/')[-2], accu))
+    #             search_records.write("Precision{} = {}\n".format(path.split('/')[-2], precision))
+    #             search_records.write("Recall_{} = {}\n".format(path.split('/')[-2], recall))
+    #             search_records.write("F1_{} = {}\n".format(path.split('/')[-2], f1))
 
-    search_records.close()
+    # search_records.close()
+
+    run_summary()

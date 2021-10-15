@@ -133,11 +133,16 @@ def run_kfolds_foldwise(args, filterList, k=5, mode='test'):
             search_records.write("F1_{} = {}\n".format(fL, f1))
     return 
 
+def run_summary():
+    model = CNN1(104, [32], 3).to(device)
+    psummary = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    print("The number of parameters {}".format(psummary))
+
 if __name__ == '__main__':
-    basic_name = args.name
-    
-    for fL in [[64]]:
-        run_kfolds_foldwise(args, fL, k=10, mode='full')
+    # basic_name = args.name
+    run_summary()
+    # for fL in [[64]]:
+    #     run_kfolds_foldwise(args, fL, k=10, mode='full')
         # search_records.write("+"*20+'\n')
         # search_records.write("ACCURACY_{} = {}\n".format(fL, accu))
         # search_records.write("Precision{} = {}\n".format(fL, precision))

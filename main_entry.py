@@ -1,3 +1,4 @@
+import torchsummary
 from Tools.utils import get_files
 from Tools import env_init
 from Tools.logger import *
@@ -14,20 +15,23 @@ import json
 import scipy.stats as st
 from Tools.metric import Performance_Test_ensemble_multi
 import pandas as pd
+from torch.utils.tensorboard import SummaryWriter
+import datetime
+from torchsummary import summary
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-m", "--mode", dest="mode", default="debug", type=str)
     parser.add_argument("-l", "--log", dest="logfile", default='debug.log', type=str)
-    
+    parser.add_argument('--exp', default='EXP04', type=str)
     return parser.parse_args()
 
 # initialization
 parser = parse_args()
-args = EXP04(parser.mode, parser.logfile)
+args = eval(parser.exp)(parser.mode, parser.logfile)
 warning("STARTING >>>>>> {} ".format(args.name))
 args.logpath = os.path.join(args.log_root, args.name, args.logfile)
-ngpu, device, writer = env_init(args, logging.INFO)
+ngpu, device, _ = env_init(args, logging.INFO)
 args.ngpu = ngpu
 
 if args.mode == 'debug':
@@ -337,6 +341,17 @@ def run_kfolds(args, k=5):
     with open(os.path.join(args.data_config['ins_root'], 'fold_id_mapping.json'), 'r') as jsf:
         fold_id_mapping = json.load(jsf)
     for i in range(k):
+        if args.summary:
+            if args.mode in args.summary_register:
+                ensure(args.summary_dir)
+                summary_dir = os.path.join(args.summary_dir, args.name+f'_{i}'+'/',datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S'))
+                writer = SummaryWriter(summary_dir)
+                info("tfboard writer created. ")
+            else:
+                writer = None
+        else:
+            writer = None
+
         args.data_config['train_ids'] = fold_id_mapping[str(i)]['train_ids']
         args.data_config['eval_ids'] = fold_id_mapping[str(i)]['eval_ids']
         args.name = "{}_{:02}".format(Basic_Name, i)
@@ -348,6 +363,12 @@ def run_kfolds(args, k=5):
         criterion = nn.CrossEntropyLoss()
         exe = fNIRS_Engine(train_loader, eval_loader, None, args, writer, device)
         exe.train(model, optimizer, criterion, None)
+
+def run_pytorchsummary(args):
+    model = update_model(args.model).to(device)
+    psummary = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    print("The number of parameters {}".format(psummary))
+    
 
 def shap_leave_one_out(args, proc='wml'):
     info(f"PROCESSING {proc.upper()}")
@@ -391,8 +412,9 @@ if __name__ == "__main__":
     # generate_kfold_instructors(args, k=10)
     # run_leave_subjects_out(args)
     # run_kfolds(args, k=10)
+    run_pytorchsummary(args)
     # esemble_test_kfolds(args, k=10)
-    visual_importance_kfolds(args, k=10)
+    # visual_importance_kfolds(args, k=10)
     # fold_test(args, k=10)
     # esemble_test_subjects_out(args)
     # shap_leave_one_out(args, proc='wml')

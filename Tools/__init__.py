@@ -26,17 +26,18 @@ def env_init(args, loglevel=logging.INFO):
         warning("No gpu found, using cpu instead")
     device = torch.device(device_)
 
+    writer = None
     # summary writer
-    if args.summary:
-        if args.mode in args.summary_register:
-            ensure(args.summary_dir)
-            summary_dir = os.path.join(args.summary_dir, args.name+'/',datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S'))
-            writer = SummaryWriter(summary_dir)
-            info("tfboard writer created. ")
-        else:
-            writer = None
-    else:
-        writer = None
+    # if args.summary:  #FIXME: ths writer been blocked in purpose
+    #     if args.mode in args.summary_register:
+    #         ensure(args.summary_dir)
+    #         summary_dir = os.path.join(args.summary_dir, args.name+'/',datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S'))
+    #         writer = SummaryWriter(summary_dir)
+    #         info("tfboard writer created. ")
+    #     else:
+    #         writer = None
+    # else:
+    #     writer = None
 
     return 1, device, writer
 

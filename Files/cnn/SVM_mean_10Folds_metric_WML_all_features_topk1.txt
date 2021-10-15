@@ -1,0 +1,50 @@
+++++++++++++++++++++Fold id 0
+ACCURACY_svmfisherZscoreWML = 0.810394060536836
+PrecisionsvmfisherZscoreWML = [0.82176656 0.71478873 0.89617486]
+Recall_svmfisherZscoreWML = [0.86401327 0.70731707 0.85714286]
+F1_svmfisherZscoreWML = [0.84236055 0.71103327 0.8762244 ]
+++++++++++++++++++++Fold id 1
+ACCURACY_svmfisherZscoreWML = 0.6453455168475157
+PrecisionsvmfisherZscoreWML = [0.74818841 0.49352751 0.7091222 ]
+Recall_svmfisherZscoreWML = [0.75364964 0.50918197 0.68211921]
+F1_svmfisherZscoreWML = [0.75090909 0.50123254 0.69535865]
+++++++++++++++++++++Fold id 2
+ACCURACY_svmfisherZscoreWML = 0.5749785775492716
+PrecisionsvmfisherZscoreWML = [0.55990783 0.50537634 0.66481994]
+Recall_svmfisherZscoreWML = [0.64116095 0.45301205 0.64343164]
+F1_svmfisherZscoreWML = [0.59778598 0.47776366 0.65395095]
+++++++++++++++++++++Fold id 3
+ACCURACY_svmfisherZscoreWML = 0.6161096829477292
+PrecisionsvmfisherZscoreWML = [0.78630137 0.39917695 0.59928444]
+Recall_svmfisherZscoreWML = [0.79501385 0.24310777 0.82309582]
+F1_svmfisherZscoreWML = [0.79063361 0.30218069 0.69358178]
+++++++++++++++++++++Fold id 4
+ACCURACY_svmfisherZscoreWML = 0.6409597257926307
+PrecisionsvmfisherZscoreWML = [0.81055901 0.4627907  0.6939759 ]
+Recall_svmfisherZscoreWML = [0.71703297 0.51421189 0.69230769]
+F1_svmfisherZscoreWML = [0.76093294 0.4871481  0.69314079]
+++++++++++++++++++++Fold id 5
+ACCURACY_svmfisherZscoreWML = 0.34104541559554413
+PrecisionsvmfisherZscoreWML = [0.89156627 0.18930958 0.29891304]
+Recall_svmfisherZscoreWML = [0.38341969 0.22251309 0.41353383]
+F1_svmfisherZscoreWML = [0.53623188 0.2045728  0.34700315]
+++++++++++++++++++++Fold id 6
+ACCURACY_svmfisherZscoreWML = 0.7703513281919452
+PrecisionsvmfisherZscoreWML = [0.71296296 0.9025974  0.79281184]
+Recall_svmfisherZscoreWML = [1.         0.35459184 0.96153846]
+F1_svmfisherZscoreWML = [0.83243243 0.50915751 0.86906141]
+++++++++++++++++++++Fold id 7
+ACCURACY_svmfisherZscoreWML = 0.6726649528706083
+PrecisionsvmfisherZscoreWML = [0.99025974 0.53209459 0.61797753]
+Recall_svmfisherZscoreWML = [0.79634465 0.79345088 0.42635659]
+F1_svmfisherZscoreWML = [0.88277858 0.63700708 0.50458716]
+++++++++++++++++++++Fold id 8
+ACCURACY_svmfisherZscoreWML = 0.7840616966580977
+PrecisionsvmfisherZscoreWML = [0.94623656 0.72507553 0.73788151]
+Recall_svmfisherZscoreWML = [0.74366197 0.59850374 1.        ]
+F1_svmfisherZscoreWML = [0.83280757 0.6557377  0.84917355]
+++++++++++++++++++++Fold id 9
+ACCURACY_svmfisherZscoreWML = 0.7934875749785776
+PrecisionsvmfisherZscoreWML = [0.82866044 0.86101695 0.73684211]
+Recall_svmfisherZscoreWML = [0.74509804 0.62871287 1.        ]
+F1_svmfisherZscoreWML = [0.78466077 0.7267525  0.84848485]

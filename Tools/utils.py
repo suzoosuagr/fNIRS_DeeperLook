@@ -5,6 +5,17 @@ from mlxtend.plotting import plot_confusion_matrix
 import matplotlib.pyplot as plt
 import numpy as np
 import json
+import glob
+
+def auto_tab(*args):
+    """
+        get filenames with pattern. like you press tab in terminal.
+    """
+    returns = []
+    for i in args:
+        returns.append(glob.glob(i))
+    return tuple(returns)
+
 
 def msg(func):
     def inner1(*args, **kwargs):
